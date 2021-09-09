@@ -9,7 +9,7 @@ Restyles acorn to dark mode.
 Clone the repo
 
 ```
-git clone https://github.com/DianaNoz/eduTechnozTestServer.git
+git clone https://github.com/jumf2222/uoft-dark-mode.git
 ```
 
 ## Installation
