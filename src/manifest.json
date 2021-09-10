@@ -1,8 +1,8 @@
 {
     "name": "UofT Dark Mode",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "manifest_version": 3,
-    "description": "Restyles acorn and quercus to dark mode.",
+    "description": "Adds dark mode to UofT websites (Acorn, Quercus, Weblogin)",
     "action": {
         "default_popup": "popup.html",
         "default_title": "Save timetable"

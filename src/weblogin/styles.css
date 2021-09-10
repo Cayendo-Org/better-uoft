@@ -1,9 +1,226 @@
 html,
 html body {
-  background-color: #181818;
+  background-color: #121212;
   color: #ffffff;
 }
 
 object.site-logo {
-  filter: grayscale(100%) invert(100%) brightness(0.9);
+  filter: grayscale(100%) invert(100%) brightness(1);
+}
+
+body > div > div > div.col-md-4 > div.login-box {
+  background: #282828;
+  border-bottom: none;
+  border-radius: 6px ;
+}
+
+body > div > div > div.col-md-4 > div.login-box > section:nth-child(1) > p,
+body > div > div > div.col-md-4 > div.login-box > section:nth-child(2) > p {
+  color: #E3E3E3;
+  font-size: 13px;
+}
+
+body > div > div > div.col-md-4 > div.login-box > form > div:nth-child(3) > label,
+body > div > div > div.col-md-4 > div.login-box > form > div:nth-child(2) > label {
+  color: #E3E3E3;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+body > div > div > div.col-md-4 > div.login-box > form > button,
+#login-with-partner > button {
+  width: 100% !important;
+  text-transform: capitalize;
+  border-radius: 4px;
+}
+
+body > header > div > div:nth-child(2) > div {
+  border-radius: 6px;
+  background: transparent;
+  color: #E3E3E3;
+  text-transform: capitalize;
+}
+
+#howToLogOut,
+body > div > div > div.col-md-4 > div.alert.alert-warning > a {
+  color: #69A9F5;
+}
+
+#doc-protect > ul > li:nth-child(3) > span {
+  color: #898989;
+}
+
+#doc-protect > ul > li:nth-child(3) > span > strong {
+  color: #898989;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+body > div > div > div.col-md-4 > div.login-box > form > button > span,
+#login-with-partner > button > span,
+body > div > div > div.col-md-4 > div.login-box-bar {
+  display: none;
+}
+
+body > div > div > div.col-md-8 > div > div.col-md-9.col-sm-12.col-xs-12 > div {
+  border-radius: 6px;
+  padding-bottom: 10px;
+  background: #282828;
+  border-top: 5px solid #282828;
+}
+
+#doc-protect,
+#doc-error > h2 {
+  color: #ffffff;
+}
+
+#doc-protect > ul > li:nth-child(1) > span,
+body > div > div > div.col-md-4 > div.login-box > div > p:nth-child(1),
+body > div > div > div.col-md-4 > div.login-box > div > p:nth-child(3),
+#doc-error > p {
+  color: #E3E3E3;
+}
+
+#doc-protect > ul > li{
+  color: #E3E3E3;
+  background: url(https://jumf2222.github.io/uoft-dark-mode/check_icon.svg) no-repeat;
+}
+
+#username:-webkit-autofill,
+#username:-webkit-autofill:hover, 
+#username:-webkit-autofill:focus,
+#password:-webkit-autofill,
+#password:-webkit-autofill:hover, 
+#password:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #E3E3E3;
+  box-shadow: 0 0 0 2px rgba(39, 94, 254, .3);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#username, #password {
+  box-sizing: border-box;
+  caret-color: #E3E3E3;
+  background: rgba(0, 0, 0, 0.05);
+  border: solid 1px #414141;
+  border-radius: 4px;
+  color: #E3E3E3;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 20px;
+  max-width: 100%;
+  height: 40px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+#username:hover, #password:hover {
+  border: solid 1px #1A73E8;
+}
+
+#username:focus, #username:focus-visible,
+#password:focus, #password:focus-visible {
+  outline: none;
+  border: solid 1px #1A73E8;
+  box-shadow: 0 0 0 2px rgba(39, 94, 254, .3);
+}
+
+#username:invalid, #password:invalid {
+  border: solid 1px rgb(232, 26, 26);
+}
+
+#username:invalid:focus, #password:invalid:focus {
+  box-shadow: 0 0 0 2px rgba(232, 39, 39, 0.3);
+}
+
+body > div > div > div.col-md-4 > div.login-box > form > button, body > div > div > div.col-md-8 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li.active > a,
+body > div > div > div.col-md-8 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li > a {
+  font-size: 16px;
+  color: #fff;
+  background-color: rgb(13, 115, 236, 0.8);
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  transition: background-color 0.3s, box-shadow 0.2s;
+  margin-bottom: 10px;
+}
+
+body > div > div > div.col-md-8 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li.active > a {
+  font-size: 13px;
+}
+
+body > div > div > div.col-md-4 > div.login-box > form > button:hover, body > div > div > div.col-md-8 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li.active > a:hover {
+  cursor: pointer;
+  background-color: rgb(13, 115, 236, 1);
+}
+
+#login-with-partner > button {
+  font-size: 16px;
+  color: #E3E3E3;
+  background-color: rgba(227, 227, 227, 0.05);
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  border: solid 1px #414141;
+  transition: background-color 0.3s, box-shadow 0.2s;
+}
+
+#login-with-partner > button:hover {
+  cursor: pointer;
+  background-color: rgba(227, 227, 227, 0.15);
+}
+
+body > div > div > div.col-md-4 > div.login-box > form > button:focus, body > div > div > div.col-md-4 > div.login-box > form > button:focus-visible,
+body > div > div > div.col-md-8 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li.active > a:focus, body > div > div > div.col-md-8 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li.active > a:focus-visible{
+  border: solid 1px #1A73E8;
+  box-shadow: 0 0 0 2px rgba(39, 94, 254, .3);
+  background-color: rgb(13, 115, 236, 1);
+  outline: none;
+}
+
+#login-with-partner > button:focus, #login-with-partner > button:focus-visible, :focus, :focus-visible {
+  border: solid 1px #1A73E8;
+  box-shadow: 0 0 0 2px rgba(39, 94, 254, .3);
+  outline: none !important;
+}
+
+body > div > div > div.col-md-4 > div.login-box > form > button:disabled, #login-with-partner > button:disabled {
+  color: rgb(44, 43, 60, 0.4);
+  background-color: rgb(44, 43, 60, 0.03);
+}
+
+body > div > div > div.col-md-4 > div.login-box > form > button:disabled:hover, #login-with-partner > button:disabled:hover {
+  cursor: not-allowed;
+  background-color: rgb(44, 43, 60, 0.03);
+}
+
+body > div > div > div.col-md-4 > div.alert.alert-warning {
+  color: #FFE2B7;
+  background-color: #191207;
+  border-color: #E89823;
+  border-radius: 6px;
+}
+
+body > div > div > div.col-md-4 > div.alert.alert-danger {
+  color: #F4C7C7;
+  background-color: #160B0B;
+  border-color: #DD3D32;
+  border-radius: 6px;
+}
+
+body > footer > div > div {
+  border-top: 1px solid #414141;
+}
+
+body > footer > div > div > div > ul > li:nth-child(1), body > footer > div > div > div > ul > li:nth-child(4) {
+  color: #898989;
+}
+
+body > footer > div > div > div > ul > li:nth-child(2) > a, body > footer > div > div > div > ul > li:nth-child(3) > a,
+body > div > div > div.col-md-4 > div.login-box > section:nth-child(2) > p > a:nth-child(1), #pwreq-link {
+  color: #69A9F5;
 }
