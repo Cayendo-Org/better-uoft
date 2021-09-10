@@ -1,0 +1,584 @@
+html,
+html body {
+  background-color: #181818;
+  color: #ffffff;
+}
+
+div.ic-Dashboard-header__layout,
+header.ic-app-header,
+div.ic-app-header__logomark-container,
+div.ic-app-nav-toggle-and-crumbs,
+nav#breadcrumbs,
+div.conversations .panel {
+  background-color: #212121;
+}
+
+div.ic-Dashboard-header__layout,
+div.ic-app-nav-toggle-and-crumbs,
+div.item-group-condensed .ig-header,
+li.item-group-condensed .ig-header,
+div.item-group-condensed .ig-row,
+div.header-bar,
+div.ic-app-nav-toggle-and-crumbs .Button,
+ul.ig-list .ig-row,
+ul.ig-list .ig-row.ig-row-empty,
+div.ui-tabs .ui-tabs-nav,
+article.discussion_entry > .discussion-entry-reply-area,
+div.conversations .panel,
+div#calendar-app .fc-agendaWeek-view .fc-day-grid .fc-row,
+div#calendar-drag-and-drop-container .fc-agendaWeek-view .fc-day-grid .fc-row,
+div.ofhgV_eLeB[aria-selected] {
+  border: none;
+}
+
+a.btn,
+button.btn,
+button.Button,
+a.Button,
+button.ui-button.ui-state-disabled,
+button.ui-button.ui-state-focus,
+button.ui-button.ui-state-hover,
+button.ui-button,
+div select,
+span.qBMHb_cSXm,
+ul.pill,
+div select.ic-Input,
+div textarea.ic-Input,
+div input[type="text"].ic-Input,
+div input[type="password"].ic-Input,
+div input[type="datetime"].ic-Input,
+div input[type="datetime-local"].ic-Input,
+div input[type="date"].ic-Input,
+div input[type="month"].ic-Input,
+div input[type="time"].ic-Input,
+div input[type="week"].ic-Input,
+div input[type="number"].ic-Input,
+div input[type="email"].ic-Input,
+div input[type="url"].ic-Input,
+div input[type="search"].ic-Input,
+div input[type="tel"].ic-Input,
+div input[type="color"].ic-Input,
+div .uneditable-input.ic-Input,
+div textarea,
+div input[type="text"],
+div input[type="password"],
+div input[type="datetime"],
+div input[type="datetime-local"],
+div input[type="date"],
+div input[type="month"],
+div input[type="time"],
+div input[type="week"],
+div input[type="number"],
+div input[type="email"],
+div input[type="url"],
+div input[type="search"],
+div input[type="tel"],
+div input[type="color"],
+div .uneditable-input,
+div.ui-tabs .ui-tabs-nav li.ui-tabs-active,
+div.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover,
+div.ui-tabs .ui-tabs-nav li.ui-tabs-active:hover,
+div.ui-tabs .ui-tabs-nav li.ui-state-hover,
+div.ui-tabs .ui-tabs-nav li:hover,
+div.pinned-discussions-v2__wrapper,
+div.unpinned-discussions-v2__wrapper,
+div.closed-for-comments-discussions-v2__wrapper,
+span.fdyuz_bGBk,
+span.fQfxa_caGd,
+span.fQfxa_dqAF.fQfxa_buuG,
+div .eHiXd_bXiG,
+div a.eHiXd_bXiG,
+div button.eHiXd_bXiG,
+div button.eHiXd_bXiG[type="button"],
+div button.eHiXd_bXiG[type="reset"],
+div button.eHiXd_bXiG[type="submit"],
+div.toolbarView .headerBar,
+article.topic .entry-content,
+article.discussion_entry,
+ul.discussion-entries .entry,
+div.ac-input-box,
+div.ac-result-container,
+div.fc th,
+div.fc td,
+div#calendar-app .fc-agendaWeek-view .fc-day-grid .fc-today,
+div#calendar-drag-and-drop-container .fc-agendaWeek-view .fc-day-grid .fc-today,
+div#minical,
+div#minical .fc-widget-content,
+span.cAqHo_eAjd {
+  border: 1px solid #4c4c4c;
+  color: #ffffff;
+}
+
+div.calendar .fc-row .fc-content-skeleton td,
+div.calendar .fc-row .fc-helper-skeleton td,
+div#calendar-drag-and-drop-container .fc-row .fc-content-skeleton td,
+div#calendar-drag-and-drop-container
+  .fc-row
+  .fc-helper-skeleton
+  td
+  div#calendar-app
+  .fc-month-view
+  .fc-widget-header,
+div.fc-unthemed th,
+div.fc-unthemed td,
+div.fc-unthemed thead,
+div.fc-unthemed tbody,
+div.fc-unthemed .fc-divider,
+div.fc-unthemed .fc-row,
+div.fc-unthemed .fc-popover,
+span.fOyUs_dsNY,
+span.fOyUs_tIxX,
+div.ofhgV_eLeB:not([aria-selected]):not([aria-disabled]):hover,
+div.ofhgV_eLeB[aria-selected],
+div.dpCPB_caGd {
+  border-color: #4c4c4c;
+}
+
+div#calendar-drag-and-drop-container .fc-month-view .fc-widget-header {
+  border-left: 1px solid #4c4c4c;
+  border-right: 1px solid #4c4c4c;
+}
+
+ul.pill {
+  box-shadow: none;
+  border-radius: 4px;
+}
+
+div.ic-app-nav-toggle-and-crumbs .Button,
+div.header-bar,
+span.fvvQs_bGBk,
+span.eHiXd_caGd,
+button.fQfxa_bGBk:hover .fQfxa_dqAF.fQfxa_buuG,
+span.fQfxa_dqAF.fQfxa_buuG,
+span.fQfxa_fKcQ .fQfxa_biBD,
+.sJGfW_bGBk .sJGfW_dnnz,
+span.DashboardCardMenu__MovementItem,
+span.enRcg_bGBk.enRcg_doqw {
+  background-color: transparent;
+}
+
+span.fvvQs_bGBk {
+  backdrop-filter: blur(4px);
+}
+
+div.item-group-condensed .ig-header,
+li.item-group-condensed .ig-header,
+div.item-group-condensed .ig-row,
+ul.ig-list .ig-row,
+table.ic-Table th,
+table.ic-Table td,
+div.cDMBL_bGBk,
+div.message-list .messages > li,
+div.agenda-day,
+div#minical .fc-toolbar,
+aside#right-side h2,
+aside#right-side .h2,
+div.ofhgV_eLeB[aria-selected] {
+  border-bottom: 1px solid #4c4c4c;
+}
+
+div.ic-item-row,
+div.dNoYT_bGBk,
+ul.discussion-entries .entry .entry,
+div hr {
+  border-top: 1px solid #4c4c4c;
+  box-shadow: none;
+}
+
+div.list-view a.active {
+  color: var(--ic-link-color-darkened-10);
+  border-left: 1px solid var(--ic-link-color-darkened-10);
+}
+
+div.item-group-condensed .ig-header:hover,
+li.item-group-condensed .ig-header:hover,
+div.item-group-condensed .ig-row:hover,
+a.btn:hover,
+button.btn:hover,
+button.Button:hover,
+button.ui-button.ui-state-disabled:hover,
+button.ui-button.ui-state-focus:hover,
+button.ui-button.ui-state-hover:hover,
+button.ui-button:hover,
+table.ic-Table.ic-Table--hover-row tbody tr:hover,
+table.ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-neutral:hover,
+table.ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-success:hover,
+table.ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-alert:hover,
+table.ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-danger:hover,
+ul.ig-list .ig-row:hover,
+div.fNHEA_cjSw.fNHEA_ksNK .fNHEA_cSXm:hover,
+div select.ic-Input:hover,
+div textarea.ic-Input:hover,
+div input[type="text"].ic-Input:hover,
+div input[type="password"].ic-Input:hover,
+div input[type="datetime"].ic-Input:hover,
+div input[type="datetime-local"].ic-Input:hover,
+div input[type="date"].ic-Input:hover,
+div input[type="month"].ic-Input:hover,
+div input[type="time"].ic-Input:hover,
+div input[type="week"].ic-Input:hover,
+div input[type="number"].ic-Input:hover,
+div input[type="email"].ic-Input:hover,
+div input[type="url"].ic-Input:hover,
+div input[type="search"].ic-Input:hover,
+div input[type="tel"].ic-Input:hover,
+div input[type="color"].ic-Input:hover,
+div .uneditable-input.ic-Input:hover,
+div textarea:hover,
+div input[type="text"]:hover,
+div input[type="password"]:hover,
+div input[type="datetime"]:hover,
+div input[type="datetime-local"]:hover,
+div input[type="date"]:hover,
+div input[type="month"]:hover,
+div input[type="time"]:hover,
+div input[type="week"]:hover,
+div input[type="number"]:hover,
+div input[type="email"]:hover,
+div input[type="url"]:hover,
+div input[type="search"]:hover,
+div input[type="tel"]:hover,
+div input[type="color"]:hover,
+div .uneditable-input:hover,
+div.ui-tabs .ui-tabs-nav li.ui-tabs-active a:hover,
+div.ui-tabs .ui-tabs-nav li.ui-state-hover,
+div.ui-tabs .ui-tabs-nav li:hover,
+span.ic-unread-badge__total-count,
+div .eHiXd_bXiG:hover,
+div a.eHiXd_bXiG:hover,
+div button.eHiXd_bXiG:hover,
+div button.eHiXd_bXiG[type="button"]:hover,
+div button.eHiXd_bXiG[type="reset"]:hover,
+div button.eHiXd_bXiG[type="submit"]:hover,
+button.fOyUs_fKyb:hover,
+button.ic-app-header__menu-list-link:hover,
+button.ic-app-header__menu-list-link:focus,
+div.message-list .messages > li.active,
+div.ac-input-box:hover,
+div#calendar-app .fc-agendaWeek-view .fc-event,
+div#calendar-drag-and-drop-container .fc-agendaWeek-view .fc-event,
+ul#context-list .context_list_context:hover,
+a.Button:hover,
+button.Button:hover,
+span.sJGfW_bGBk.sJGfW_cSen,
+span.sJGfW_bGBk:active,
+span.sJGfW_bGBk:focus,
+span.sJGfW_bGBk:hover,
+span.sJGfW_bGBk[aria-expanded="true"],
+div.ofhgV_eLeB:not([aria-selected]):not([aria-disabled]):hover,
+div.ofhgV_eLeB[aria-selected],
+div.ofhgV_eLeB:hover,
+button.sJGfW_bGBk:hover:hover {
+  background-color: #4d4d4d;
+  color: #ffffff;
+}
+
+div.message-list .messages > li:hover {
+  box-shadow: inset -4px 0px 0px #4d4d4d;
+}
+
+aside#right-side .todo-list-header,
+div.item-group-condensed .ig-header,
+li.item-group-condensed .ig-header {
+  margin: 0;
+}
+
+div.ic-DashboardCard,
+div.ic-DashboardCard__header_content,
+#nav-tray-portal span,
+body > span span,
+#breadcrumbs,
+li.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active
+  .ic-app-header__menu-list-link,
+div[role="dialog"],
+nav#mobileContextNavContainer,
+header#mobile-header,
+div.item-group-container,
+div.item-group-condensed .ig-header,
+li.item-group-condensed .ig-header,
+div.item-group-condensed .ig-row,
+a.btn,
+button.btn,
+button.Button,
+a.Button,
+button.ui-button.ui-state-disabled,
+button.ui-button.ui-state-focus,
+button.ui-button.ui-state-hover,
+button.ui-button,
+div.fNHEA_cjSw.fNHEA_ksNK .fNHEA_cSXm,
+div select,
+span.qBMHb_cSXm,
+ul.ig-list .ig-row,
+ul.ig-list .ig-row .ig-empty-msg,
+div.ui-tabs .ui-tabs-panel,
+table.ic-Table.ic-Table--striped tbody tr:nth-child(odd),
+div select.ic-Input,
+div textarea.ic-Input,
+div input[type="text"].ic-Input,
+div.toolbarView .headerBar,
+article.topic .entry-content,
+article.discussion_ent,
+.fOyUs_fZwI,
+.fOyUs_kXoPry,
+div.message-list .messages > li,
+div.message-list .collectionViewItems,
+div.ac-result-container,
+div.fc-unthemed th,
+div.fc-unthemed td,
+div.fc-unthemed thead,
+div.fc-unthemed tbody,
+div.fc-unthemed .fc-divider,
+div.fc-unthemed .fc-row,
+div.fc-unthemed .fc-popover,
+div#calendar-app .fc-month-view .fc-today,
+div#calendar-drag-and-drop-container .fc-month-view .fc-today,
+div#calendar-app .fc-event,
+div#calendar-drag-and-drop-container .fc-event,
+div.agenda-wrapper,
+a.fc-event .fc-bg,
+div#minical,
+div#context-list-holder,
+div#undated-events,
+ul.cAqHo_eAjd,
+span.eoNrR_blJt,
+span.sJGfW_bGBk,
+span.cAqHo_eAjd,
+span.fOyUs_fZwI,
+span.fOyUs_kXoP,
+div.dpCPB_caGd,
+div.ColorPicker__Container,
+button.sJGfW_bGBk {
+  background-color: #373737;
+  color: #ffffff;
+}
+
+.message-list .collectionViewItems {
+  margin-bottom: 0;
+}
+
+div input[type="password"].ic-Input,
+div input[type="datetime"].ic-Input,
+div input[type="datetime-local"].ic-Input,
+div input[type="date"].ic-Input,
+div input[type="month"].ic-Input,
+div input[type="time"].ic-Input,
+div input[type="week"].ic-Input,
+div input[type="number"].ic-Input,
+div input[type="email"].ic-Input,
+div input[type="url"].ic-Input,
+div input[type="search"].ic-Input,
+div input[type="tel"].ic-Input,
+div input[type="color"].ic-Input,
+div .uneditable-input.ic-Input,
+div textarea,
+div input[type="text"],
+div input[type="password"],
+div input[type="datetime"],
+div input[type="datetime-local"],
+div input[type="date"],
+div input[type="month"],
+div input[type="time"],
+div input[type="week"],
+div input[type="number"],
+div input[type="email"],
+div input[type="url"],
+div input[type="search"],
+div input[type="tel"],
+div input[type="color"],
+div .uneditable-input,
+div.ui-tabs .ui-tabs-nav li.ui-tabs-active a,
+div.ui-tabs .ui-tabs-nav li.ui-tabs-active,
+div.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover,
+div.ui-tabs .ui-tabs-nav li.ui-tabs-active:hover,
+div.pinned-discussions-v2__wrapper,
+div.unpinned-discussions-v2__wrapper,
+span.MlJlv_cjSw,
+div.ic-discussion-row,
+div.closed-for-comments-discussions-v2__wrapper,
+div.discussions-v2__container-image,
+span.fdyuz_bGBk,
+div.cDMBL_bGBk,
+div.dNoYT_bGBk,
+div .eHiXd_bXiG,
+div a.eHiXd_bXiG,
+div button.eHiXd_bXiG,
+div button.eHiXd_bXiG[type="button"],
+div button.eHiXd_bXiG[type="reset"],
+div button.eHiXd_bXiG[type="submit"],
+div.ac-input-box,
+div.calendar .fc-head thead .fc-widget-header,
+div#calendar-drag-and-drop-container .fc-head thead .fc-widget-header,
+div#calendar-app .fc-view-container,
+div#calendar-drag-and-drop-container .fc-view-container,
+div#minical .fc-widget-content {
+  background-color: #373737;
+  color: #ffffff;
+}
+
+nav.ic-DashboardCard__action-container svg:hover,
+div.ic-DashboardCard__header-subtitle,
+div.ic-DashboardCard__header-term,
+li.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active
+  .menu-item-icon-container,
+html
+  body.primary-nav-expanded
+  .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active
+  .menu-item__text,
+div.ig-header .name,
+div.ig-list .ig-row a.ig-title,
+table#grades_summary th.title .context,
+ul.ig-list .ig-row a.ig-title,
+div.qBMHb_cwos,
+div input[type].qBMHb_cwos,
+span.fCrpb_egrg,
+li.ctrLD_bGBk,
+span.fCrpb_egrg.fCrpb_fVUh,
+div.message-list .date,
+div.message-list .author,
+div.message-list .subject,
+div.message-list .summary,
+div.message-list .star-btn,
+a#create_new_event_link,
+div.fc-agendaWeek-view
+  .fc-event-container
+  a[class*="group_"]
+  .fc-content
+  .fc-time,
+div#calendar-app .fc-agendaWeek-view .fc-widget-header,
+div#calendar-app .fc-agendaWeek-view .fc-axis,
+div#calendar-drag-and-drop-container .fc-agendaWeek-view .fc-widget-header,
+div#calendar-drag-and-drop-container .fc-agendaWeek-view .fc-axis,
+button.fc-state-default,
+div#minical .fc-toolbar h2,
+div#minical .fc-toolbar .h2,
+nav#breadcrumbs > ul > li + li:last-of-type a,
+span.sJGfW_blJt,
+div.ofhgV_eLeB {
+  color: #ffffff;
+}
+
+html
+  body.primary-nav-expanded
+  .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active
+  .menu-item__text,
+div.ic-DashboardCard__header-subtitle,
+div.ic-DashboardCard__header-term,
+div label.fCrpb_egrg,
+li.ctrLD_bGBk,
+nav#breadcrumbs > ul > li + li:last-of-type a,
+button.accessible-toggler,
+button.accessible-toggler:hover,
+span.fNHEA_blJt,
+div.ui-tabs .ui-tabs-nav li.ui-state-hover a,
+div.ui-tabs .ui-tabs-nav li:hover a,
+button.MlJlv_cjSw,
+button.MlJlv_cjSw:active,
+button.MlJlv_cjSw:focus,
+button.MlJlv_cjSw:hover,
+svg.esvoZ_bGBk:hover,
+li.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active
+  .ic-icon-svg,
+span.yyQPt_cjfS .yyQPt_blJt,
+span.yyQPt_blJt,
+i.standalone-icon:before:hover,
+li.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active
+  .menu-item-icon-container {
+  color: #ffffff;
+}
+
+li.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active
+  .ic-icon-svg {
+  fill: #ffffff;
+}
+
+div.header-bar {
+  padding: 0;
+}
+
+div.ic-DashboardCard {
+  box-shadow: none;
+}
+
+div.ig-header .name {
+  text-shadow: none;
+}
+
+nav.ic-DashboardCard__action-container svg,
+svg.esvoZ_bGBk,
+i.standalone-icon:before {
+  color: #bfbfbf;
+}
+
+a.ic-app-header__logomark {
+  filter: grayscale(100%) brightness(0.9);
+}
+
+footer#footer {
+  display: none;
+}
+
+div.ic-app-nav-toggle-and-crumbs {
+  margin: 0;
+}
+
+div.ic-Dashboard-header,
+html body.dashboard-is-planner .ic-Dashboard-header,
+div.ic-app-nav-toggle-and-crumbs {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 84px;
+  min-height: 4.5rem;
+  z-index: 11;
+}
+
+div.ic-Layout-wrapper {
+  padding-top: 4.5rem;
+}
+
+.ic-Dashboard-header__title {
+  padding-left: 24px;
+}
+
+@media only screen and (min-width: 992px) {
+  div.ic-Dashboard-header__layout {
+    padding-right: 20px;
+  }
+
+  html body:not(.course-menu-expanded) .ic-sidebar-logo {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  div.ic-Dashboard-header,
+  html body.dashboard-is-planner .ic-Dashboard-header,
+  div.ic-app-nav-toggle-and-crumbs {
+    left: 0;
+  }
+
+  .ic-Dashboard-header__title .hidden-phone {
+    display: block !important;
+  }
+
+  header#mobile-header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    min-height: 4.5rem;
+  }
+
+  nav#mobileContextNavContainer {
+    position: fixed;
+    right: 0;
+    top: 90px;
+    left: 0;
+    z-index: 100;
+  }
+
+  div.ic-Layout-wrapper {
+    padding-top: 90px;
+  }
+}

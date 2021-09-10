@@ -2,7 +2,7 @@
     "name": "UofT Dark Mode",
     "version": "0.0.1",
     "manifest_version": 3,
-    "description": "Restyles acorn to dark mode.",
+    "description": "Restyles acorn and quercus to dark mode.",
     "action": {
         "default_popup": "popup.html",
         "default_title": "Save timetable"
@@ -13,10 +13,18 @@
                 "https://acorn.utoronto.ca/sws/*"
             ],
             "css": [
-                "styles.css"
+                "acorn/styles.css"
             ],
             "js": [
-                "html2canvas.min.js"
+                "acorn/html2canvas.min.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://q.utoronto.ca/*"
+            ],
+            "css": [
+                "quercus/styles.css"
             ]
         }
     ],
@@ -29,7 +37,7 @@
     "web_accessible_resources": [
         {
             "resources": [
-                "styles.css"
+                "acorn/styles.css"
             ],
             "matches": [
                 "https://acorn.utoronto.ca/*"

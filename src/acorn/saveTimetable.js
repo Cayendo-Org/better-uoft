@@ -2,7 +2,7 @@
   let link = document.createElement("link");
   link.type = "text/css";
   link.rel = "stylesheet";
-  link.href = chrome.runtime.getURL("styles.css");
+  link.href = chrome.runtime.getURL("acorn/styles.css");
   document.getElementsByTagName("head")[0].appendChild(link);
 
   html2canvas(document.querySelector("#drawingArea")).then((canvas) => {

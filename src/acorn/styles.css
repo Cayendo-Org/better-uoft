@@ -10,7 +10,7 @@ body,
 div#body-container,
 div table.timetableSchedule tr td.emptySlot {
   background-color: #181818;
-  color: #fff;
+  color: #ffffff;
 }
 
 div table.timetableSchedule tr .timeOfDay,
@@ -32,7 +32,7 @@ table.table-bordered > thead > tr > td,
 table.table-bordered > thead > tr > th,
 div.calendar .date-calendar .day-container {
   border: 1px solid #4c4c4c;
-  color: #fff;
+  color: #ffffff;
 }
 
 div.notifications-listing-container,
@@ -153,9 +153,10 @@ div.notification-activity-filter-div,
 thead.notification-activity-header,
 td.notification-activity-read,
 div.notification-activity-container .table tbody tr,
-div.calendar .date-calendar .day-container {
+div.calendar .date-calendar .day-container,
+div#acorn-nav-side .nav-section-container a:hover {
   background-color: #373737;
-  color: #fff;
+  color: #ffffff;
 }
 
 div.acorn .enrolment-code,
@@ -188,7 +189,7 @@ div.acorn .information,
 span.notification-activity-tab-title,
 span.notification-activity-filter-personal,
 div#acorn-footer .uoft-footer {
-  color: #fff;
+  color: #ffffff;
 }
 
 div#acorn-footer ul li a,
@@ -213,7 +214,7 @@ div.panel {
 
 div#typeahead-search .ut-typeahead-container input.loadingIcon {
   background-image: url(../images/loading.460bfa98.gif) right center
-    no-repeat#fff;
+    no-repeat#ffffff;
   background-color: #373737;
 }
 
@@ -245,7 +246,7 @@ div table.timetableSchedule tr .timeOfDay {
 }
 
 div#acorn-footer .acorn-logo {
-  display: none;
+  filter: grayscale(100%) invert(100%) brightness(0.9);
 }
 
 div.finance-info .balance .debt {
@@ -255,8 +256,4 @@ div.finance-info .balance .debt {
 div.dashboard-reg-status .registered,
 div.acorn .finances {
   color: #81c784;
-}
-
-div#acorn-nav-side .nav-section-container a:hover {
-  background-color: #383838;
 }
