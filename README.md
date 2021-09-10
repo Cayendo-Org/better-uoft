@@ -1,22 +1,35 @@
-# uoft-dark-mode
+# UofT Dark Mode
 
-Restyles acorn and quercus to dark mode.
+## _Whole Lotta Dark Mode_
 
-## Getting Started
+UofT Dark Mode is a chrome extension that adds dark mode to UofT websites.
 
----
+## Websites
 
-Clone the repo
+UofT Dark Mode currently restyles the following websites:
 
+| Websites | Link |
+| ------ | ------ |
+| Acorn | [https://acorn.utoronto.ca/sws/*][PlDb] |
+| Quercus | [https://q.utoronto.ca/*][PlGh] |
+| Weblogin | [https://idpz.utorauth.utoronto.ca/*][PlGd] |
+
+## Local Development
+
+0. Clone the repo:
 ```
 git clone https://github.com/jumf2222/uoft-dark-mode.git
 ```
 
-## Installation
+1. Go to extensions in Chrome
 
----
-
-1. Goto extensions in Chome
 2. Turn on developer mode
-3. Click load unpacked
+
+3. Click _load unpacked_
+
 4. Locate the repository's src folder
+
+5. Start making changes!
+
+
+**Feel free to contribute to the repo or use the project in anyway you see fit**
