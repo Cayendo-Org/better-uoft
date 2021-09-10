@@ -33,3 +33,9 @@ git clone https://github.com/jumf2222/uoft-dark-mode.git
 
 
 **Feel free to contribute to the repo or use the project in anyway you see fit**
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+   [PlDb]: <https://acorn.utoronto.ca/sws/>
+   [PlGh]: <https://q.utoronto.ca/>
+   [PlGd]: <https://idpz.utorauth.utoronto.ca/>
