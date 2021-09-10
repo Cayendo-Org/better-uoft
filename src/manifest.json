@@ -26,6 +26,15 @@
             "css": [
                 "quercus/styles.css"
             ]
+        },
+        {
+            "matches": [
+                "https://idpz.utorauth.utoronto.ca/*",
+                "https://weblogin.utoronto.ca/*"
+            ],
+            "css": [
+                "weblogin/styles.css"
+            ]
         }
     ],
     "permissions": [

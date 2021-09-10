@@ -1,0 +1,9 @@
+html,
+html body {
+  background-color: #181818;
+  color: #ffffff;
+}
+
+object.site-logo {
+  filter: grayscale(100%) invert(100%) brightness(0.9);
+}

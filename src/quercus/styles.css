@@ -532,6 +532,10 @@ div.ic-app-nav-toggle-and-crumbs {
   z-index: 11;
 }
 
+div#content {
+  --ic-brand-font-color-dark: #ffffff;
+}
+
 div.ic-Layout-wrapper {
   padding-top: 4.5rem;
 }
