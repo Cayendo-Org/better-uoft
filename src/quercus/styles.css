@@ -540,6 +540,10 @@ div.ic-Layout-wrapper {
   padding-left: 24px;
 }
 
+button#primaryNavToggle {
+  display: none;
+}
+
 @media only screen and (min-width: 992px) {
   div.ic-Dashboard-header__layout {
     padding-right: 20px;
