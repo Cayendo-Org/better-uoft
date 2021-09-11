@@ -14,8 +14,7 @@
                 "https://acorn.utoronto.ca/sws/*"
             ],
             "css": [
-                "acorn/styles.css",
-                "styles.css"
+                "acorn/styles.css"
             ],
             "js": [
                 "acorn/html2canvas.min.js"
@@ -26,8 +25,7 @@
                 "https://q.utoronto.ca/*"
             ],
             "css": [
-                "quercus/styles.css",
-                "styles.css"
+                "quercus/styles.css"
             ]
         },
         {
@@ -41,7 +39,6 @@
         }
     ],
     "permissions": [
-        "storage",
         "activeTab",
         "tabs"
     ]
