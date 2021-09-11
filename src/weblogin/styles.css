@@ -8,7 +8,7 @@
 }
 
 .uoft-dark-mode body > header > div > div:nth-child(1) > div > a {
-  background: url(https://jumf2222.github.io/uoft-dark-mode/uoft_logo.svg)
+  background: url(https://cayendo-org.github.io/uoft-dark-mode/uoft_logo.svg)
     no-repeat;
   border: 1px solid transparent;
 }
@@ -211,7 +211,7 @@ html.uoft-dark-mode body {
 
 .uoft-dark-mode #doc-protect > ul > li {
   color: #e3e3e3;
-  background: url(https://jumf2222.github.io/uoft-dark-mode/check_icon.svg)
+  background: url(https://cayendo-org.github.io/uoft-dark-mode/check_icon.svg)
     no-repeat;
 }
 
