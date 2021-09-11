@@ -7,7 +7,8 @@ body > header > div > div:nth-child(1) > div > a > object {
 }
 
 body > header > div > div:nth-child(1) > div > a {
-  background: url(https://jumf2222.github.io/uoft-dark-mode/uoft_logo.svg) no-repeat;
+  background: url(https://jumf2222.github.io/uoft-dark-mode/uoft_logo.svg)
+    no-repeat;
   border: 1px solid transparent;
 }
 
@@ -28,18 +29,32 @@ html body {
 body > div > div > div.col-md-4 > div.login-box {
   background: #282828;
   border-bottom: none;
-  border-radius: 6px ;
+  border-radius: 6px;
 }
 
 body > div > div > div.col-md-4 > div.login-box > section:nth-child(1) > p,
 body > div > div > div.col-md-4 > div.login-box > section:nth-child(2) > p {
-  color: #E3E3E3;
+  color: #e3e3e3;
   font-size: 13px;
 }
 
-body > div > div > div.col-md-4 > div.login-box > form > div:nth-child(3) > label,
-body > div > div > div.col-md-4 > div.login-box > form > div:nth-child(2) > label {
-  color: #E3E3E3;
+body
+  > div
+  > div
+  > div.col-md-4
+  > div.login-box
+  > form
+  > div:nth-child(3)
+  > label,
+body
+  > div
+  > div
+  > div.col-md-4
+  > div.login-box
+  > form
+  > div:nth-child(2)
+  > label {
+  color: #e3e3e3;
   font-weight: 500;
   font-size: 16px;
 }
@@ -54,7 +69,7 @@ body > div > div > div.col-md-4 > div.login-box > form > button,
 body > header > div > div:nth-child(2) > div {
   border-radius: 6px;
   background: transparent;
-  color: #E3E3E3;
+  color: #e3e3e3;
   text-transform: capitalize;
 }
 
@@ -62,7 +77,7 @@ body > header > div > div:nth-child(2) > div {
 body > div > div > div.col-md-4 > div.alert.alert-warning > a,
 #doc-login-problems > p > a,
 #doc-forgotten-password > p > a {
-  color: #69A9F5;
+  color: #69a9f5;
 }
 
 #doc-protect > ul > li:nth-child(3) > span {
@@ -129,24 +144,25 @@ body > div > div > div.col-md-4 > div.login-box > div > p:nth-child(3),
 #collapseHelp_UTORid > div > p,
 #collapseHelp3 > div > p,
 #collapseHelp_uSOURCE > div > p,
-#collapseHelp_ess > div > p, 
+#collapseHelp_ess > div > p,
 #collapseHelp_erdd > div > p,
 #collapseHelp_IC > div > p,
 #collapseHelp_JOINid > div > p,
 #collapseHelp_JOINid > div > ul {
-  color: #E3E3E3;
+  color: #e3e3e3;
 }
 
-#doc-protect > ul > li{
-  color: #E3E3E3;
-  background: url(https://jumf2222.github.io/uoft-dark-mode/check_icon.svg) no-repeat;
+#doc-protect > ul > li {
+  color: #e3e3e3;
+  background: url(https://jumf2222.github.io/uoft-dark-mode/check_icon.svg)
+    no-repeat;
 }
 
 #username:-webkit-autofill,
-#username:-webkit-autofill:hover, 
+#username:-webkit-autofill:hover,
 #username:-webkit-autofill:focus,
 #password:-webkit-autofill,
-#password:-webkit-autofill:hover, 
+#password:-webkit-autofill:hover,
 #password:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -154,18 +170,19 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #E3E3E3;
-  box-shadow: 0 0 0 2px rgba(39, 94, 254, .3);
+  -webkit-text-fill-color: #e3e3e3;
+  box-shadow: 0 0 0 2px rgba(39, 94, 254, 0.3);
   transition: background-color 5000s ease-in-out 0s;
 }
 
-#username, #password {
+#username,
+#password {
   box-sizing: border-box;
-  caret-color: #E3E3E3;
+  caret-color: #e3e3e3;
   background: rgba(0, 0, 0, 0.05);
   border: solid 1px #414141;
   border-radius: 4px;
-  color: #E3E3E3;
+  color: #e3e3e3;
   font-size: 14px;
   font-weight: 500;
   padding: 14px 20px;
@@ -174,22 +191,27 @@ select:-webkit-autofill:focus {
   transition: border 0.2s, box-shadow 0.2s;
 }
 
-#username:hover, #password:hover {
-  border: solid 1px #1A73E8;
+#username:hover,
+#password:hover {
+  border: solid 1px #1a73e8;
 }
 
-#username:focus, #username:focus-visible,
-#password:focus, #password:focus-visible {
+#username:focus,
+#username:focus-visible,
+#password:focus,
+#password:focus-visible {
   outline: none;
-  border: solid 1px #1A73E8;
-  box-shadow: 0 0 0 2px rgba(39, 94, 254, .3);
+  border: solid 1px #1a73e8;
+  box-shadow: 0 0 0 2px rgba(39, 94, 254, 0.3);
 }
 
-#username:invalid, #password:invalid {
+#username:invalid,
+#password:invalid {
   border: solid 1px rgb(232, 26, 26);
 }
 
-#username:invalid:focus, #password:invalid:focus {
+#username:invalid:focus,
+#password:invalid:focus {
   box-shadow: 0 0 0 2px rgba(232, 39, 39, 0.3);
 }
 
@@ -231,7 +253,7 @@ body > div > div > div.col-md-4 > div.login-box > form > button:hover,
 #collapse_UTORidLoginProblems > div > a:nth-child(7):hover,
 #collapse_UTORidForgottenPW > div > a:nth-child(5):hover,
 #collapse_UTORidForgottenPW > div > a:nth-child(6):hover,
-#collapse_UTORidForgottenPW > div > a:nth-child(7):hover  {
+#collapse_UTORidForgottenPW > div > a:nth-child(7):hover {
   cursor: pointer;
   background-color: rgb(13, 115, 236, 1);
 }
@@ -243,22 +265,31 @@ body > div > div > div.col-md-4 > div.login-box > form > button:hover,
 #collapse_UTORidLoginProblems > div > a:nth-child(7),
 #collapse_UTORidForgottenPW > div > a:nth-child(5),
 #collapse_UTORidForgottenPW > div > a:nth-child(6),
-#collapse_UTORidForgottenPW > div > a:nth-child(7)  {
+#collapse_UTORidForgottenPW > div > a:nth-child(7) {
   text-transform: capitalize;
   font-size: 13px;
 }
 
-body > div > div > div.col-md-4 > div.login-box > form > button:focus, body > div > div > div.col-md-4 > div.login-box > form > button:focus-visible,
-#doc-login-problems > a:focus, #doc-login-problems > a:focus-visible,
-#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a:focus, #collapse_PwReq_LoginProblems > div > p:nth-child(2) > a:focus-visible,
-#collapse_UTORidLoginProblems > div > a:nth-child(5):focus, #collapse_UTORidLoginProblems > div > a:nth-child(5):focus-visible,
-#collapse_UTORidLoginProblems > div > a:nth-child(6):focus, #collapse_UTORidLoginProblems > div > a:nth-child(6):focus-visible,
-#collapse_UTORidLoginProblems > div > a:nth-child(7):focus, #collapse_UTORidLoginProblems > div > a:nth-child(7):focus-visible,
-#collapse_UTORidForgottenPW > div > a:nth-child(5):focus, #collapse_UTORidForgottenPW > div > a:nth-child(5):focus-visible,
-#collapse_UTORidForgottenPW > div > a:nth-child(6):focus, #collapse_UTORidForgottenPW > div > a:nth-child(6):focus-visible,
-#collapse_UTORidForgottenPW > div > a:nth-child(7):focus, #collapse_UTORidForgottenPW > div > a:nth-child(7):focus-visible  {
-  border: solid 1px #1A73E8;
-  box-shadow: 0 0 0 2px rgba(39, 94, 254, .3);
+body > div > div > div.col-md-4 > div.login-box > form > button:focus,
+body > div > div > div.col-md-4 > div.login-box > form > button:focus-visible,
+#doc-login-problems > a:focus,
+#doc-login-problems > a:focus-visible,
+#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a:focus,
+#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a:focus-visible,
+#collapse_UTORidLoginProblems > div > a:nth-child(5):focus,
+#collapse_UTORidLoginProblems > div > a:nth-child(5):focus-visible,
+#collapse_UTORidLoginProblems > div > a:nth-child(6):focus,
+#collapse_UTORidLoginProblems > div > a:nth-child(6):focus-visible,
+#collapse_UTORidLoginProblems > div > a:nth-child(7):focus,
+#collapse_UTORidLoginProblems > div > a:nth-child(7):focus-visible,
+#collapse_UTORidForgottenPW > div > a:nth-child(5):focus,
+#collapse_UTORidForgottenPW > div > a:nth-child(5):focus-visible,
+#collapse_UTORidForgottenPW > div > a:nth-child(6):focus,
+#collapse_UTORidForgottenPW > div > a:nth-child(6):focus-visible,
+#collapse_UTORidForgottenPW > div > a:nth-child(7):focus,
+#collapse_UTORidForgottenPW > div > a:nth-child(7):focus-visible {
+  border: solid 1px #1a73e8;
+  box-shadow: 0 0 0 2px rgba(39, 94, 254, 0.3);
   background-color: rgb(13, 115, 236, 1);
   outline: none;
 }
@@ -269,7 +300,7 @@ body > div > div > div.col-md-4 > div.login-box > form > button:focus, body > di
 
 #login-with-partner > button {
   font-size: 16px;
-  color: #E3E3E3;
+  color: #e3e3e3;
   background-color: rgba(227, 227, 227, 0.05);
   padding: 10px 20px;
   border-radius: 4px;
@@ -278,12 +309,44 @@ body > div > div > div.col-md-4 > div.login-box > form > button:focus, body > di
   transition: background-color 0.3s, box-shadow 0.2s;
 }
 
-body > div > div > div.col-md-8 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li > a,
-body > div > div > div.col-md-8 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li.active > a,
-body > div > div > div.col-md-7 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li.active > a,
-body > div > div > div.col-md-7 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li> a {
+body
+  > div
+  > div
+  > div.col-md-8
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li
+  > a,
+body
+  > div
+  > div
+  > div.col-md-8
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li.active
+  > a,
+body
+  > div
+  > div
+  > div.col-md-7
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li.active
+  > a,
+body
+  > div
+  > div
+  > div.col-md-7
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li
+  > a {
   font-size: 13px;
-  color: #E3E3E3;
+  color: #e3e3e3;
   background-color: transparent;
   padding: 10px 20px;
   border-radius: 4px;
@@ -292,43 +355,97 @@ body > div > div > div.col-md-7 > div > div.col-md-3.col-sm-12.col-xs-12.weblogi
   transition: background-color 0.3s, box-shadow 0.2s;
 }
 
-#login-with-partner > button:hover, body > div > div > div.col-md-8 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li.active > a:hover,
-body > div > div > div.col-md-8 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li > a:hover,
-body > div > div > div.col-md-7 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li.active > a:hover,
-body > div > div > div.col-md-7 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li> a:hover {
+#login-with-partner > button:hover,
+body
+  > div
+  > div
+  > div.col-md-8
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li.active
+  > a:hover,
+body
+  > div
+  > div
+  > div.col-md-8
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li
+  > a:hover,
+body
+  > div
+  > div
+  > div.col-md-7
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li.active
+  > a:hover,
+body
+  > div
+  > div
+  > div.col-md-7
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li
+  > a:hover {
   cursor: pointer;
   background-color: rgba(227, 227, 227, 0.15);
 }
 
-#login-with-partner > button:focus, #login-with-partner > button:focus-visible, :focus, :focus-visible,
-body > div > div > div.col-md-8 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li > a:focus,
-body > div > div > div.col-md-8 > div > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav > ul > li > a:focus-visible {
-  border: solid 1px #1A73E8;
-  box-shadow: 0 0 0 2px rgba(39, 94, 254, .3);
+#login-with-partner > button:focus,
+#login-with-partner > button:focus-visible,
+:focus,
+:focus-visible,
+body
+  > div
+  > div
+  > div.col-md-8
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li
+  > a:focus,
+body
+  > div
+  > div
+  > div.col-md-8
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li
+  > a:focus-visible {
+  border: solid 1px #1a73e8;
+  box-shadow: 0 0 0 2px rgba(39, 94, 254, 0.3);
   outline: none !important;
 }
 
-body > div > div > div.col-md-4 > div.login-box > form > button:disabled, #login-with-partner > button:disabled {
+body > div > div > div.col-md-4 > div.login-box > form > button:disabled,
+#login-with-partner > button:disabled {
   color: rgb(44, 43, 60, 0.4);
   background-color: rgb(44, 43, 60, 0.03);
 }
 
-body > div > div > div.col-md-4 > div.login-box > form > button:disabled:hover, #login-with-partner > button:disabled:hover {
+body > div > div > div.col-md-4 > div.login-box > form > button:disabled:hover,
+#login-with-partner > button:disabled:hover {
   cursor: not-allowed;
   background-color: rgb(44, 43, 60, 0.03);
 }
 
 body > div > div > div.col-md-4 > div.alert.alert-warning {
-  color: #FFE2B7;
+  color: #ffe2b7;
   background-color: #191207;
-  border-color: #E89823;
+  border-color: #e89823;
   border-radius: 6px;
 }
 
 body > div > div > div.col-md-4 > div.alert.alert-danger {
-  color: #F4C7C7;
-  background-color: #160B0B;
-  border-color: #DD3D32;
+  color: #f4c7c7;
+  background-color: #160b0b;
+  border-color: #dd3d32;
   border-radius: 6px;
 }
 
@@ -336,14 +453,23 @@ body > footer > div > div {
   border-top: 1px solid #414141;
 }
 
-body > footer > div > div > div > ul > li:nth-child(1), body > footer > div > div > div > ul > li:nth-child(4),
-body > footer > div > div > div > ul > li:nth-child(3)
- {
+body > footer > div > div > div > ul > li:nth-child(1),
+body > footer > div > div > div > ul > li:nth-child(4),
+body > footer > div > div > div > ul > li:nth-child(3) {
   color: #898989;
 }
 
-body > footer > div > div > div > ul > li:nth-child(2) > a, body > footer > div > div > div > ul > li:nth-child(3) > a,
-body > div > div > div.col-md-4 > div.login-box > section:nth-child(2) > p > a:nth-child(1), #pwreq-link,
+body > footer > div > div > div > ul > li:nth-child(2) > a,
+body > footer > div > div > div > ul > li:nth-child(3) > a,
+body
+  > div
+  > div
+  > div.col-md-4
+  > div.login-box
+  > section:nth-child(2)
+  > p
+  > a:nth-child(1),
+#pwreq-link,
 #collapse_UTORidLoginProblems > div > p > a,
 #collapse_UTORidLoginProblems > div > a:nth-child(9),
 #collapse_JOINid_LoginProblems > div > p > a,
@@ -364,7 +490,7 @@ body > footer > div > div > div > ul > li:nth-child(1) > a,
 #collapseHelp_JOINid > div > ul > li > a,
 #collapseHelp_JOINid > div > p:nth-child(3) > a,
 #doc-protect > ul > li:nth-child(1) > a {
-  color: #69A9F5;
+  color: #69a9f5;
 }
 
 div.panel-heading {
@@ -377,7 +503,7 @@ div.panel-heading {
 #accordionLoginProblems > div,
 #accordionForgottenPW > div,
 #collapse_UTORidForgottenPW > div::before,
-#accordionHelp > div{
+#accordionHelp > div {
   border: none !important;
   border-radius: 4px;
   background-color: #121212;
