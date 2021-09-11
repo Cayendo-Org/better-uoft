@@ -15,9 +15,6 @@
             ],
             "css": [
                 "acorn/styles.css"
-            ],
-            "js": [
-                "acorn/html2canvas.min.js"
             ]
         },
         {
