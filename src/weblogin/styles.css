@@ -2,7 +2,8 @@
   font-family: Arial, Helvetica, sans-serif !important;
 }
 
-body > header > div > div:nth-child(1) > div > a > object {
+body > header > div > div:nth-child(1) > div > a > object,
+body > div > div > div.col-md-5 > div.login-box-bar.clearfix {
   display: none;
 }
 
@@ -26,7 +27,8 @@ html body {
   color: #ffffff;
 }
 
-body > div > div > div.col-md-4 > div.login-box {
+body > div > div > div.col-md-4 > div.login-box,
+body > div > div > div.col-md-5 > div.login-box {
   background: #282828;
   border-bottom: none;
   border-radius: 6px;
@@ -148,7 +150,10 @@ body > div > div > div.col-md-4 > div.login-box > div > p:nth-child(3),
 #collapseHelp_erdd > div > p,
 #collapseHelp_IC > div > p,
 #collapseHelp_JOINid > div > p,
-#collapseHelp_JOINid > div > ul {
+#collapseHelp_JOINid > div > ul,
+body > div > div > div.col-md-5 > div.login-box > p,
+#idpSelectIdPEntryTile > form > label > div,
+#idpSelectIdPListTile > form > label > div {
   color: #e3e3e3;
 }
 
@@ -489,7 +494,9 @@ body > footer > div > div > div > ul > li:nth-child(1) > a,
 #collapseHelp_IC > div > p > a,
 #collapseHelp_JOINid > div > ul > li > a,
 #collapseHelp_JOINid > div > p:nth-child(3) > a,
-#doc-protect > ul > li:nth-child(1) > a {
+#doc-protect > ul > li:nth-child(1) > a,
+#idpSelectIdPEntryTile > a,
+#idpSelectIdPListTile > a {
   color: #69a9f5;
 }
 
@@ -535,4 +542,12 @@ div.panel-heading {
 #accordionForgottenPW > div > div.panel-heading > h4 > a::before,
 #accordionHelp > div > div.panel-heading > h4 > a::before {
   color: #fff !important;
+}
+
+#idpSelectIdPSelector {
+  background: transparent !important;
+  border: transparent !important;
+  padding: 0 !important;
+  color: #fff !important;
+  width: 100% !important;
 }
