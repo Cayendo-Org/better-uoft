@@ -17,3 +17,9 @@ chrome.browserAction.onClicked.addListener(() => {
     chrome.storage.sync.set({ on: !result.on });
   });
 });
+
+chrome.runtime.onInstalled.addListener(function (details) {
+  if (details.reason == "install") {
+    chrome.storage.sync.set({ on: true });
+  }
+});
