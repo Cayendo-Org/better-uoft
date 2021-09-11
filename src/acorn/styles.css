@@ -1,259 +1,353 @@
-div table.timetableSchedule tr .timeOfDay,
-div table.timetableSchedule tr .dayOfWeek,
-div#acorn-nav-side-parent,
-nav#acorn-nav-top {
+.uoft-dark-mode div table.timetableSchedule tr .timeOfDay,
+.uoft-dark-mode div table.timetableSchedule tr .dayOfWeek,
+.uoft-dark-mode div#acorn-nav-side-parent,
+.uoft-dark-mode nav#acorn-nav-top {
   background-color: #212121;
 }
 
-html,
-body,
-div#body-container,
-div table.timetableSchedule tr td.emptySlot {
+html.uoft-dark-mode,
+.uoft-dark-mode body,
+.uoft-dark-mode div#body-container,
+.uoft-dark-mode div table.timetableSchedule tr td.emptySlot {
   background-color: #181818;
   color: #ffffff;
 }
 
-div table.timetableSchedule tr .timeOfDay,
-div table.timetableSchedule tr .dayOfWeek,
-div table.timetableSchedule tr td,
-div.acorn-card,
-div#typeahead-search .ut-typeahead-container input,
-div#typeahead-search .ut-typeahead-results-list ul,
-div#typeahead-search .ut-typeahead-results-container .view-more,
-div#typeahead-search .ut-typeahead-results-container .no-results,
-div#typeahead-search .ut-typeahead-results-container .too-many-results,
-div.osap-fee-deferral .section,
-table.table-bordered,
-table.table-bordered > tbody > tr > td,
-table.table-bordered > tbody > tr > th,
-table.table-bordered > tfoot > tr > td,
-table.table-bordered > tfoot > tr > th,
-table.table-bordered > thead > tr > td,
-table.table-bordered > thead > tr > th,
-div.calendar .date-calendar .day-container {
+.uoft-dark-mode div table.timetableSchedule tr .timeOfDay,
+.uoft-dark-mode div table.timetableSchedule tr .dayOfWeek,
+.uoft-dark-mode div table.timetableSchedule tr td,
+.uoft-dark-mode div.acorn-card,
+.uoft-dark-mode div#typeahead-search .ut-typeahead-container input,
+.uoft-dark-mode div#typeahead-search .ut-typeahead-results-list ul,
+.uoft-dark-mode div#typeahead-search .ut-typeahead-results-container .view-more,
+.uoft-dark-mode
+  div#typeahead-search
+  .ut-typeahead-results-container
+  .no-results,
+.uoft-dark-mode
+  div#typeahead-search
+  .ut-typeahead-results-container
+  .too-many-results,
+.uoft-dark-mode div.osap-fee-deferral .section,
+.uoft-dark-mode table.table-bordered,
+.uoft-dark-mode table.table-bordered > tbody > tr > td,
+.uoft-dark-mode table.table-bordered > tbody > tr > th,
+.uoft-dark-mode table.table-bordered > tfoot > tr > td,
+.uoft-dark-mode table.table-bordered > tfoot > tr > th,
+.uoft-dark-mode table.table-bordered > thead > tr > td,
+.uoft-dark-mode table.table-bordered > thead > tr > th,
+.uoft-dark-mode div.calendar .date-calendar .day-container {
   border: 1px solid #4c4c4c;
   color: #ffffff;
 }
 
-div.notifications-listing-container,
-div.acorn-card-header,
-div.acorn-card-footer,
-div.courseInfo,
-div.awards-container .cards-wrapper,
-div.notification-activity-container {
+.uoft-dark-mode div.notifications-listing-container,
+.uoft-dark-mode div.acorn-card-header,
+.uoft-dark-mode div.acorn-card-footer,
+.uoft-dark-mode div.courseInfo,
+.uoft-dark-mode div.awards-container .cards-wrapper,
+.uoft-dark-mode div.notification-activity-container {
   background-color: transparent;
 }
 
-div.calendar .todays-events .event,
-div.border-top-skip-first:not(:first-child),
-div.acorn-card-footer,
-div#acorn-footer .border,
-div#acorn-footer .border:before,
-div.acorn .currentlyEnrolledBox .courseDetailsBox .courseDetails td,
-div#program-enrolment-app .subject_pos_contents .program_info_details table td,
-div.awards-container .acorn-table tr:last-child td,
-table.table > tbody > tr > td,
-table.table > tbody > tr > th,
-table.table > tfoot > tr > td,
-table.table > tfoot > tr > th,
-table.table > thead > tr > td,
-table.table > thead > tr > th,
-div.acorn .borderTopDashed {
+.uoft-dark-mode div.calendar .todays-events .event,
+.uoft-dark-mode div.border-top-skip-first:not(:first-child),
+.uoft-dark-mode div.acorn-card-footer,
+.uoft-dark-mode div#acorn-footer .border,
+.uoft-dark-mode div#acorn-footer .border:before,
+.uoft-dark-mode
+  div.acorn
+  .currentlyEnrolledBox
+  .courseDetailsBox
+  .courseDetails
+  td,
+.uoft-dark-mode
+  div#program-enrolment-app
+  .subject_pos_contents
+  .program_info_details
+  table
+  td,
+.uoft-dark-mode div.awards-container .acorn-table tr:last-child td,
+.uoft-dark-mode table.table > tbody > tr > td,
+.uoft-dark-mode table.table > tbody > tr > th,
+.uoft-dark-mode table.table > tfoot > tr > td,
+.uoft-dark-mode table.table > tfoot > tr > th,
+.uoft-dark-mode table.table > thead > tr > td,
+.uoft-dark-mode table.table > thead > tr > th,
+.uoft-dark-mode div.acorn .borderTopDashed {
   border-top: 1px solid #4c4c4c;
 }
 
-div.acorn-card-header,
-div.acorn .currentlyEnrolledBox .courseDetailsBox .courseDetails thead.header,
-div.address.acorn-classic.page-container #address tbody tr,
-div.contact.acorn-classic.page-container #contact tbody tr,
-div.phone.acorn-classic.page-container #phone tbody tr,
-div.address.acorn-classic.page-container #address thead tr,
-div.contact.acorn-classic.page-container #contact thead tr,
-div.phone.acorn-classic.page-container #phone thead tr,
-div.address.acorn-classic.page-container #saAddress thead tr,
-div.address.acorn-classic.page-container #saAddress tbody tr,
-div.acorn-classic.page-container #otherInfo thead tr,
-div.acorn-classic.page-container #otherInfo tbody tr,
-div.acorn-classic.page-container .section,
-div.acorn-classic.page-container .academic-history .sessionHeader,
-div.awards-container .acorn-table th,
-div.notification-activity-container .table tr td,
-thead.notification-activity-header {
+.uoft-dark-mode div.acorn-card-header,
+.uoft-dark-mode
+  div.acorn
+  .currentlyEnrolledBox
+  .courseDetailsBox
+  .courseDetails
+  thead.header,
+.uoft-dark-mode div.address.acorn-classic.page-container #address tbody tr,
+.uoft-dark-mode div.contact.acorn-classic.page-container #contact tbody tr,
+.uoft-dark-mode div.phone.acorn-classic.page-container #phone tbody tr,
+.uoft-dark-mode div.address.acorn-classic.page-container #address thead tr,
+.uoft-dark-mode div.contact.acorn-classic.page-container #contact thead tr,
+.uoft-dark-mode div.phone.acorn-classic.page-container #phone thead tr,
+.uoft-dark-mode div.address.acorn-classic.page-container #saAddress thead tr,
+.uoft-dark-mode div.address.acorn-classic.page-container #saAddress tbody tr,
+.uoft-dark-mode div.acorn-classic.page-container #otherInfo thead tr,
+.uoft-dark-mode div.acorn-classic.page-container #otherInfo tbody tr,
+.uoft-dark-mode div.acorn-classic.page-container .section,
+.uoft-dark-mode
+  div.acorn-classic.page-container
+  .academic-history
+  .sessionHeader,
+.uoft-dark-mode div.awards-container .acorn-table th,
+.uoft-dark-mode div.notification-activity-container .table tr td,
+.uoft-dark-mode thead.notification-activity-header {
   border-bottom: 1px solid #4c4c4c;
 }
 
-div.acorn-card-bg,
-table.timetable.decorated,
-div#dashboard-container .tab-box,
-div.academic-info .tab-box,
-ul.nav.nav-tabs .nav-item.active a,
-ul.nav.nav-tabs .nav-item a,
-ul.nav-tabs > li.active > a,
-ul.nav-tabs > li.active > a:focus,
-ul.nav-tabs > li.active > a:hover,
-div.program-course-info,
-table.course-meeting,
-table.course-meeting tr th,
-table.course-meeting .meeting-sections,
-tr.course-section .course,
-div#enrolment-app .currentlyEnrolledBox,
-div.acorn .currentlyEnrolledBox .currentCourseTitleInfo,
-div.acorn .currentlyEnrolledBox .courseDetailsBox,
-div#typeahead-search .ut-typeahead-container input,
-div#typeahead-search .cantFindResults,
-div#typeahead-search .ut-typeahead-results-container .no-results,
-div#typeahead-search .ut-typeahead-results-container .too-many-results,
-div#typeahead-search .ut-typeahead-results-list ul li,
-div#typeahead-search .ut-typeahead-results-container .view-more,
-div#program-enrolment-app .subject_pos_contents .program_info_details,
-div.acorn-classic.page-container,
-div.acorn-classic.page-container table tr th,
-div.address.acorn-classic.page-container #address tbody tr,
-div.contact.acorn-classic.page-container #contact tbody tr,
-div.phone.acorn-classic.page-container #phone tbody tr,
-div.address.acorn-classic.page-container #saAddress tbody tr td,
-div.acorn-classic.page-container #otherInfo tbody tr,
-div.acorn-classic.page-container .academic-history .sessionHeader,
-div.acorn-classic.page-container
+.uoft-dark-mode div.acorn-card-bg,
+.uoft-dark-mode table.timetable.decorated,
+.uoft-dark-mode div#dashboard-container .tab-box,
+.uoft-dark-mode div.academic-info .tab-box,
+.uoft-dark-mode ul.nav.nav-tabs .nav-item.active a,
+.uoft-dark-mode ul.nav.nav-tabs .nav-item a,
+.uoft-dark-mode ul.nav-tabs > li.active > a,
+.uoft-dark-mode ul.nav-tabs > li.active > a:focus,
+.uoft-dark-mode ul.nav-tabs > li.active > a:hover,
+.uoft-dark-mode div.program-course-info,
+.uoft-dark-mode table.course-meeting,
+.uoft-dark-mode table.course-meeting tr th,
+.uoft-dark-mode table.course-meeting .meeting-sections,
+.uoft-dark-mode tr.course-section .course,
+.uoft-dark-mode div#enrolment-app .currentlyEnrolledBox,
+.uoft-dark-mode div.acorn .currentlyEnrolledBox .currentCourseTitleInfo,
+.uoft-dark-mode div.acorn .currentlyEnrolledBox .courseDetailsBox,
+.uoft-dark-mode div#typeahead-search .ut-typeahead-container input,
+.uoft-dark-mode div#typeahead-search .cantFindResults,
+.uoft-dark-mode
+  div#typeahead-search
+  .ut-typeahead-results-container
+  .no-results,
+.uoft-dark-mode
+  div#typeahead-search
+  .ut-typeahead-results-container
+  .too-many-results,
+.uoft-dark-mode div#typeahead-search .ut-typeahead-results-list ul li,
+.uoft-dark-mode div#typeahead-search .ut-typeahead-results-container .view-more,
+.uoft-dark-mode
+  div#program-enrolment-app
+  .subject_pos_contents
+  .program_info_details,
+.uoft-dark-mode div.acorn-classic.page-container,
+.uoft-dark-mode div.acorn-classic.page-container table tr th,
+.uoft-dark-mode div.address.acorn-classic.page-container #address tbody tr,
+.uoft-dark-mode div.contact.acorn-classic.page-container #contact tbody tr,
+.uoft-dark-mode div.phone.acorn-classic.page-container #phone tbody tr,
+.uoft-dark-mode div.address.acorn-classic.page-container #saAddress tbody tr td,
+.uoft-dark-mode div.acorn-classic.page-container #otherInfo tbody tr,
+.uoft-dark-mode
+  div.acorn-classic.page-container
+  .academic-history
+  .sessionHeader,
+.uoft-dark-mode
+  div.acorn-classic.page-container
   .academic-history-recent
   .recentAcademicHistoryLeft,
-div.acorn-classic.page-container .academic-history-recent table .courses,
-div.acorn-classic.page-container .gpa-listing,
-div.acorn-classic.page-container .academic-history .coursesHeader,
-div.acorn-classic.page-container
+.uoft-dark-mode
+  div.acorn-classic.page-container
+  .academic-history-recent
+  table
+  .courses,
+.uoft-dark-mode div.acorn-classic.page-container .gpa-listing,
+.uoft-dark-mode
+  div.acorn-classic.page-container
+  .academic-history
+  .coursesHeader,
+.uoft-dark-mode
+  div.acorn-classic.page-container
   .academic-history-recent
   .recentAcademicHistoryRight,
-div.acorn-classic.page-container .courses,
-div.acorn-classic.page-container .coursesHeader,
-div.osap-fee-deferral .section,
-div.taxes-container .tab-box,
-div.awards-container .summary-section,
-div.awards-container .acorn-table-padding,
-div.awards-container .acorn-table-title,
-div.awards-container .acorn-table th,
-div.awards-container .acorn-table > tbody > tr > td,
-div.awards-container .acorn-table > tbody > tr > th,
-div.page-content-wrapper .select-with-button-section.flex-display select,
-div#account-details pre,
-div non-tuition-fees .acorn-card.acorn-card-bg,
-select.form-control,
-div.panel-default,
-table.table-hover tbody tr:hover td,
-table.table-hover tbody tr:hover th,
-table.table-hover tbody tr td,
-table.table-hover tbody tr th,
-div.invoice-and-net-cost .tab-box,
-div.invoice-and-net-cost .tab-box .section,
-div pre,
-div#acorn-notification-side,
-div.notification-header,
-div.side-notification-body.notification-style-read,
-div.side-notification-body,
-div.notification-activity-filter-div,
-thead.notification-activity-header,
-td.notification-activity-read,
-div.notification-activity-container .table tbody tr,
-div.calendar .date-calendar .day-container,
-div#acorn-nav-side .nav-section-container a:hover {
+.uoft-dark-mode div.acorn-classic.page-container .courses,
+.uoft-dark-mode div.acorn-classic.page-container .coursesHeader,
+.uoft-dark-mode div.osap-fee-deferral .section,
+.uoft-dark-mode div.taxes-container .tab-box,
+.uoft-dark-mode div.awards-container .summary-section,
+.uoft-dark-mode div.awards-container .acorn-table-padding,
+.uoft-dark-mode div.awards-container .acorn-table-title,
+.uoft-dark-mode div.awards-container .acorn-table th,
+.uoft-dark-mode div.awards-container .acorn-table > tbody > tr > td,
+.uoft-dark-mode div.awards-container .acorn-table > tbody > tr > th,
+.uoft-dark-mode
+  div.page-content-wrapper
+  .select-with-button-section.flex-display
+  select,
+.uoft-dark-mode div#account-details pre,
+.uoft-dark-mode div non-tuition-fees .acorn-card.acorn-card-bg,
+.uoft-dark-mode select.form-control,
+.uoft-dark-mode div.panel-default,
+.uoft-dark-mode table.table-hover tbody tr:hover td,
+.uoft-dark-mode table.table-hover tbody tr:hover th,
+.uoft-dark-mode table.table-hover tbody tr td,
+.uoft-dark-mode table.table-hover tbody tr th,
+.uoft-dark-mode div.invoice-and-net-cost .tab-box,
+.uoft-dark-mode div.invoice-and-net-cost .tab-box .section,
+.uoft-dark-mode div pre,
+.uoft-dark-mode div#acorn-notification-side,
+.uoft-dark-mode div.notification-header,
+.uoft-dark-mode div.side-notification-body.notification-style-read,
+.uoft-dark-mode div.side-notification-body,
+.uoft-dark-mode div.notification-activity-filter-div,
+.uoft-dark-mode thead.notification-activity-header,
+.uoft-dark-mode td.notification-activity-read,
+.uoft-dark-mode div.notification-activity-container .table tbody tr,
+.uoft-dark-mode div.calendar .date-calendar .day-container,
+.uoft-dark-mode div#acorn-nav-side .nav-section-container a:hover {
   background-color: #373737;
   color: #ffffff;
 }
 
-div.acorn .enrolment-code,
-div#acorn-footer .foot-header,
-div#typeahead-search .ut-typeahead-container label,
-div#program-enrolment-app .icon-cog:hover,
-div.acorn .currentlyEnrolledBox i.icon-cog:hover,
-div.currentCoursesBox .fa-calendar:hover,
-div.currentCoursesBox .icon-calendar:hover,
-div.acorn .courseSearchBox .courseDetailsBox .changeActivity .fa-pencil:hover,
-div.acorn .courseSearchBox .courseDetailsBox .changeActivity .icon-pencil:hover,
-div.absence-declaration h2,
-div.absence-declaration h3,
-div.acorn-classic.page-container .sectionHeader,
-div.acorn-classic.page-container .subheading,
-span.ut-tooltip .highlight,
-div.acorn-classic.page-container
+.uoft-dark-mode div.acorn .enrolment-code,
+.uoft-dark-mode div#acorn-footer .foot-header,
+.uoft-dark-mode div#typeahead-search .ut-typeahead-container label,
+.uoft-dark-mode div#program-enrolment-app .icon-cog:hover,
+.uoft-dark-mode div.acorn .currentlyEnrolledBox i.icon-cog:hover,
+.uoft-dark-mode div.currentCoursesBox .fa-calendar:hover,
+.uoft-dark-mode div.currentCoursesBox .icon-calendar:hover,
+.uoft-dark-mode
+  div.acorn
+  .courseSearchBox
+  .courseDetailsBox
+  .changeActivity
+  .fa-pencil:hover,
+.uoft-dark-mode
+  div.acorn
+  .courseSearchBox
+  .courseDetailsBox
+  .changeActivity
+  .icon-pencil:hover,
+.uoft-dark-mode div.absence-declaration h2,
+.uoft-dark-mode div.absence-declaration h3,
+.uoft-dark-mode div.acorn-classic.page-container .sectionHeader,
+.uoft-dark-mode div.acorn-classic.page-container .subheading,
+.uoft-dark-mode span.ut-tooltip .highlight,
+.uoft-dark-mode
+  div.acorn-classic.page-container
   .academic-history-recent
   table
   tr.coursesHeader
   th,
-div.acorn-classic.page-container .academic-history-recent table .emph,
-div.acorn-classic.page-container .academic-history .average-section,
-div.acorn-classic.page-container .academic-history .courses,
-div.acorn-classic.page-container .academic-history .coursesHeader,
-div.acorn-classic.page-container .academic-history .credit-earned-section,
-div.acorn-classic.page-container .academic-history .sessionHeader,
-p.notification-info-field,
-div.acorn .information,
-span.notification-activity-tab-title,
-span.notification-activity-filter-personal,
-div#acorn-footer .uoft-footer {
+.uoft-dark-mode
+  div.acorn-classic.page-container
+  .academic-history-recent
+  table
+  .emph,
+.uoft-dark-mode
+  div.acorn-classic.page-container
+  .academic-history
+  .average-section,
+.uoft-dark-mode div.acorn-classic.page-container .academic-history .courses,
+.uoft-dark-mode
+  div.acorn-classic.page-container
+  .academic-history
+  .coursesHeader,
+.uoft-dark-mode
+  div.acorn-classic.page-container
+  .academic-history
+  .credit-earned-section,
+.uoft-dark-mode
+  div.acorn-classic.page-container
+  .academic-history
+  .sessionHeader,
+.uoft-dark-mode p.notification-info-field,
+.uoft-dark-mode div.acorn .information,
+.uoft-dark-mode span.notification-activity-tab-title,
+.uoft-dark-mode span.notification-activity-filter-personal,
+.uoft-dark-mode div#acorn-footer .uoft-footer {
   color: #ffffff;
 }
 
-div#acorn-footer ul li a,
-div#program-enrolment-app .icon-cog,
-div.acorn .currentlyEnrolledBox i.icon-cog,
-div.currentCoursesBox .fa-calendar,
-div.currentCoursesBox .icon-calendar,
-div.acorn .courseSearchBox .courseDetailsBox .changeActivity .fa-pencil,
-div.acorn .courseSearchBox .courseDetailsBox .changeActivity .icon-pencil,
-div.acorn-classic.page-container .fa-pencil,
-div.acorn-classic.page-container .icon-pencil,
-div.acorn-classic.page-container .icon-trash {
+.uoft-dark-mode div#acorn-footer ul li a,
+.uoft-dark-mode div#program-enrolment-app .icon-cog,
+.uoft-dark-mode div.acorn .currentlyEnrolledBox i.icon-cog,
+.uoft-dark-mode div.currentCoursesBox .fa-calendar,
+.uoft-dark-mode div.currentCoursesBox .icon-calendar,
+.uoft-dark-mode
+  div.acorn
+  .courseSearchBox
+  .courseDetailsBox
+  .changeActivity
+  .fa-pencil,
+.uoft-dark-mode
+  div.acorn
+  .courseSearchBox
+  .courseDetailsBox
+  .changeActivity
+  .icon-pencil,
+.uoft-dark-mode div.acorn-classic.page-container .fa-pencil,
+.uoft-dark-mode div.acorn-classic.page-container .icon-pencil,
+.uoft-dark-mode div.acorn-classic.page-container .icon-trash {
   color: #bfbfbf;
 }
 
-ul.nav-tabs > li.active > a,
-ul.nav-tabs > li.active > a:focus,
-ul.nav-tabs > li.active > a:hover,
-div.panel {
+.uoft-dark-mode ul.nav-tabs > li.active > a,
+.uoft-dark-mode ul.nav-tabs > li.active > a:focus,
+.uoft-dark-mode ul.nav-tabs > li.active > a:hover,
+.uoft-dark-mode div.panel {
   border: none;
 }
 
-div#typeahead-search .ut-typeahead-container input.loadingIcon {
+.uoft-dark-mode div#typeahead-search .ut-typeahead-container input.loadingIcon {
   background-image: url(../images/loading.460bfa98.gif) right center
     no-repeat#ffffff;
   background-color: #373737;
 }
 
-div#typeahead-search .ut-typeahead-results-list ul li.active {
+.uoft-dark-mode div#typeahead-search .ut-typeahead-results-list ul li.active {
   background-color: #303030;
 }
 
-div.acorn-card-deck .acorn-card,
-div.awards-container .cards-wrapper .acorn-card-deck .acorn-card {
+.uoft-dark-mode div.acorn-card-deck .acorn-card,
+.uoft-dark-mode
+  div.awards-container
+  .cards-wrapper
+  .acorn-card-deck
+  .acorn-card {
   border-left: 10px solid #181818;
   border-right: 10px solid #181818;
 }
 
-div.acorn-card-placeholder,
-div.acorn-classic.page-container .academic-history-recent .coursesHeader > *,
-div.invoice-and-net-cost
+.uoft-dark-mode div.acorn-card-placeholder,
+.uoft-dark-mode
+  div.acorn-classic.page-container
+  .academic-history-recent
+  .coursesHeader
+  > *,
+.uoft-dark-mode
+  div.invoice-and-net-cost
   .net-cost
   .acorn-card-deck
   .acorn-card.acorn-card-placeholder {
   background-color: #373737 !important;
 }
 
-div table.timetableSchedule tr .dayOfWeek {
+.uoft-dark-mode div table.timetableSchedule tr .dayOfWeek {
   line-height: 40px;
 }
 
-div table.timetableSchedule tr .timeOfDay {
+.uoft-dark-mode div table.timetableSchedule tr .timeOfDay {
   line-height: 98px;
 }
 
-div#acorn-footer .acorn-logo {
+.uoft-dark-mode div#acorn-footer .acorn-logo {
   filter: grayscale(100%) invert(100%) brightness(0.9);
 }
 
-div.finance-info .balance .debt {
+.uoft-dark-mode div.finance-info .balance .debt {
   color: #e57373;
 }
 
-div.dashboard-reg-status .registered,
-div.acorn .finances {
+.uoft-dark-mode div.dashboard-reg-status .registered,
+.uoft-dark-mode div.acorn .finances {
   color: #81c784;
 }

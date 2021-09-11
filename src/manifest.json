@@ -5,43 +5,19 @@
     "description": "Adds dark mode to UofT websites (Acorn, Quercus, Weblogin)",
     "background": {
         "scripts": [
-            "hot-reload.js"
+            "hot-reload.js",
+            "inject.js"
         ]
     },
     "browser_action": {
-        "default_icon": {
-            "128": "icon.png"
-        }
+        "default_icon": "icon.png"
     },
-    "content_scripts": [
-        {
-            "matches": [
-                "https://acorn.utoronto.ca/sws/*"
-            ],
-            "css": [
-                "acorn/styles.css"
-            ]
-        },
-        {
-            "matches": [
-                "https://q.utoronto.ca/*"
-            ],
-            "css": [
-                "quercus/styles.css"
-            ]
-        },
-        {
-            "matches": [
-                "https://idpz.utorauth.utoronto.ca/*",
-                "https://weblogin.utoronto.ca/*"
-            ],
-            "css": [
-                "weblogin/styles.css"
-            ]
-        }
-    ],
     "permissions": [
-        "activeTab",
-        "tabs"
+        "storage",
+        "webNavigation",
+        "https://acorn.utoronto.ca/sws/*",
+        "https://q.utoronto.ca/*",
+        "https://weblogin.utoronto.ca/*",
+        "https://idpz.utorauth.utoronto.ca/*"
     ]
 }
