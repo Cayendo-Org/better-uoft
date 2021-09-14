@@ -123,6 +123,7 @@
       --border-radius: 4px;
       --spacing: 8;
       --hue-primary: 40;
+      transition: background-color 0.3s;
     }
 
     &,
@@ -200,6 +201,7 @@
 
     @include override {
       border-radius: borderRadius();
+      cursor: pointer;
       transition: background-color 0.3s;
     }
   } @else if $variant == text {
@@ -221,6 +223,7 @@
 
     @include override {
       border-radius: borderRadius();
+      cursor: pointer;
       transition: background-color 0.3s;
     }
   }

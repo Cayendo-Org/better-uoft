@@ -1,12 +1,12 @@
 const script_type = () => {
   if (chrome && chrome.extension && chrome.extension.getBackgroundPage && chrome.extension.getBackgroundPage() === window) {
-      return 'BACKGROUND';
+    return 'BACKGROUND';
   } else if (chrome && chrome.extension && chrome.extension.getBackgroundPage && chrome.extension.getBackgroundPage() !== window) {
-      return 'POPUP';
+    return 'POPUP';
   } else if (!chrome || !chrome.runtime || !chrome.runtime.onMessage) {
-      return 'WEB';
+    return 'WEB';
   } else {
-      return 'CONTENT';
+    return 'CONTENT';
   }
 };
 

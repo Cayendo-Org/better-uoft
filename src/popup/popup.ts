@@ -1,8 +1,8 @@
-import "./styles.scss";
 import "../inject";
+import "./styles.scss";
 
-const enabledButton = document.getElementById("enabled") as HTMLBRElement;
-const darkModeCButton = document.getElementById("darkMode") as HTMLBRElement;
+const enabledButton = document.getElementById("enabled") as HTMLButtonElement;
+const darkModeButton = document.getElementById("darkMode") as HTMLButtonElement;
 const hueSlider = document.getElementById("hue") as HTMLInputElement;
 
 enabledButton.addEventListener("click", () => {
@@ -11,7 +11,7 @@ enabledButton.addEventListener("click", () => {
     });
 });
 
-darkModeCButton.addEventListener("click", () => {
+darkModeButton.addEventListener("click", () => {
     chrome.storage.sync.get(["darkMode"], (result) => {
         chrome.storage.sync.set({ darkMode: !(result.darkMode ?? true) });
     });
@@ -22,27 +22,35 @@ hueSlider.addEventListener("change", (event) => {
 });
 
 chrome.storage.sync.get(["enabled", "hue", "darkMode"], (result) => {
-    if(result.enabled ?? true){
+    if (result.enabled ?? true) {
         enabledButton.classList.add("on");
+        darkModeButton.disabled = false;
+        hueSlider.disabled = false;
     } else {
         enabledButton.classList.remove("on");
+        darkModeButton.disabled = true;
+        hueSlider.disabled = true;
     }
- 
+
     hueSlider.value = result.hue ?? 200;
 
-    if(result.darkMode ?? true){
-        darkModeCButton.classList.add("on");
-    }else{
-        darkModeCButton.classList.remove("on");
+    if (result.darkMode ?? true) {
+        darkModeButton.classList.add("on");
+    } else {
+        darkModeButton.classList.remove("on");
     }
 });
 
 chrome.storage.onChanged.addListener((changes) => {
     if (changes.enabled) {
-        if (changes.enabled.newValue ?? true){
+        if (changes.enabled.newValue ?? true) {
             enabledButton.classList.add("on");
+            darkModeButton.disabled = false;
+            hueSlider.disabled = false;
         } else {
             enabledButton.classList.remove("on");
+            darkModeButton.disabled = true;
+            hueSlider.disabled = true;
         }
     }
 
@@ -51,10 +59,10 @@ chrome.storage.onChanged.addListener((changes) => {
     }
 
     if (changes.darkMode) {
-        if (changes.darkMode.newValue ?? true){
-            darkModeCButton.classList.add("on");
+        if (changes.darkMode.newValue ?? true) {
+            darkModeButton.classList.add("on");
         } else {
-            darkModeCButton.classList.remove("on");
+            darkModeButton.classList.remove("on");
         }
     }
 });
