@@ -295,7 +295,9 @@ html.uoft-dark-mode {
   #collapseHelp_JOINid > div > ul,
   body > div > div > div.col-md-5 > div.login-box > p,
   #idpSelectIdPEntryTile > form > label > div,
-  #idpSelectIdPListTile > form > label > div {
+  #idpSelectIdPListTile > form > label > div,
+  body > div > div > div.col-md-4 > div.login-box > p.warning,
+  body > div > div > div.col-md-4 > div.login-box > p {
     color: #e3e3e3;
   }
 
