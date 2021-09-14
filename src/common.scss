@@ -85,11 +85,11 @@
 
 @mixin override($mode: both) {
   @if $mode == both {
-    :root:not(#better-uoft-off) & {
+    :root:not(#abcd).better-uoft & {
       @content;
     }
   } @else if $mode == dark {
-    :root:not(#better-uoft-off).uoft-dark-mode & {
+    :root:not(#abcd).better-uoft.uoft-dark-mode & {
       @content;
     }
   } @else {
@@ -100,33 +100,32 @@
 }
 
 @mixin theme {
-  :root:not(#better-uoft-off) {
+  :root:not(#abcd).better-uoft {
     * {
       background-color: transparent;
       font-family: Arial, Helvetica, sans-serif !important;
       box-sizing: border-box;
     }
 
-    --border-radius: 4px;
-    --spacing: 8;
-    --hue-primary: 40;
-  }
+    &.uoft-dark-mode {
+      color-scheme: dark;
+      color: textColor(paper, 0, dark);
+      background-color: color(paper, 0, dark);
+    }
 
-  :root:not(#better-uoft-off).uoft-dark-mode {
-    color-scheme: dark;
-    color: textColor(paper, 0, dark);
-    background-color: color(paper, 0, dark);
-  }
+    &:not(.uoft-dark-mode) {
+      color-scheme: light;
+      color: textColor(paper, 0, light);
+      background-color: color(paper, 0, light);
+    }
 
-  :root:not(#better-uoft-off, .uoft-dark-mode) {
-    color-scheme: light;
-    color: textColor(paper, 0, light);
-    background-color: color(paper, 0, light);
-  }
-
-  :root:not(#better-uoft-off),
-  :root:not(#better-uoft-off) body {
-    font-size: unset;
+    &,
+    body {
+      font-size: unset;
+      --border-radius: 4px;
+      --spacing: 8;
+      --hue-primary: 40;
+    }
   }
 }
 

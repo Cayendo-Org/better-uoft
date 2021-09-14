@@ -1,25 +1,19 @@
-const updateIcon = (on: boolean) => {
-  chrome.browserAction.setIcon({ path: on ? "icon.png" : "icon-off.png" });
+const updateIcon = (enabled: boolean) => {
+  chrome.browserAction.setIcon({ path: enabled ? "icon.png" : "icon-off.png" });
 };
 
-chrome.storage.sync.get(["on"], (result) => {
-  updateIcon(result.on);
+chrome.storage.sync.get(["enabled"], (result) => {
+  updateIcon(result.enabled ?? true);
 });
 
 chrome.storage.onChanged.addListener((changes) => {
-  if (changes.on) {
-    updateIcon(changes.on.newValue);
+  if (changes.enabled) {
+    updateIcon(changes.enabled.newValue ?? true);
   }
 });
 
-chrome.browserAction.onClicked.addListener(() => {
-  chrome.storage.sync.get(["on"], (result) => {
-    chrome.storage.sync.set({ on: !result.on });
-  });
-});
-
-chrome.runtime.onInstalled.addListener(function (details) {
-  if (details.reason == "install") {
-    chrome.storage.sync.set({ on: true });
-  }
-});
+// chrome.runtime.onInstalled.addListener(function (details) {
+//   if (details.reason == "install") {
+//     chrome.storage.sync.set({ on: true });
+//   }
+// });

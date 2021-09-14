@@ -3,6 +3,7 @@ const nodeExternals = require("webpack-node-externals");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const RemoveEmptyScriptsPlugin = require("webpack-remove-empty-scripts");
 const CopyPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { NODE_ENV = "production" } = process.env;
 
 module.exports = {
@@ -11,19 +12,31 @@ module.exports = {
     new RemoveEmptyScriptsPlugin(),
     new CopyPlugin({
       patterns: [
-        { from: "./src/icon.png", to: "icon.png" },
-        { from: "./src/icon-off.png", to: "icon-off.png" },
-        { from: "./src/manifest.json", to: "manifest.json" },
+        { from: path.join(__dirname, "src", "icon.png"), to: "icon.png" },
+        {
+          from: path.join(__dirname, "src", "icon-off.png"),
+          to: "icon-off.png",
+        },
+        {
+          from: path.join(__dirname, "src", "manifest.json"),
+          to: "manifest.json",
+        },
       ],
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "src", "popup", "popup.html"),
+      filename: "popup.html",
+      chunks: ["popup"],
     }),
   ],
   entry: {
-    action: "./src/action.ts",
-    inject: "./src/inject.ts",
-    "hot-reload": "./src/hot-reload.ts",
-    acorn: "./src/acorn/styles.scss",
-    quercus: "./src/quercus/styles.scss",
-    weblogin: "./src/weblogin/styles.scss",
+    action: path.join(__dirname, "src", "action.ts"),
+    inject: path.join(__dirname, "src", "inject.ts"),
+    "hot-reload": path.join(__dirname, "src", "hot-reload.ts"),
+    acorn: path.join(__dirname, "src", "acorn", "styles.scss"),
+    quercus: path.join(__dirname, "src", "quercus", "styles.scss"),
+    weblogin: path.join(__dirname, "src", "weblogin", "styles.scss"),
+    popup: path.join(__dirname, "src", "popup", "popup.ts"),
   },
   mode: NODE_ENV,
   target: "node",
@@ -57,6 +70,11 @@ module.exports = {
           },
           "sass-loader",
         ],
+      },
+      {
+        test: /\.html$/,
+        loader: "html-loader",
+        exclude: /node_modules/,
       },
     ],
   },
