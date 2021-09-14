@@ -1,3 +1,15 @@
+const script_type = () => {
+  if (chrome && chrome.extension && chrome.extension.getBackgroundPage && chrome.extension.getBackgroundPage() === window) {
+      return 'BACKGROUND';
+  } else if (chrome && chrome.extension && chrome.extension.getBackgroundPage && chrome.extension.getBackgroundPage() !== window) {
+      return 'POPUP';
+  } else if (!chrome || !chrome.runtime || !chrome.runtime.onMessage) {
+      return 'WEB';
+  } else {
+      return 'CONTENT';
+  }
+};
+
 const updateMode = (darkMode: boolean) => {
   if (darkMode) {
     document.getElementsByTagName("HTML")[0].classList.add("uoft-dark-mode");
@@ -7,7 +19,7 @@ const updateMode = (darkMode: boolean) => {
 };
 
 const updateState = (enabled: boolean) => {
-  if (enabled) {
+  if (enabled || script_type() === "POPUP") {
     document.getElementsByTagName("HTML")[0].classList.add("better-uoft");
   } else {
     document.getElementsByTagName("HTML")[0].classList.remove("better-uoft");

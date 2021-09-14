@@ -1,0 +1,51 @@
+@use "../common.scss";
+
+@include common.theme;
+
+[type=range] {
+    -webkit-appearance: none;
+    background: transparent;
+    margin: 12px 0;
+    width: 100%;
+}
+
+[type=range]:focus {
+    outline: 0;
+}
+
+// [type=range]:focus::-webkit-slider-runnable-track {
+//     background: #fbfbfc10;
+// }
+
+[type=range]::-webkit-slider-runnable-track {
+    cursor: default;
+    height: 8px;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+    background: linear-gradient(to right, #FF8C8C, #FFFF8C, #8CFF8C,#8CE5E5,#A4A4D2, #BF9EBF, #FF8C8C);
+    border: 2px solid #cfd8dc;
+    border-radius: 5px;
+}
+
+[type=range]::-webkit-slider-thumb {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+    background: #607d8b;
+    border: 2px solid #eceff1;
+    border-radius: 12px;
+    box-sizing: border-box;
+    cursor: default;
+    height: 20px;
+    width: 20px;
+    -webkit-appearance: none;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+[type=range]:disabled::-webkit-slider-thumb, [type=range]:disabled::-webkit-slider-runnable-track {
+    cursor: not-allowed;
+}
+
+[type=range]:disabled::-webkit-slider-thumb {
+    display: none;
+}
