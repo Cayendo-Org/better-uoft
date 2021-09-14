@@ -1,0 +1,283 @@
+@use "../common.scss";
+
+@include common.theme;
+
+html.uoft-dark-mode {
+  * {
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif !important;
+  }
+
+  &,
+  body {
+    color-scheme: dark;
+    background-color: var(--page-background);
+    color: #ffffff;
+  }
+
+  div table.timetableSchedule tr .timeOfDay,
+  div table.timetableSchedule tr .dayOfWeek,
+  div#acorn-nav-side-parent,
+  nav#acorn-nav-top {
+    background-color: #212121;
+  }
+
+  div#body-container,
+  div table.timetableSchedule tr td.emptySlot {
+    background-color: var(--page-background);
+    color: #ffffff;
+  }
+
+  div table.timetableSchedule tr .timeOfDay,
+  div table.timetableSchedule tr .dayOfWeek,
+  div table.timetableSchedule tr td,
+  div.acorn-card,
+  div#typeahead-search .ut-typeahead-container input,
+  div#typeahead-search .ut-typeahead-results-list ul,
+  div#typeahead-search .ut-typeahead-results-container .view-more,
+  div#typeahead-search .ut-typeahead-results-container .no-results,
+  div#typeahead-search .ut-typeahead-results-container .too-many-results,
+  div.osap-fee-deferral .section,
+  table.table-bordered,
+  table.table-bordered > tbody > tr > td,
+  table.table-bordered > tbody > tr > th,
+  table.table-bordered > tfoot > tr > td,
+  table.table-bordered > tfoot > tr > th,
+  table.table-bordered > thead > tr > td,
+  table.table-bordered > thead > tr > th,
+  div.calendar .date-calendar .day-container {
+    border: 1px solid #4c4c4c;
+    color: #ffffff;
+  }
+
+  div.notifications-listing-container,
+  div.acorn-card-header,
+  div.acorn-card-footer,
+  div.courseInfo,
+  div.awards-container .cards-wrapper,
+  div.notification-activity-container {
+    background-color: transparent;
+  }
+
+  div.calendar .todays-events .event,
+  div.border-top-skip-first:not(:first-child),
+  div.acorn-card-footer,
+  div#acorn-footer .border,
+  div#acorn-footer .border:before,
+  div.acorn .currentlyEnrolledBox .courseDetailsBox .courseDetails td,
+  div#program-enrolment-app
+    .subject_pos_contents
+    .program_info_details
+    table
+    td,
+  div.awards-container .acorn-table tr:last-child td,
+  table.table > tbody > tr > td,
+  table.table > tbody > tr > th,
+  table.table > tfoot > tr > td,
+  table.table > tfoot > tr > th,
+  table.table > thead > tr > td,
+  table.table > thead > tr > th,
+  div.acorn .borderTopDashed {
+    border-top: 1px solid #4c4c4c;
+  }
+
+  div.acorn-card-header,
+  div.acorn .currentlyEnrolledBox .courseDetailsBox .courseDetails thead.header,
+  div.address.acorn-classic.page-container #address tbody tr,
+  div.contact.acorn-classic.page-container #contact tbody tr,
+  div.phone.acorn-classic.page-container #phone tbody tr,
+  div.address.acorn-classic.page-container #address thead tr,
+  div.contact.acorn-classic.page-container #contact thead tr,
+  div.phone.acorn-classic.page-container #phone thead tr,
+  div.address.acorn-classic.page-container #saAddress thead tr,
+  div.address.acorn-classic.page-container #saAddress tbody tr,
+  div.acorn-classic.page-container #otherInfo thead tr,
+  div.acorn-classic.page-container #otherInfo tbody tr,
+  div.acorn-classic.page-container .section,
+  div.acorn-classic.page-container .academic-history .sessionHeader,
+  div.awards-container .acorn-table th,
+  div.notification-activity-container .table tr td,
+  thead.notification-activity-header {
+    border-bottom: 1px solid #4c4c4c;
+  }
+
+  div.acorn-card-bg,
+  table.timetable.decorated,
+  div#dashboard-container .tab-box,
+  div.academic-info .tab-box,
+  ul.nav.nav-tabs .nav-item.active a,
+  ul.nav.nav-tabs .nav-item a,
+  ul.nav-tabs > li.active > a,
+  ul.nav-tabs > li.active > a:focus,
+  ul.nav-tabs > li.active > a:hover,
+  div.program-course-info,
+  table.course-meeting,
+  table.course-meeting tr th,
+  table.course-meeting .meeting-sections,
+  tr.course-section .course,
+  div#enrolment-app .currentlyEnrolledBox,
+  div.acorn .currentlyEnrolledBox .currentCourseTitleInfo,
+  div.acorn .currentlyEnrolledBox .courseDetailsBox,
+  div#typeahead-search .ut-typeahead-container input,
+  div#typeahead-search .cantFindResults,
+  div#typeahead-search .ut-typeahead-results-container .no-results,
+  div#typeahead-search .ut-typeahead-results-container .too-many-results,
+  div#typeahead-search .ut-typeahead-results-list ul li,
+  div#typeahead-search .ut-typeahead-results-container .view-more,
+  div#program-enrolment-app .subject_pos_contents .program_info_details,
+  div.acorn-classic.page-container,
+  div.acorn-classic.page-container table tr th,
+  div.address.acorn-classic.page-container #address tbody tr,
+  div.contact.acorn-classic.page-container #contact tbody tr,
+  div.phone.acorn-classic.page-container #phone tbody tr,
+  div.address.acorn-classic.page-container #saAddress tbody tr td,
+  div.acorn-classic.page-container #otherInfo tbody tr,
+  div.acorn-classic.page-container .academic-history .sessionHeader,
+  div.acorn-classic.page-container
+    .academic-history-recent
+    .recentAcademicHistoryLeft,
+  div.acorn-classic.page-container .academic-history-recent table .courses,
+  div.acorn-classic.page-container .gpa-listing,
+  div.acorn-classic.page-container .academic-history .coursesHeader,
+  div.acorn-classic.page-container
+    .academic-history-recent
+    .recentAcademicHistoryRight,
+  div.acorn-classic.page-container .courses,
+  div.acorn-classic.page-container .coursesHeader,
+  div.osap-fee-deferral .section,
+  div.taxes-container .tab-box,
+  div.awards-container .summary-section,
+  div.awards-container .acorn-table-padding,
+  div.awards-container .acorn-table-title,
+  div.awards-container .acorn-table th,
+  div.awards-container .acorn-table > tbody > tr > td,
+  div.awards-container .acorn-table > tbody > tr > th,
+  div.page-content-wrapper .select-with-button-section.flex-display select,
+  div#account-details pre,
+  div non-tuition-fees .acorn-card.acorn-card-bg,
+  select.form-control,
+  div.panel-default,
+  table.table-hover tbody tr:hover td,
+  table.table-hover tbody tr:hover th,
+  table.table-hover tbody tr td,
+  table.table-hover tbody tr th,
+  div.invoice-and-net-cost .tab-box,
+  div.invoice-and-net-cost .tab-box .section,
+  div pre,
+  div#acorn-notification-side,
+  div.notification-header,
+  div.side-notification-body.notification-style-read,
+  div.side-notification-body,
+  div.notification-activity-filter-div,
+  thead.notification-activity-header,
+  td.notification-activity-read,
+  div.notification-activity-container .table tbody tr,
+  div.calendar .date-calendar .day-container,
+  div#acorn-nav-side .nav-section-container a:hover {
+    background-color: #373737;
+    color: #ffffff;
+  }
+
+  div.acorn .enrolment-code,
+  div#acorn-footer .foot-header,
+  div#typeahead-search .ut-typeahead-container label,
+  div#program-enrolment-app .icon-cog:hover,
+  div.acorn .currentlyEnrolledBox i.icon-cog:hover,
+  div.currentCoursesBox .fa-calendar:hover,
+  div.currentCoursesBox .icon-calendar:hover,
+  div.acorn .courseSearchBox .courseDetailsBox .changeActivity .fa-pencil:hover,
+  div.acorn
+    .courseSearchBox
+    .courseDetailsBox
+    .changeActivity
+    .icon-pencil:hover,
+  div.absence-declaration h2,
+  div.absence-declaration h3,
+  div.acorn-classic.page-container .sectionHeader,
+  div.acorn-classic.page-container .subheading,
+  span.ut-tooltip .highlight,
+  div.acorn-classic.page-container
+    .academic-history-recent
+    table
+    tr.coursesHeader
+    th,
+  div.acorn-classic.page-container .academic-history-recent table .emph,
+  div.acorn-classic.page-container .academic-history .average-section,
+  div.acorn-classic.page-container .academic-history .courses,
+  div.acorn-classic.page-container .academic-history .coursesHeader,
+  div.acorn-classic.page-container .academic-history .credit-earned-section,
+  div.acorn-classic.page-container .academic-history .sessionHeader,
+  p.notification-info-field,
+  div.acorn .information,
+  span.notification-activity-tab-title,
+  span.notification-activity-filter-personal,
+  div#acorn-footer .uoft-footer {
+    color: #ffffff;
+  }
+
+  div#acorn-footer ul li a,
+  div#program-enrolment-app .icon-cog,
+  div.acorn .currentlyEnrolledBox i.icon-cog,
+  div.currentCoursesBox .fa-calendar,
+  div.currentCoursesBox .icon-calendar,
+  div.acorn .courseSearchBox .courseDetailsBox .changeActivity .fa-pencil,
+  div.acorn .courseSearchBox .courseDetailsBox .changeActivity .icon-pencil,
+  div.acorn-classic.page-container .fa-pencil,
+  div.acorn-classic.page-container .icon-pencil,
+  div.acorn-classic.page-container .icon-trash {
+    color: #bfbfbf;
+  }
+
+  ul.nav-tabs > li.active > a,
+  ul.nav-tabs > li.active > a:focus,
+  ul.nav-tabs > li.active > a:hover,
+  div.panel {
+    border: none;
+  }
+
+  div#typeahead-search .ut-typeahead-container input.loadingIcon {
+    background-image: url(../images/loading.460bfa98.gif) right center
+      no-repeat#ffffff;
+    background-color: #373737;
+  }
+
+  div#typeahead-search .ut-typeahead-results-list ul li.active {
+    background-color: #303030;
+  }
+
+  div.acorn-card-deck .acorn-card,
+  div.awards-container .cards-wrapper .acorn-card-deck .acorn-card {
+    border-left: 10px solid var(--page-background);
+    border-right: 10px solid var(--page-background);
+  }
+
+  div.acorn-card-placeholder,
+  div.acorn-classic.page-container .academic-history-recent .coursesHeader > *,
+  div.invoice-and-net-cost
+    .net-cost
+    .acorn-card-deck
+    .acorn-card.acorn-card-placeholder {
+    background-color: #373737 !important;
+  }
+
+  div table.timetableSchedule tr .dayOfWeek {
+    line-height: 40px;
+  }
+
+  div table.timetableSchedule tr .timeOfDay {
+    line-height: 98px;
+  }
+
+  div#acorn-footer .acorn-logo {
+    filter: grayscale(100%) invert(100%) brightness(0.9);
+  }
+
+  div.finance-info .balance .debt {
+    color: #e57373;
+  }
+
+  div.dashboard-reg-status .registered,
+  div.acorn .finances {
+    color: #81c784;
+  }
+}

@@ -1,4 +1,4 @@
-const filesInDirectory = (dir) =>
+const filesInDirectory = (dir: FileSystemDirectoryEntry): Promise<any[]> =>
   new Promise((resolve) =>
     dir.createReader().readEntries((entries) =>
       Promise.all(
@@ -6,21 +6,21 @@ const filesInDirectory = (dir) =>
           .filter((e) => e.name[0] !== ".")
           .map((e) =>
             e.isDirectory
-              ? filesInDirectory(e)
-              : new Promise((resolve) => e.file(resolve))
+              ? filesInDirectory(e as FileSystemDirectoryEntry)
+              : new Promise((resolve) => (e as any).file(resolve))
           )
       )
-        .then((files) => [].concat(...files))
+        .then((files: any[]) => [].concat(...files))
         .then(resolve)
     )
   );
 
-const timestampForFilesInDirectory = (dir) =>
+const timestampForFilesInDirectory = (dir: FileSystemDirectoryEntry): Promise<string> =>
   filesInDirectory(dir).then((files) =>
     files.map((f) => f.name + f.lastModifiedDate).join()
   );
 
-const watchChanges = (dir, lastTimestamp) => {
+const watchChanges = (dir: FileSystemDirectoryEntry, lastTimestamp: string) => {
   timestampForFilesInDirectory(dir).then((timestamp) => {
     if (!lastTimestamp || lastTimestamp === timestamp) {
       setTimeout(() => watchChanges(dir, timestamp), 1000); // retry after 1s
@@ -32,11 +32,11 @@ const watchChanges = (dir, lastTimestamp) => {
 
 chrome.management.getSelf((self) => {
   if (self.installType === "development") {
-    chrome.runtime.getPackageDirectoryEntry((dir) => watchChanges(dir));
+    chrome.runtime.getPackageDirectoryEntry((dir) => watchChanges(dir, ""));
     chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
       // NB: see https://github.com/xpl/crx-hotreload/issues/5
       if (tabs[0]) {
-        chrome.tabs.reload(tabs[0].id);
+        chrome.tabs.reload(tabs[0].id as number);
       }
     });
   }

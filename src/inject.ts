@@ -1,4 +1,4 @@
-const updateMode = (on) => {
+const updateMode = (on: boolean) => {
   if (on) {
     document.getElementsByTagName("HTML")[0].classList.add("uoft-dark-mode");
   } else {

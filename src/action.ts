@@ -1,4 +1,4 @@
-const updateIcon = (on) => {
+const updateIcon = (on: boolean) => {
   chrome.browserAction.setIcon({ path: on ? "icon.png" : "icon-off.png" });
 };
 
