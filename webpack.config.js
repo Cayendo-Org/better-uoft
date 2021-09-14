@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const RemoveEmptyScriptsPlugin = require("webpack-remove-empty-scripts");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const moveProps = require("postcss-move-props-to-bg-image-query");
 const { NODE_ENV = "production" } = process.env;
 
 module.exports = {
@@ -55,7 +56,12 @@ module.exports = {
         loader: "ts-loader",
       },
       {
-        test: /\.(png|jpg|svg|gif|webp|pdf)$/,
+        test: /\.svg(\?.*)?$/,
+        use: ["svg-transform-loader"],
+        type: "asset/inline",
+      },
+      {
+        test: /\.(png|jpg|gif|webp|pdf)$/,
         type: "asset/resource",
       },
       {
@@ -65,7 +71,15 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              url: false,
+              url: true,
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [moveProps()],
+              },
             },
           },
           "sass-loader",

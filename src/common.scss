@@ -119,12 +119,15 @@
       background-color: color(paper, 0, light);
     }
 
-    &,
-    body {
-      font-size: unset;
+    & {
       --border-radius: 4px;
       --spacing: 8;
       --hue-primary: 40;
+    }
+
+    &,
+    body {
+      font-size: unset;
     }
   }
 }
