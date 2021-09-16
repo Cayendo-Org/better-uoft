@@ -22,6 +22,23 @@
   }
 }
 
+#advancedMode {
+  @include common.button(primary, filled, 0);
+}
+
+#advanced-panel {
+  @include common.override {
+    display: none;
+    padding-top: common.spacing(2);
+  }
+}
+
+#advanced-panel.on {
+  @include common.override {
+    display: block;
+  }
+}
+
 #darkMode {
   @include common.button(secondary, filled, 0);
   @include common.override {
@@ -97,6 +114,71 @@
   outline: 0;
 }
 
+//#region Strength
+#primary-strength::-webkit-slider-runnable-track,
+#paper-strength::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, hsl(0, 0%, 0%), hsl(0, 100%, 100%));
+}
+
+#primary-strength::-webkit-slider-thumb {
+  @include common.override(dark) {
+    background: hsla(0, 0%, calc(var(--primary-strength) * 100%), 1);
+  }
+
+  @include common.override(light) {
+    background: hsla(0, 0%, calc(var(--primary-strength) * 100%), 1);
+  }
+}
+
+#paper-strength::-webkit-slider-thumb {
+  @include common.override(dark) {
+    background: hsla(0, 0%, calc(var(--paper-strength) * 100%), 1);
+  }
+
+  @include common.override(light) {
+    background: hsla(0, 0%, calc(var(--paper-strength) * 100%), 1);
+  }
+}
+//#endregion
+
+//#region Hue
+#primary-hue::-webkit-slider-runnable-track,
+#paper-hue::-webkit-slider-runnable-track {
+  @include common.override {
+    background: linear-gradient(
+      to right,
+      #ff8c8c,
+      #ffff8c,
+      #8cff8c,
+      #8ce5e5,
+      #a4a4d2,
+      #bf9ebf,
+      #ff8c8c
+    );
+  }
+}
+
+#primary-hue::-webkit-slider-thumb {
+  @include common.override(dark) {
+    background: hsla(var(--hue-primary), 100%, 77.5%, 1);
+  }
+
+  @include common.override(light) {
+    background: hsla(var(--hue-primary), 100%, 77.5%, 1);
+  }
+}
+
+#paper-hue::-webkit-slider-thumb {
+  @include common.override(dark) {
+    background: hsla(var(--hue-paper), 100%, 77.5%, 1);
+  }
+
+  @include common.override(light) {
+    background: hsla(var(--hue-paper), 100%, 77.5%, 1);
+  }
+}
+//#endregion
+
 [type="range"]::-webkit-slider-runnable-track {
   @include common.override(dark) {
     border: 2px solid common.color(paper, 3, dark);
@@ -111,31 +193,11 @@
     height: 8px;
     transition: all 0.2s ease;
     width: 100%;
-    background: linear-gradient(
-      to right,
-      #ff8c8c,
-      #ffff8c,
-      #8cff8c,
-      #8ce5e5,
-      #a4a4d2,
-      #bf9ebf,
-      #ff8c8c
-    );
     border-radius: common.borderRadius(1.5);
   }
 }
 
 [type="range"]::-webkit-slider-thumb {
-  @include common.override(dark) {
-    background: common.color(secondary, 0, dark);
-    border: 2px solid common.color(paper, 2, dark);
-  }
-
-  @include common.override(light) {
-    background: common.color(secondary, 0, light);
-    border: 2px solid common.textColor(paper, 0, light);
-  }
-
   @include common.override {
     border-radius: common.borderRadius(3);
     box-sizing: border-box;
@@ -145,6 +207,7 @@
     -webkit-appearance: none;
     margin-top: -8px;
     cursor: pointer;
+    border: 2px solid common.color(paper, 2, dark);
   }
 }
 

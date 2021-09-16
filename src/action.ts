@@ -11,9 +11,3 @@ chrome.storage.onChanged.addListener((changes) => {
     updateIcon(changes.enabled.newValue ?? true);
   }
 });
-
-// chrome.runtime.onInstalled.addListener(function (details) {
-//   if (details.reason == "install") {
-//     chrome.storage.sync.set({ on: true });
-//   }
-// });

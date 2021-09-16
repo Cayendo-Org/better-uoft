@@ -26,13 +26,28 @@ const updateState = (enabled: boolean) => {
   }
 };
 
-const updateHue = (hue: number) => {
-  (document.getElementsByTagName("HTML")[0] as HTMLHtmlElement).style.setProperty("--hue-primary", hue.toString());
+const updateHuePrimary = (huePrimary: number) => {
+  (document.getElementsByTagName("HTML")[0] as HTMLHtmlElement).style.setProperty("--hue-primary", huePrimary.toString());
 };
 
-chrome.storage.sync.get(["enabled", "hue", "darkMode"], (result) => {
+const updateHuePaper = (huePaper: number) => {
+  (document.getElementsByTagName("HTML")[0] as HTMLHtmlElement).style.setProperty("--hue-paper", huePaper.toString());
+};
+
+const updatePrimaryStrength = (primaryStrength: number) => {
+  (document.getElementsByTagName("HTML")[0] as HTMLHtmlElement).style.setProperty("--primary-strength", primaryStrength.toString());
+};
+
+const updatePaperStrength = (paperStrength: number) => {
+  (document.getElementsByTagName("HTML")[0] as HTMLHtmlElement).style.setProperty("--paper-strength", paperStrength.toString());
+};
+
+chrome.storage.sync.get(["enabled", "huePrimary", "huePaper", "darkMode"], (result) => {
   updateState(result.enabled ?? true);
-  updateHue(result.hue ?? 200);
+  updateHuePrimary(result.huePrimary ?? 200);
+  updateHuePaper(result.huePaper ?? 200);
+  updatePrimaryStrength(result.primaryStrength ?? 1);
+  updatePaperStrength(result.paperStrength ?? 0);
   updateMode(result.darkMode ?? true);
 });
 
@@ -40,10 +55,24 @@ chrome.storage.onChanged.addListener((changes) => {
   if (changes.enabled) {
     updateState(changes.enabled.newValue ?? true);
   }
-  if (changes.hue) {
-    updateHue(changes.hue.newValue ?? 200);
+
+  if (changes.huePrimary) {
+    updateHuePrimary(changes.huePrimary.newValue ?? 200);
   }
+
+  if (changes.huePaper) {
+    updateHuePaper(changes.huePaper.newValue ?? 200);
+  }
+
   if (changes.darkMode) {
     updateMode(changes.darkMode.newValue ?? true);
+  }
+
+  if (changes.primaryStrength) {
+    updatePrimaryStrength(changes.primaryStrength.newValue ?? 1);
+  }
+
+  if (changes.paperStrength) {
+    updatePaperStrength(changes.paperStrength.newValue ?? 0);
   }
 });
