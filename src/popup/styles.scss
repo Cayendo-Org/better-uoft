@@ -22,14 +22,71 @@
   }
 }
 
+body {
+  @include common.override {
+    width: 380px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.title-wrapper {
+  @include common.override {
+    padding: common.spacing(1) common.spacing(2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.button-wrapper {
+  @include common.override {
+    display: flex;
+    flex-direction: row;
+    gap: common.spacing(1);
+  }
+}
+
 #advancedMode {
-  @include common.button(primary, filled, 0);
+  @include common.button(paper, filled, 1);
+
+  @include common.override {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 0;
+    padding: common.spacing(1) common.spacing(2);
+  }
+
+  @include common.override(dark) {
+    fill: common.textColor(paper, 0, dark);
+  }
+
+  @include common.override(light) {
+    fill: common.textColor(paper, 0, light);
+  }
+
+  &:not(.on) svg.on {
+    display: none;
+  }
+
+  &.on svg:not(.on) {
+    display: none;
+  }
 }
 
 #advanced-panel {
+  @include common.paper(1);
+
   @include common.override {
     display: none;
-    padding-top: common.spacing(2);
+    padding: common.spacing(2);
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
   }
 }
 

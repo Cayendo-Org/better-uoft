@@ -72,8 +72,10 @@ chrome.storage.sync.get(["enabled", "darkMode", "advancedMode", "huePrimary", "h
 
     if (result.advancedMode ?? false) {
         advancedModePanel.classList.add("on");
+        advancedModeButton.classList.add("on");
     } else {
         advancedModePanel.classList.remove("on");
+        advancedModeButton.classList.remove("on");
     }
 
     huePrimarySlider.value = result.huePrimary ?? 200;
@@ -108,8 +110,10 @@ chrome.storage.onChanged.addListener((changes) => {
     if (changes.advancedMode) {
         if (changes.advancedMode.newValue ?? false) {
             advancedModePanel.classList.add("on");
+            advancedModeButton.classList.add("on");
         } else {
             advancedModePanel.classList.remove("on");
+            advancedModeButton.classList.remove("on");
         }
     }
 
