@@ -1,4 +1,4 @@
-# UofT Dark Mode
+# Better UofT
 
 ## _Whole Lotta Dark Mode_
 
