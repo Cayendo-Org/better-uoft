@@ -279,11 +279,11 @@ body {
 
 [type="range"]::-webkit-slider-runnable-track {
   @include common.override(dark) {
-    border: 2px solid common.color(paper, 3, dark);
+    border: 1px solid common.color(paper, 3, dark);
   }
 
   @include common.override(light) {
-    border: 2px solid common.textColor(paper, 0, light);
+    border: 1px solid common.textColor(paper, 0, light);
   }
 
   @include common.override {
@@ -305,9 +305,17 @@ body {
     -webkit-appearance: none;
     margin-top: -8px;
     cursor: pointer;
-    border: 2px solid common.color(paper, 2, dark);
+    border: 1px solid common.color(paper, 2, dark);
   }
 }
+
+[type="range"]::-webkit-slider-thumb:focus,
+[type="range"]::-webkit-slider-thumb:hover {
+  @include common.override {
+    border: 1px solid common.color(paper, 5, dark);
+  }
+}
+
 
 [type="range"]:disabled::-webkit-slider-thumb,
 [type="range"]:disabled::-webkit-slider-runnable-track {
