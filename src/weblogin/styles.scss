@@ -210,7 +210,7 @@ body
 body > div > div > div.col-md-4 > div.login-box > form > button,
 #login-with-partner > button {
   @include common.override {
-    width: 100%;
+    width: 100% !important;
     text-transform: capitalize;
     border-radius: common.borderRadius();
   }
