@@ -238,6 +238,9 @@
         box-shadow: 0 0 0 2px color(focus, 1, light);
         outline: none;
       }
+      &:disabled:hover {
+        cursor: not-allowed;
+      }
     }
 
     @include override(dark) {
@@ -253,6 +256,10 @@
         border: 1px solid color(focus, 1, dark);
         box-shadow: 0 0 0 2px color(focus, 0, dark);
         outline: none;
+      }
+
+      &:disabled:hover {
+        cursor: not-allowed;
       }
     }
 
@@ -275,6 +282,10 @@
         box-shadow: 0 0 0 2px color(focus, 1, light);
         outline: none;
       }
+
+      &:disabled:hover {
+        cursor: not-allowed;
+      }
     }
 
     @include override(dark) {
@@ -289,6 +300,10 @@
         border: 1px solid color(focus, 1, dark);
         box-shadow: 0 0 0 2px color(focus, 0, dark);
         outline: none;
+      }
+
+      &:disabled:hover {
+        cursor: not-allowed;
       }
     }
 

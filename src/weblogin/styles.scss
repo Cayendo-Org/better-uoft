@@ -2,45 +2,163 @@
 
 @include common.theme;
 
-body > div > div > div.col-md-4 > div.login-box,
-body > div > div > div.col-md-5 > div.login-box {
-  @include common.paper;
-}
-
-body > div > div > div.col-md-4 > div.login-box > form > button,
-#doc-login-problems > a,
-#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
-#collapse_UTORidLoginProblems > div > a:nth-child(5),
-#collapse_UTORidLoginProblems > div > a:nth-child(6),
-#collapse_UTORidLoginProblems > div > a:nth-child(7),
-#collapse_UTORidForgottenPW > div > a:nth-child(5),
-#collapse_UTORidForgottenPW > div > a:nth-child(6),
-#collapse_UTORidForgottenPW > div > a:nth-child(7) {
-  @include common.button;
-}
-
-.alert.alert-warning {
-  @include common.alert(warning);
-}
-
-.alert.alert-danger {
-  @include common.alert(error);
-}
-
+//#region Sizing
 body {
   @include common.override {
     overflow-y: scroll;
   }
 }
 
-body > div > div > div.col-md-8 > div > div.col-md-9.col-sm-12.col-xs-12 > div,
-body > div > div > div.col-md-7 > div > div.col-md-9.col-sm-12.col-xs-12 > div {
-  @include common.paper;
+body > div > div > div.col-md-4 > div.login-box > form > button,
+#login-with-partner > button,
+body > header > div > div:nth-child(2) > div {
   @include common.override {
-    padding-bottom: 10px;
+    border-radius: common.borderRadius();
   }
 }
 
+#username,
+#password {
+  @include common.override {
+    box-sizing: border-box;
+    max-width: 100%;
+    height: 40px;
+  }
+}
+
+body > div > div > div.col-md-4 > div.login-box > form > button,
+#login-with-partner > button,
+#idpSelectIdPSelector {
+  @include common.override {
+    width: 100% !important;
+  }
+}
+//#endregion
+
+//#region Asset Swaps
+body > header > div > div:nth-child(1) > div > a {
+  @include common.override {
+    background: url(../assets/uoft_logo.svg);
+    border: none;
+  }
+
+  @include common.override(light) {
+    filter: invert(100%);
+  }
+}
+
+.login-checklist > li {
+  @include common.override {
+    position: relative;
+  }
+}
+
+#doc-protect > ul > li {
+  @include common.override {
+    &::before {
+      position: absolute;
+      left: 0;
+      display: block;
+      content: " ";
+      width: 25px;
+      height: 25px;
+      clip-path: path(
+        "M23,12l-2.44-2.79l0.34-3.69l-3.61-0.82L15.4,1.5L12,2.96L8.6,1.5L6.71,4.69L3.1,5.5L3.44,9.2L1,12l2.44,2.79l-0.34,3.7 l3.61,0.82L8.6,22.5l3.4-1.47l3.4,1.46l1.89-3.19l3.61-0.82l-0.34-3.69L23,12z M10.09,16.72l-3.8-3.81l1.48-1.48l2.32,2.33 l5.85-5.87l1.48,1.48L10.09,16.72z"
+      );
+    }
+  }
+}
+//#endregion
+
+//#region Hide Elements
+body > header > div > div:nth-child(1) > div > a > object,
+body > div > div > div.col-md-5 > div.login-box-bar.clearfix,
+body > div > div > div.col-md-4 > div.login-box > form > button > span,
+#login-with-partner > button > span,
+body > div > div > div.col-md-4 > div.login-box-bar {
+  @include common.override {
+    display: none;
+  }
+}
+
+body > header > div > div:nth-child(2) > div,
+#doc-protect > ul > li {
+  @include common.override {
+    background: transparent;
+  }
+}
+//#endregion
+
+//#region Font Weight
+body
+  > div
+  > div
+  > div.col-md-4
+  > div.login-box
+  > form
+  > div:nth-child(3)
+  > label,
+body
+  > div
+  > div
+  > div.col-md-4
+  > div.login-box
+  > form
+  > div:nth-child(2)
+  > label,
+#username,
+#password {
+  @include common.override {
+    font-weight: 500;
+  }
+}
+
+#doc-log-out > span > strong {
+  @include common.override {
+    font-weight: 600;
+  }
+}
+//#endregion
+
+//#region Components
+body > footer > div > div > div > ul > li:nth-child(2) > a,
+body > footer > div > div > div > ul > li:nth-child(3) > a,
+body
+  > div
+  > div
+  > div.col-md-4
+  > div.login-box
+  > section:nth-child(2)
+  > p
+  > a:nth-child(1),
+#pwreq-link,
+#collapse_UTORidLoginProblems > div > p > a,
+#collapse_UTORidLoginProblems > div > a:nth-child(9),
+#collapse_JOINid_LoginProblems > div > p > a,
+body > footer > div > div > div > ul > li:nth-child(1) > a,
+#collapse_UTORidForgottenPW > div > p > a,
+#collapse_UTORidForgottenPW > div > a:nth-child(9),
+#collapse_JOINidForgottenPW > div > p > a,
+#collapseHelp_UTORid > div > p > a,
+#collapseHelp3 > div > p > a,
+#collapseHelp3 > div > p > i:nth-child(8) > a,
+#collapseHelp_uSOURCE > div > p > a:nth-child(1),
+#collapseHelp_uSOURCE > div > p > a:nth-child(3),
+#collapseHelp_ess > div > p > a:nth-child(6),
+#collapseHelp_ess > div > p > a:nth-child(8),
+#collapseHelp_ess > div > p > a:nth-child(10),
+#collapseHelp_erdd > div > p > a,
+#collapseHelp_IC > div > p > a,
+#collapseHelp_JOINid > div > ul > li > a,
+#collapseHelp_JOINid > div > p:nth-child(3) > a,
+#doc-protect > ul > li:nth-child(1) > a,
+#idpSelectIdPEntryTile > a,
+#idpSelectIdPListTile > a,
+#accordionLoginProblems div.panel-heading h4 a,
+#howToLogOut,
+body > div > div > div.col-md-4 > div.alert.alert-warning > a,
+#doc-login-problems > p > a,
+#doc-forgotten-password > p > a,
 body
   > div
   > div
@@ -78,102 +196,267 @@ body
   > li
   > a {
   @include common.link;
-  @include common.typography(body2);
-  @include common.override {
-    padding: 10px 20px;
-  }
 }
 
+body > div > div > div.col-md-4 > div.login-box,
+body > div > div > div.col-md-5 > div.login-box,
+body > div > div > div.col-md-8 > div > div.col-md-9.col-sm-12.col-xs-12 > div,
+body > div > div > div.col-md-7 > div > div.col-md-9.col-sm-12.col-xs-12 > div {
+  @include common.paper;
+}
+
+#accordionLoginProblems > div,
+#accordionForgottenPW > div,
+#collapse_UTORidForgottenPW > div::before,
+#accordionHelp > div {
+  @include common.paper(2);
+}
+
+body > div > div > div.col-md-4 > div.login-box > form > button,
+#doc-login-problems > a,
+#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
+#collapse_UTORidLoginProblems > div > a:nth-child(5),
+#collapse_UTORidLoginProblems > div > a:nth-child(6),
+#collapse_UTORidLoginProblems > div > a:nth-child(7),
+#collapse_UTORidForgottenPW > div > a:nth-child(5),
+#collapse_UTORidForgottenPW > div > a:nth-child(6),
+#collapse_UTORidForgottenPW > div > a:nth-child(7),
+#login-with-partner > button {
+  @include common.button;
+}
+
+#username,
+#password {
+  @include common.input;
+}
+
+.alert.alert-warning {
+  @include common.alert(warning);
+}
+
+.alert.alert-danger {
+  @include common.alert(error);
+}
+//#endregion
+
+//#region Padding
 body
   > div
   > div
   > div.col-md-8
   > div
-  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav {
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav,
+#idpSelectIdPSelector {
   @include common.override {
-    padding: 0;
+    padding: 0 !important;
   }
 }
 
-#howToLogOut,
-body > div > div > div.col-md-4 > div.alert.alert-warning > a,
-#doc-login-problems > p > a,
-#doc-forgotten-password > p > a {
-  @include common.link;
+#doc-login-problems > a,
+#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
+#collapse_UTORidLoginProblems > div > a:nth-child(5),
+#collapse_UTORidLoginProblems > div > a:nth-child(6),
+#collapse_UTORidLoginProblems > div > a:nth-child(7),
+#collapse_UTORidForgottenPW > div > a:nth-child(5),
+#collapse_UTORidForgottenPW > div > a:nth-child(6),
+#collapse_UTORidForgottenPW > div > a:nth-child(7) {
+  @include common.override {
+    padding: 5px 10px;
+  }
 }
 
-body > header > div > div:nth-child(1) > div > a {
+body > div > div > div.col-md-4 > div.login-box > form > button,
+#doc-login-problems > a,
+#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
+#collapse_UTORidLoginProblems > div > a:nth-child(5),
+#collapse_UTORidLoginProblems > div > a:nth-child(6),
+#collapse_UTORidLoginProblems > div > a:nth-child(7),
+#collapse_UTORidForgottenPW > div > a:nth-child(5),
+#collapse_UTORidForgottenPW > div > a:nth-child(6),
+#collapse_UTORidForgottenPW > div > a:nth-child(7),
+#login-with-partner > button,
+body
+  > div
+  > div
+  > div.col-md-8
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li
+  > a,
+body
+  > div
+  > div
+  > div.col-md-8
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li.active
+  > a,
+body
+  > div
+  > div
+  > div.col-md-7
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li.active
+  > a,
+body
+  > div
+  > div
+  > div.col-md-7
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li
+  > a {
   @include common.override {
-    background: url(../assets/uoft_logo.svg);
-    border: none;
+    padding: 10px 20px;
   }
+}
 
+#username,
+#password {
+  padding: 14px 20px;
+}
+
+body > div > div > div.col-md-8 > div > div.col-md-9.col-sm-12.col-xs-12 > div,
+body > div > div > div.col-md-7 > div > div.col-md-9.col-sm-12.col-xs-12 > div {
+  @include common.override {
+    padding-bottom: 10px;
+  }
+}
+//#endregion
+
+//#region Margin
+body > div > div > div.col-md-4 > div.login-box > form > button,
+#doc-login-problems > a,
+#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
+#collapse_UTORidLoginProblems > div > a:nth-child(5),
+#collapse_UTORidLoginProblems > div > a:nth-child(6),
+#collapse_UTORidLoginProblems > div > a:nth-child(7),
+#collapse_UTORidForgottenPW > div > a:nth-child(5),
+#collapse_UTORidForgottenPW > div > a:nth-child(6),
+#collapse_UTORidForgottenPW > div > a:nth-child(7) {
+  margin-bottom: 10px;
+}
+
+#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a {
+  @include common.override {
+    margin-bottom: 0;
+  }
+}
+//#endregion
+
+//#region Border
+body > footer > div > div {
   @include common.override(light) {
-    filter: invert(100%);
-  }
-}
-
-.login-checklist > li {
-  @include common.override {
-    position: relative;
-  }
-}
-
-#doc-protect > ul > li {
-  @include common.override(light) {
-    color: common.textColor(paper, 0, light);
-
-    &::before {
-      background: common.textColor(paper, 0, light);
-    }
+    border-top: 1px solid common.textColor(paper, 2, light);
   }
 
   @include common.override(dark) {
-    color: common.textColor(paper, 0, dark);
-
-    &::before {
-      background: common.textColor(paper, 0, dark);
-    }
-  }
-
-  @include common.override {
-    background: none;
-
-    &::before {
-      position: absolute;
-      left: 0;
-      display: block;
-      content: " ";
-      width: 25px;
-      height: 25px;
-      clip-path: path(
-        "M23,12l-2.44-2.79l0.34-3.69l-3.61-0.82L15.4,1.5L12,2.96L8.6,1.5L6.71,4.69L3.1,5.5L3.44,9.2L1,12l2.44,2.79l-0.34,3.7 l3.61,0.82L8.6,22.5l3.4-1.47l3.4,1.46l1.89-3.19l3.61-0.82l-0.34-3.69L23,12z M10.09,16.72l-3.8-3.81l1.48-1.48l2.32,2.33 l5.85-5.87l1.48,1.48L10.09,16.72z"
-      );
-    }
+    border-top: 1px solid common.textColor(paper, 2, dark);
   }
 }
 
-body > header > div > div:nth-child(1) > div > a > object,
-body > div > div > div.col-md-5 > div.login-box-bar.clearfix,
-body > div > div > div.col-md-4 > div.login-box > form > button > span,
-#login-with-partner > button > span,
-body > div > div > div.col-md-4 > div.login-box-bar {
+#collapse_PwReq_LoginProblems > div,
+#collapse_UTORidLoginProblems > div,
+#collapse_JOINid_LoginProblems > div,
+#collapse_JOINidForgottenPW > div,
+#collapse_UTORidForgottenPW > div,
+#collapseHelp_UTORid > div,
+#collapseHelp3 > div,
+#collapseHelp_uSOURCE > div,
+#collapseHelp_ess > div,
+#collapseHelp_erdd > div,
+#collapseHelp_IC > div,
+#collapseHelp_JOINid > div {
+  @include common.override(light) {
+    border-top: 1px solid common.color(paper, 3, light);
+  }
+
+  @include common.override(dark) {
+    border-top: 1px solid common.color(paper, 3, dark);
+  }
+}
+//#endregion
+
+//#region Typography
+#doc-login-problems > a,
+#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
+#collapse_UTORidLoginProblems > div > a:nth-child(5),
+#collapse_UTORidLoginProblems > div > a:nth-child(6),
+#collapse_UTORidLoginProblems > div > a:nth-child(7),
+#collapse_UTORidForgottenPW > div > a:nth-child(5),
+#collapse_UTORidForgottenPW > div > a:nth-child(6),
+#collapse_UTORidForgottenPW > div > a:nth-child(7),
+body > div > div > div.col-md-4 > div.login-box > form > button,
+#login-with-partner > button,
+body > header > div > div:nth-child(2) > div {
   @include common.override {
-    display: none;
+    text-transform: capitalize;
   }
 }
 
 body > div > div > div.col-md-4 > div.login-box > section:nth-child(1) > p,
-body > div > div > div.col-md-4 > div.login-box > section:nth-child(2) > p {
+body > div > div > div.col-md-4 > div.login-box > section:nth-child(2) > p,
+#username,
+#password,
+#doc-login-problems > a,
+#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
+#collapse_UTORidLoginProblems > div > a:nth-child(5),
+#collapse_UTORidLoginProblems > div > a:nth-child(6),
+#collapse_UTORidLoginProblems > div > a:nth-child(7),
+#collapse_UTORidForgottenPW > div > a:nth-child(5),
+#collapse_UTORidForgottenPW > div > a:nth-child(6),
+#collapse_UTORidForgottenPW > div > a:nth-child(7),
+body
+  > div
+  > div
+  > div.col-md-8
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li
+  > a,
+body
+  > div
+  > div
+  > div.col-md-8
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li.active
+  > a,
+body
+  > div
+  > div
+  > div.col-md-7
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li.active
+  > a,
+body
+  > div
+  > div
+  > div.col-md-7
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
+  > ul
+  > li
+  > a {
   @include common.typography(body2);
+}
 
-  @include common.override(light) {
-    color: common.textColor(paper, 1, light);
-  }
-
-  @include common.override(dark) {
-    color: common.textColor(paper, 1, dark);
-  }
+#doc-protect > h2,
+#doc-error > h2,
+#doc-login-problems > h2,
+#doc-forgotten-password > h2,
+#doc-log-out > h2,
+#doc-finding-help > h2 {
+  @include common.typography(h6);
 }
 
 body
@@ -192,51 +475,27 @@ body
   > form
   > div:nth-child(2)
   > label {
-  @include common.typography();
-
-  @include common.override {
-    font-weight: 500;
-  }
-
-  @include common.override(light) {
-    color: common.textColor(paper, 1, light);
-  }
-
-  @include common.override(dark) {
-    color: common.textColor(paper, 1, dark);
-  }
+  @include common.typography;
 }
+//#endregion
 
-body > div > div > div.col-md-4 > div.login-box > form > button,
-#login-with-partner > button {
-  @include common.override {
-    width: 100% !important;
-    text-transform: capitalize;
-    border-radius: common.borderRadius();
-  }
-}
-
-body > header > div > div:nth-child(2) > div {
-  @include common.override {
-    text-transform: capitalize;
-    border-radius: common.borderRadius(1.5);
-    background: transparent;
-  }
-
-  @include common.override(light) {
-    color: common.textColor(paper, 1, light);
-  }
-
-  @include common.override(dark) {
-    color: common.textColor(paper, 1, dark);
-  }
-}
-
-#doc-log-out > span > strong {
-  @include common.override {
-    font-weight: 600;
-  }
-
+//#region Color
+#accordionLoginProblems > div > div.panel-heading > h4 > a,
+#accordionForgottenPW > div > div.panel-heading > h4 > a,
+#accordionHelp > div > div.panel-heading > h4 > a,
+#accordionLoginProblems > div > div.panel-heading > h4 > a::before,
+#accordionForgottenPW > div > div.panel-heading > h4 > a::before,
+#accordionHelp > div > div.panel-heading > h4 > a::before,
+#idpSelectIdPSelector,
+#doc-protect > ul > li,
+#doc-log-out > span > strong,
+#doc-protect > h2,
+#doc-error > h2,
+#doc-login-problems > h2,
+#doc-forgotten-password > h2,
+#doc-log-out > h2,
+#doc-finding-help > h2,
+#doc-protect > ul > li::before {
   @include common.override(light) {
     color: common.textColor(paper, 0, light);
   }
@@ -246,45 +505,26 @@ body > header > div > div:nth-child(2) > div {
   }
 }
 
-#doc-protect > ul > li:nth-child(3) > span {
-  @include common.override(light) {
-    color: common.textColor(paper, 2, light);
-  }
-
-  @include common.override(dark) {
-    color: common.textColor(paper, 2, dark);
-  }
-}
-
-body > header > div > div:nth-child(2) > div {
-  @include common.override {
-    text-transform: capitalize;
-    border-radius: common.borderRadius(1.5);
-  }
-
-  @include common.override(light) {
-    color: common.textColor(paper, 1, light);
-  }
-
-  @include common.override(dark) {
-    color: common.textColor(paper, 1, dark);
-  }
-}
-
-#doc-protect > ul > li:nth-child(3) > span > strong,
-#doc-log-out > p:nth-child(4) > strong.alert-danger,
-#doc-log-out > p:nth-child(5) > strong.alert-danger,
-#doc-protect > ul > li:nth-child(2) > span > strong,
-#doc-protect > ul > li:nth-child(2) > span {
-  @include common.override(light) {
-    color: common.textColor(paper, 2, light);
-  }
-
-  @include common.override(dark) {
-    color: common.textColor(paper, 2, dark);
-  }
-}
-
+body
+  > div
+  > div
+  > div.col-md-4
+  > div.login-box
+  > form
+  > div:nth-child(3)
+  > label,
+body
+  > div
+  > div
+  > div.col-md-4
+  > div.login-box
+  > form
+  > div:nth-child(2)
+  > label,
+body > div > div > div.col-md-4 > div.login-box > section:nth-child(1) > p,
+body > div > div > div.col-md-4 > div.login-box > section:nth-child(2) > p,
+body > header > div > div:nth-child(2) > div,
+body > header > div > div:nth-child(2) > div,
 #doc-protect > ul > li:nth-child(1) > span,
 body > div > div > div.col-md-4 > div.login-box > div > p:nth-child(1),
 body > div > div > div.col-md-4 > div.login-box > div > p:nth-child(3),
@@ -325,118 +565,15 @@ body > div > div > div.col-md-4 > div.login-box > p {
   }
 }
 
-#doc-protect > h2,
-#doc-error > h2,
-#doc-login-problems > h2,
-#doc-forgotten-password > h2,
-#doc-log-out > h2,
-#doc-finding-help > h2 {
-  @include common.typography(h6);
-
-  @include common.override(light) {
-    color: common.textColor(paper, 0, light);
-  }
-
-  @include common.override(dark) {
-    color: common.textColor(paper, 0, dark);
-  }
-}
-
-#username,
-#password {
-  @include common.input;
-  @include common.override {
-    box-sizing: border-box;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 14px 20px;
-    max-width: 100%;
-    height: 40px;
-  }
-}
-
-body > div > div > div.col-md-4 > div.login-box > form > button,
-#doc-login-problems > a,
-#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
-#collapse_UTORidLoginProblems > div > a:nth-child(5),
-#collapse_UTORidLoginProblems > div > a:nth-child(6),
-#collapse_UTORidLoginProblems > div > a:nth-child(7),
-#collapse_UTORidForgottenPW > div > a:nth-child(5),
-#collapse_UTORidForgottenPW > div > a:nth-child(6),
-#collapse_UTORidForgottenPW > div > a:nth-child(7) {
-  @include common.override {
-    padding: 10px 20px;
-    margin-bottom: 10px;
-  }
-}
-
-#doc-login-problems > a,
-#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
-#collapse_UTORidLoginProblems > div > a:nth-child(5),
-#collapse_UTORidLoginProblems > div > a:nth-child(6),
-#collapse_UTORidLoginProblems > div > a:nth-child(7),
-#collapse_UTORidForgottenPW > div > a:nth-child(5),
-#collapse_UTORidForgottenPW > div > a:nth-child(6),
-#collapse_UTORidForgottenPW > div > a:nth-child(7) {
-  @include common.override {
-    padding: 5px 10px;
-  }
-}
-
-#doc-login-problems > a,
-#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
-#collapse_UTORidLoginProblems > div > a:nth-child(5),
-#collapse_UTORidLoginProblems > div > a:nth-child(6),
-#collapse_UTORidLoginProblems > div > a:nth-child(7),
-#collapse_UTORidForgottenPW > div > a:nth-child(5),
-#collapse_UTORidForgottenPW > div > a:nth-child(6),
-#collapse_UTORidForgottenPW > div > a:nth-child(7) {
-  @include common.typography(body2);
-
-  @include common.override {
-    text-transform: capitalize;
-  }
-}
-
-#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a {
-  @include common.override {
-    margin-bottom: 0;
-  }
-}
-
-#login-with-partner > button {
-  @include common.button;
-  @include common.override {
-    padding: 10px 20px;
-  }
-}
-
-body > div > div > div.col-md-4 > div.login-box > form > button:disabled,
-#login-with-partner > button:disabled {
-  @include common.button;
-}
-
-body > div > div > div.col-md-4 > div.login-box > form > button:disabled:hover,
-#login-with-partner > button:disabled:hover {
-  @include common.button;
-  @include common.override {
-    cursor: not-allowed;
-  }
-}
-
-body > footer > div > div {
-  @include common.override(light) {
-    border-top: 1px solid common.textColor(paper, 2, light);
-  }
-
-  @include common.override(dark) {
-    border-top: 1px solid common.textColor(paper, 2, dark);
-  }
-}
-
 body > footer > div > div > div > ul > li:nth-child(1),
 body > footer > div > div > div > ul > li:nth-child(4),
-body > footer > div > div > div > ul > li:nth-child(3) {
+body > footer > div > div > div > ul > li:nth-child(3),
+#doc-protect > ul > li:nth-child(3) > span > strong,
+#doc-log-out > p:nth-child(4) > strong.alert-danger,
+#doc-log-out > p:nth-child(5) > strong.alert-danger,
+#doc-protect > ul > li:nth-child(2) > span > strong,
+#doc-protect > ul > li:nth-child(2) > span,
+#doc-protect > ul > li:nth-child(3) > span {
   @include common.override(light) {
     color: common.textColor(paper, 2, light);
   }
@@ -445,107 +582,4 @@ body > footer > div > div > div > ul > li:nth-child(3) {
     color: common.textColor(paper, 2, dark);
   }
 }
-
-body > footer > div > div > div > ul > li:nth-child(2) > a,
-body > footer > div > div > div > ul > li:nth-child(3) > a,
-body
-  > div
-  > div
-  > div.col-md-4
-  > div.login-box
-  > section:nth-child(2)
-  > p
-  > a:nth-child(1),
-#pwreq-link,
-#collapse_UTORidLoginProblems > div > p > a,
-#collapse_UTORidLoginProblems > div > a:nth-child(9),
-#collapse_JOINid_LoginProblems > div > p > a,
-body > footer > div > div > div > ul > li:nth-child(1) > a,
-#collapse_UTORidForgottenPW > div > p > a,
-#collapse_UTORidForgottenPW > div > a:nth-child(9),
-#collapse_JOINidForgottenPW > div > p > a,
-#collapseHelp_UTORid > div > p > a,
-#collapseHelp3 > div > p > a,
-#collapseHelp3 > div > p > i:nth-child(8) > a,
-#collapseHelp_uSOURCE > div > p > a:nth-child(1),
-#collapseHelp_uSOURCE > div > p > a:nth-child(3),
-#collapseHelp_ess > div > p > a:nth-child(6),
-#collapseHelp_ess > div > p > a:nth-child(8),
-#collapseHelp_ess > div > p > a:nth-child(10),
-#collapseHelp_erdd > div > p > a,
-#collapseHelp_IC > div > p > a,
-#collapseHelp_JOINid > div > ul > li > a,
-#collapseHelp_JOINid > div > p:nth-child(3) > a,
-#doc-protect > ul > li:nth-child(1) > a,
-#idpSelectIdPEntryTile > a,
-#idpSelectIdPListTile > a,
-#accordionLoginProblems div.panel-heading h4 a {
-  @include common.link;
-}
-
-#accordionLoginProblems > div,
-#accordionForgottenPW > div,
-#collapse_UTORidForgottenPW > div::before,
-#accordionHelp > div {
-  @include common.paper(2);
-}
-
-#collapse_PwReq_LoginProblems > div,
-#collapse_UTORidLoginProblems > div,
-#collapse_JOINid_LoginProblems > div,
-#collapse_JOINidForgottenPW > div,
-#collapse_UTORidForgottenPW > div,
-#collapseHelp_UTORid > div,
-#collapseHelp3 > div,
-#collapseHelp_uSOURCE > div,
-#collapseHelp_ess > div,
-#collapseHelp_erdd > div,
-#collapseHelp_IC > div,
-#collapseHelp_JOINid > div {
-  @include common.override(light) {
-    border-top: 1px solid common.color(paper, 3, light);
-  }
-
-  @include common.override(dark) {
-    border-top: 1px solid common.color(paper, 3, dark);
-  }
-}
-
-#accordionLoginProblems > div > div.panel-heading > h4 > a,
-#accordionForgottenPW > div > div.panel-heading > h4 > a,
-#accordionHelp > div > div.panel-heading > h4 > a {
-  @include common.override(light) {
-    color: common.textColor(paper, 0, light);
-  }
-
-  @include common.override(dark) {
-    color: common.textColor(paper, 0, dark);
-  }
-}
-
-#accordionLoginProblems > div > div.panel-heading > h4 > a::before,
-#accordionForgottenPW > div > div.panel-heading > h4 > a::before,
-#accordionHelp > div > div.panel-heading > h4 > a::before {
-  @include common.override(light) {
-    color: common.textColor(paper, 0, light);
-  }
-
-  @include common.override(dark) {
-    color: common.textColor(paper, 0, dark);
-  }
-}
-
-#idpSelectIdPSelector {
-  @include common.override(light) {
-    color: common.textColor(paper, 0, light);
-  }
-
-  @include common.override(dark) {
-    color: common.textColor(paper, 0, dark);
-  }
-
-  @include common.override {
-    padding: 0 !important;
-    width: 100% !important;
-  }
-}
+//#endregion
