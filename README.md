@@ -2,11 +2,11 @@
 
 ## _Whole Lotta Dark Mode_
 
-UofT Dark Mode is a chrome extension that adds dark mode to UofT websites.
+Better UofT is a chrome extension that improves accessibilty, adds dark mode and customizable theming to UofT websites.
 
 ## Websites
 
-UofT Dark Mode currently restyles the following websites:
+Better UofT currently supports the following websites:
 
 | Websites | Link |
 | ------ | ------ |
@@ -18,7 +18,7 @@ UofT Dark Mode currently restyles the following websites:
 
 >0. Clone the repo:
 ```
-git clone https://github.com/jumf2222/uoft-dark-mode.git
+git clone https://github.com/Cayendo-Org/better-uoft.git
 ```
 >
 >1. Go to extensions in Chrome
