@@ -25,7 +25,7 @@
         1
       )
     );
-  } @else if $color == secondary {
+  } @else if $color == focus {
     @return hsla(
       calc(var(--hue-primary) + 180),
       calc(100% * var(--primary-strength)),
@@ -73,7 +73,7 @@
         1
       )
     );
-  } @else if $color == secondary {
+  } @else if $color == focus {
     @return hsla(
       calc(var(--hue-primary) + 180),
       calc(100% * var(--primary-strength)),
@@ -95,10 +95,20 @@
 }
 
 @mixin typography($variant: body) {
-  @if $variant == body {
-    font-size: 1rem;
-  } @else if $variant == body2 {
-    font-size: 0.78rem;
+  @include override {
+    @if $variant == h3 {
+      font-size: 2.25rem;
+    } @else if $variant == h4 {
+      font-size: 1.75rem;
+    } @else if $variant == h5 {
+      font-size: 1.5rem;
+    } @else if $variant == h6 {
+      font-size: 1.25rem;
+    } @else if $variant == body {
+      font-size: 1rem;
+    } @else if $variant == body2 {
+      font-size: 0.875rem;
+    }
   }
 }
 
@@ -122,6 +132,7 @@
   :root:not(#abcd).better-uoft {
     * {
       background-color: transparent;
+      border-color: transparent;
       font-family: Arial, Helvetica, sans-serif !important;
       box-sizing: border-box;
     }
@@ -175,20 +186,32 @@
   }
 }
 
-@mixin link($color: primary, $elevation: 0) {
+@mixin link() {
   @include override(light) {
-    color: textColor($color, $elevation, light);
+    color: textColor(primary, 0, light);
+    border: 1px solid transparent;
 
     &:hover {
       text-decoration: none;
     }
+
+    &:focus {
+      border: 1px solid color(focus, 0, light);
+      outline: none;
+    }
   }
 
   @include override(dark) {
-    color: color($color, $elevation, dark);
+    color: color(primary, 0, dark);
+    border: 1px solid transparent;
 
     &:hover {
       text-decoration: none;
+    }
+
+    &:focus {
+      border: 1px solid color(focus, 0, dark);
+      outline: none;
     }
   }
 
@@ -197,27 +220,39 @@
   }
 }
 
-@mixin button($color: primary, $variant: filled, $elevation: 0) {
+@mixin button($variant: filled) {
   @include typography;
 
   @if $variant == filled {
     @include override(light) {
-      border: 1px solid color($color, $elevation, light);
-      color: textColor($color, $elevation, light);
-      background: color($color, $elevation, light);
+      border: 1px solid color(primary, 0, light);
+      color: textColor(primary, 0, light);
+      background: color(primary, 0, light);
 
       &:hover {
-        background: color($color, $elevation + 1, light);
+        background: color(primary, 1, light);
+      }
+
+      &:focus {
+        border: 1px solid color(focus, 0, light);
+        box-shadow: 0 0 0 2px color(focus, 1, light);
+        outline: none;
       }
     }
 
     @include override(dark) {
-      border: 1px solid color($color, $elevation, dark);
-      color: textColor($color, $elevation, dark);
-      background: color($color, $elevation, dark);
+      border: 1px solid color(primary, 0, dark);
+      color: textColor(primary, 0, dark);
+      background: color(primary, 0, dark);
 
       &:hover {
-        background: color($color, $elevation + 1, dark);
+        background: color(primary, 1, dark);
+      }
+
+      &:focus {
+        border: 1px solid color(focus, 1, dark);
+        box-shadow: 0 0 0 2px color(focus, 0, dark);
+        outline: none;
       }
     }
 
@@ -228,18 +263,32 @@
     }
   } @else if $variant == text {
     @include override(light) {
-      color: textColor($color, $elevation, light);
+      color: textColor(paper, 0, light);
 
       &:hover {
-        background: color($color, $elevation + 1, light);
+        background: color(primary, 0, light);
+        color: textColor(primary, 0, light);
+      }
+
+      &:focus {
+        border: 1px solid color(focus, 0, light);
+        box-shadow: 0 0 0 2px color(focus, 1, light);
+        outline: none;
       }
     }
 
     @include override(dark) {
-      color: textColor($color, $elevation, dark);
+      color: textColor(paper, 0, dark);
 
       &:hover {
-        background: color($color, $elevation + 1, dark);
+        background: color(primary, 0, dark);
+        color: textColor(primary, 0, dark);
+      }
+
+      &:focus {
+        border: 1px solid color(focus, 1, dark);
+        box-shadow: 0 0 0 2px color(focus, 0, dark);
+        outline: none;
       }
     }
 
@@ -248,6 +297,71 @@
       cursor: pointer;
       transition: background-color 0.2s;
     }
+  }
+}
+
+@mixin input() {
+  @include typography;
+
+  @include override(light) {
+    border: 1px solid color(paper, 3, light);
+    color: textColor(paper, 2, light);
+    background: color(paper, 2, light);
+    caret-color: textColor(paper, 2, light);
+
+    &:hover {
+      background: color(paper, 2, light);
+      border: 1px solid color(focus, 0, light);
+    }
+
+    &:focus {
+      border: 1px solid color(focus, 0, light);
+      box-shadow: 0 0 0 2px color(focus, 1, light);
+      outline: none;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-internal-autofill-previewed,
+    &:-internal-autofill-previewed:hover,
+    &:-internal-autofill-selected,
+    &:-internal-autofill-selected:focus {
+      box-shadow: 0 0 0 1000px #{color(paper, 0, light)} inset;
+    }
+  }
+
+  @include override(dark) {
+    border: 1px solid color(paper, 3, dark);
+    color: textColor(paper, 2, dark);
+    background: color(paper, 2, dark);
+    caret-color: textColor(paper, 2, dark);
+
+    &:hover {
+      background: color(paper, 2, dark);
+      border: 1px solid color(focus, 0, dark);
+    }
+
+    &:focus {
+      border: 1px solid color(focus, 1, dark);
+      box-shadow: 0 0 0 2px color(focus, 0, dark);
+      outline: none;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-internal-autofill-previewed,
+    &:-internal-autofill-previewed:hover,
+    &:-internal-autofill-selected,
+    &:-internal-autofill-selected:focus {
+      box-shadow: 0 0 0 1000px #{color(paper, 0, dark)} inset;
+    }
+  }
+
+  @include override {
+    border-radius: borderRadius();
+    transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
   }
 }
 

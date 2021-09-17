@@ -49,7 +49,7 @@ body {
 }
 
 #advancedMode {
-  @include common.button(paper, filled, 1);
+  @include common.button;
 
   @include common.override {
     display: flex;
@@ -60,12 +60,36 @@ body {
     padding: common.spacing(1) common.spacing(2);
   }
 
-  @include common.override(dark) {
-    fill: common.textColor(paper, 0, dark);
+  @include common.override(light) {
+    fill: common.textColor(paper, 1, light);
+    background: common.color(paper, 1, light);
+    border: 1px solid common.color(paper, 1, light);
+
+    &:hover {
+      background: common.color(paper, 2, light);
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:active:focus {
+      border: 1px solid common.color(paper, 1, light);
+    }
   }
 
-  @include common.override(light) {
-    fill: common.textColor(paper, 0, light);
+  @include common.override(dark) {
+    fill: common.textColor(paper, 1, dark);
+    background: common.color(paper, 1, dark);
+    border: 1px solid common.color(paper, 1, dark);
+
+    &:hover {
+      background: common.color(paper, 2, dark);
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
   }
 
   &:not(.on) svg.on {
@@ -97,7 +121,7 @@ body {
 }
 
 #darkMode {
-  @include common.button(secondary, filled, 0);
+  @include common.button;
   @include common.override {
     width: 53px;
     height: 36px;
@@ -108,11 +132,11 @@ body {
 
   svg {
     @include common.override(dark) {
-      fill: common.textColor(secondary, 0, dark);
+      fill: common.textColor(primary, 0, dark);
     }
 
     @include common.override(light) {
-      fill: common.textColor(secondary, 0, light);
+      fill: common.textColor(primary, 0, light);
     }
 
     @include common.override {
@@ -135,18 +159,18 @@ body {
 }
 
 #enabled {
-  @include common.button(primary, filled, 0);
+  @include common.button;
   @include common.override {
     width: 53px;
     height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
-    &:not(.on){
-      background: #FF8C8C;
-      border-color: #FF8C8C;
+    &:not(.on) {
+      background: #ff8c8c;
+      border-color: #ff8c8c;
       &:hover {
-        background: #FFBFBF;
+        background: #ffbfbf;
       }
     }
   }
@@ -162,10 +186,10 @@ body {
 
 #enabled.on {
   @include common.override {
-    background: #8CFF8C;
-    border-color: #8CFF8C;
+    background: #8cff8c;
+    border-color: #8cff8c;
     &:hover {
-      background: #BFFFBF;
+      background: #bfffbf;
     }
   }
 

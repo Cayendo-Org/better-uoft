@@ -77,10 +77,21 @@ body
   > ul
   > li
   > a {
-  @include common.button($color: paper, $variant: text);
+  @include common.link;
   @include common.typography(body2);
   @include common.override {
     padding: 10px 20px;
+  }
+}
+
+body
+  > div
+  > div
+  > div.col-md-8
+  > div
+  > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav {
+  @include common.override {
+    padding: 0;
   }
 }
 
@@ -88,14 +99,17 @@ body
 body > div > div > div.col-md-4 > div.alert.alert-warning > a,
 #doc-login-problems > p > a,
 #doc-forgotten-password > p > a {
-  @include common.link();
+  @include common.link;
 }
 
 body > header > div > div:nth-child(1) > div > a {
   @include common.override {
-    background: url(https://cayendo-org.github.io/uoft-dark-mode/uoft_logo.svg)
-      no-repeat;
+    background: url(../assets/uoft_logo.svg);
     border: none;
+  }
+
+  @include common.override(light) {
+    filter: invert(100%);
   }
 }
 
@@ -139,469 +153,399 @@ body > header > div > div:nth-child(1) > div > a {
   }
 }
 
-html.uoft-dark-mode {
-  body > header > div > div:nth-child(1) > div > a > object,
-  body > div > div > div.col-md-5 > div.login-box-bar.clearfix {
+body > header > div > div:nth-child(1) > div > a > object,
+body > div > div > div.col-md-5 > div.login-box-bar.clearfix,
+body > div > div > div.col-md-4 > div.login-box > form > button > span,
+#login-with-partner > button > span,
+body > div > div > div.col-md-4 > div.login-box-bar {
+  @include common.override {
     display: none;
   }
+}
 
-  body > div > div > div.col-md-4 > div.login-box > section:nth-child(1) > p,
-  body > div > div > div.col-md-4 > div.login-box > section:nth-child(2) > p {
-    color: #e3e3e3;
-    font-size: 13px;
+body > div > div > div.col-md-4 > div.login-box > section:nth-child(1) > p,
+body > div > div > div.col-md-4 > div.login-box > section:nth-child(2) > p {
+  @include common.typography(body2);
+
+  @include common.override(light) {
+    color: common.textColor(paper, 1, light);
   }
 
-  body
-    > div
-    > div
-    > div.col-md-4
-    > div.login-box
-    > form
-    > div:nth-child(3)
-    > label,
-  body
-    > div
-    > div
-    > div.col-md-4
-    > div.login-box
-    > form
-    > div:nth-child(2)
-    > label {
-    color: #e3e3e3;
+  @include common.override(dark) {
+    color: common.textColor(paper, 1, dark);
+  }
+}
+
+body
+  > div
+  > div
+  > div.col-md-4
+  > div.login-box
+  > form
+  > div:nth-child(3)
+  > label,
+body
+  > div
+  > div
+  > div.col-md-4
+  > div.login-box
+  > form
+  > div:nth-child(2)
+  > label {
+  @include common.typography();
+
+  @include common.override {
     font-weight: 500;
-    font-size: 16px;
   }
 
-  body > div > div > div.col-md-4 > div.login-box > form > button,
-  #login-with-partner > button {
-    width: 100% !important;
+  @include common.override(light) {
+    color: common.textColor(paper, 1, light);
+  }
+
+  @include common.override(dark) {
+    color: common.textColor(paper, 1, dark);
+  }
+}
+
+body > div > div > div.col-md-4 > div.login-box > form > button,
+#login-with-partner > button {
+  @include common.override {
+    width: 100%;
     text-transform: capitalize;
-    border-radius: 4px;
+    border-radius: common.borderRadius();
   }
+}
 
-  body > header > div > div:nth-child(2) > div {
-    border-radius: 6px;
+body > header > div > div:nth-child(2) > div {
+  @include common.override {
+    text-transform: capitalize;
+    border-radius: common.borderRadius(1.5);
     background: transparent;
-    color: #e3e3e3;
-    text-transform: capitalize;
   }
 
-  #doc-protect > ul > li:nth-child(3) > span {
-    color: #898989;
+  @include common.override(light) {
+    color: common.textColor(paper, 1, light);
   }
 
-  #doc-protect > ul > li:nth-child(3) > span > strong,
-  #doc-log-out > p:nth-child(4) > strong.alert-danger,
-  #doc-log-out > p:nth-child(5) > strong.alert-danger,
-  #doc-protect > ul > li:nth-child(2) > span > strong,
-  #doc-protect > ul > li:nth-child(2) > span {
-    color: #898989;
-    background-color: transparent;
-    border-color: transparent;
+  @include common.override(dark) {
+    color: common.textColor(paper, 1, dark);
   }
+}
 
-  body > div > div > div.col-md-4 > div.login-box > form > button > span,
-  #login-with-partner > button > span,
-  body > div > div > div.col-md-4 > div.login-box-bar {
-    display: none;
-  }
-
-  #doc-protect > h2,
-  #doc-error > h2,
-  #doc-login-problems > h2,
-  #doc-forgotten-password > h2,
-  #doc-log-out > h2,
-  #doc-finding-help > h2 {
-    color: #ffffff;
-    font-size: 22px;
-  }
-
-  #doc-log-out > span > strong {
-    color: #ffffff;
+#doc-log-out > span > strong {
+  @include common.override {
     font-weight: 600;
   }
 
-  #doc-protect > ul > li:nth-child(1) > span,
-  body > div > div > div.col-md-4 > div.login-box > div > p:nth-child(1),
-  body > div > div > div.col-md-4 > div.login-box > div > p:nth-child(3),
-  #doc-error > p,
-  #doc-forgotten-password > p,
-  #doc-login-problems > p,
-  #doc-log-out > p:nth-child(3),
-  #doc-log-out > p:nth-child(4),
-  #doc-log-out > p:nth-child(5),
-  #collapse_PwReq_LoginProblems > div > p,
-  #collapse_UTORidLoginProblems > div > p,
-  #collapse_UTORidLoginProblems > div > h4,
-  #collapse_UTORidLoginProblems > div,
-  #collapse_JOINid_LoginProblems > div > p,
-  #collapse_UTORidForgottenPW > div > h4,
-  #collapse_UTORidForgottenPW > div > p,
-  #collapse_JOINidForgottenPW > div > p,
-  #collapse_UTORidForgottenPW > div,
-  #collapseHelp_UTORid > div > p,
-  #collapseHelp3 > div > p,
-  #collapseHelp_uSOURCE > div > p,
-  #collapseHelp_ess > div > p,
-  #collapseHelp_erdd > div > p,
-  #collapseHelp_IC > div > p,
-  #collapseHelp_JOINid > div > p,
-  #collapseHelp_JOINid > div > ul,
-  body > div > div > div.col-md-5 > div.login-box > p,
-  #idpSelectIdPEntryTile > form > label > div,
-  #idpSelectIdPListTile > form > label > div,
-  body > div > div > div.col-md-4 > div.login-box > p.warning,
-  body > div > div > div.col-md-4 > div.login-box > p {
-    color: #e3e3e3;
+  @include common.override(light) {
+    color: common.textColor(paper, 0, light);
   }
 
-  #username:-webkit-autofill,
-  #username:-webkit-autofill:hover,
-  #username:-webkit-autofill:focus,
-  #password:-webkit-autofill,
-  #password:-webkit-autofill:hover,
-  #password:-webkit-autofill:focus,
-  textarea:-webkit-autofill,
-  textarea:-webkit-autofill:hover,
-  textarea:-webkit-autofill:focus,
-  select:-webkit-autofill,
-  select:-webkit-autofill:hover,
-  select:-webkit-autofill:focus {
-    -webkit-text-fill-color: #e3e3e3;
-    box-shadow: none;
-    -webkit-box-shadow: 0 0 0 1000px #414141 inset;
-    transition: background-color 5000s ease-in-out 0s;
+  @include common.override(dark) {
+    color: common.textColor(paper, 0, dark);
+  }
+}
+
+#doc-protect > ul > li:nth-child(3) > span {
+  @include common.override(light) {
+    color: common.textColor(paper, 2, light);
   }
 
-  #username,
-  #password {
+  @include common.override(dark) {
+    color: common.textColor(paper, 2, dark);
+  }
+}
+
+body > header > div > div:nth-child(2) > div {
+  @include common.override {
+    text-transform: capitalize;
+    border-radius: common.borderRadius(1.5);
+  }
+
+  @include common.override(light) {
+    color: common.textColor(paper, 1, light);
+  }
+
+  @include common.override(dark) {
+    color: common.textColor(paper, 1, dark);
+  }
+}
+
+#doc-protect > ul > li:nth-child(3) > span > strong,
+#doc-log-out > p:nth-child(4) > strong.alert-danger,
+#doc-log-out > p:nth-child(5) > strong.alert-danger,
+#doc-protect > ul > li:nth-child(2) > span > strong,
+#doc-protect > ul > li:nth-child(2) > span {
+  @include common.override(light) {
+    color: common.textColor(paper, 2, light);
+  }
+
+  @include common.override(dark) {
+    color: common.textColor(paper, 2, dark);
+  }
+}
+
+#doc-protect > ul > li:nth-child(1) > span,
+body > div > div > div.col-md-4 > div.login-box > div > p:nth-child(1),
+body > div > div > div.col-md-4 > div.login-box > div > p:nth-child(3),
+#doc-error > p,
+#doc-forgotten-password > p,
+#doc-login-problems > p,
+#doc-log-out > p:nth-child(3),
+#doc-log-out > p:nth-child(4),
+#doc-log-out > p:nth-child(5),
+#collapse_PwReq_LoginProblems > div > p,
+#collapse_UTORidLoginProblems > div > p,
+#collapse_UTORidLoginProblems > div > h4,
+#collapse_UTORidLoginProblems > div,
+#collapse_JOINid_LoginProblems > div > p,
+#collapse_UTORidForgottenPW > div > h4,
+#collapse_UTORidForgottenPW > div > p,
+#collapse_JOINidForgottenPW > div > p,
+#collapse_UTORidForgottenPW > div,
+#collapseHelp_UTORid > div > p,
+#collapseHelp3 > div > p,
+#collapseHelp_uSOURCE > div > p,
+#collapseHelp_ess > div > p,
+#collapseHelp_erdd > div > p,
+#collapseHelp_IC > div > p,
+#collapseHelp_JOINid > div > p,
+#collapseHelp_JOINid > div > ul,
+body > div > div > div.col-md-5 > div.login-box > p,
+#idpSelectIdPEntryTile > form > label > div,
+#idpSelectIdPListTile > form > label > div,
+body > div > div > div.col-md-4 > div.login-box > p.warning,
+body > div > div > div.col-md-4 > div.login-box > p {
+  @include common.override(light) {
+    color: common.textColor(paper, 1, light);
+  }
+
+  @include common.override(dark) {
+    color: common.textColor(paper, 1, dark);
+  }
+}
+
+#doc-protect > h2,
+#doc-error > h2,
+#doc-login-problems > h2,
+#doc-forgotten-password > h2,
+#doc-log-out > h2,
+#doc-finding-help > h2 {
+  @include common.typography(h6);
+
+  @include common.override(light) {
+    color: common.textColor(paper, 0, light);
+  }
+
+  @include common.override(dark) {
+    color: common.textColor(paper, 0, dark);
+  }
+}
+
+#username,
+#password {
+  @include common.input;
+  @include common.override {
     box-sizing: border-box;
-    caret-color: #e3e3e3;
-    background: rgba(0, 0, 0, 0.05);
-    border: solid 1px #414141;
-    border-radius: 4px;
-    color: #e3e3e3;
     font-size: 14px;
     font-weight: 500;
     padding: 14px 20px;
     max-width: 100%;
     height: 40px;
-    transition: border 0.2s, box-shadow 0.2s;
   }
+}
 
-  #username:hover,
-  #password:hover {
-    border: solid 1px #1a73e8;
-  }
-
-  #username:focus,
-  #username:focus-visible,
-  #password:focus,
-  #password:focus-visible {
-    outline: none;
-    border: solid 1px #1a73e8;
-    box-shadow: 0 0 0 2px rgba(39, 94, 254, 0.3);
-  }
-
-  #username:invalid,
-  #password:invalid {
-    border: solid 1px rgb(232, 26, 26);
-  }
-
-  #username:invalid:focus,
-  #password:invalid:focus {
-    box-shadow: 0 0 0 2px rgba(232, 39, 39, 0.3);
-  }
-
-  body > div > div > div.col-md-4 > div.login-box > form > button,
-  #doc-login-problems > a,
-  #collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
-  #collapse_UTORidLoginProblems > div > a:nth-child(5),
-  #collapse_UTORidLoginProblems > div > a:nth-child(6),
-  #collapse_UTORidLoginProblems > div > a:nth-child(7),
-  #collapse_UTORidForgottenPW > div > a:nth-child(5),
-  #collapse_UTORidForgottenPW > div > a:nth-child(6),
-  #collapse_UTORidForgottenPW > div > a:nth-child(7) {
-    // font-size: 16px;
-    // color: #fff;
-    // background-color: rgb(13, 115, 236, 0.8);
+body > div > div > div.col-md-4 > div.login-box > form > button,
+#doc-login-problems > a,
+#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
+#collapse_UTORidLoginProblems > div > a:nth-child(5),
+#collapse_UTORidLoginProblems > div > a:nth-child(6),
+#collapse_UTORidLoginProblems > div > a:nth-child(7),
+#collapse_UTORidForgottenPW > div > a:nth-child(5),
+#collapse_UTORidForgottenPW > div > a:nth-child(6),
+#collapse_UTORidForgottenPW > div > a:nth-child(7) {
+  @include common.override {
     padding: 10px 20px;
-    // border-radius: 4px;
-    // border: solid 1px transparent;
-    // transition: background-color 0.3s, box-shadow 0.2s;
     margin-bottom: 10px;
   }
+}
 
-  #doc-login-problems > a,
-  #collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
-  #collapse_UTORidLoginProblems > div > a:nth-child(5),
-  #collapse_UTORidLoginProblems > div > a:nth-child(6),
-  #collapse_UTORidLoginProblems > div > a:nth-child(7),
-  #collapse_UTORidForgottenPW > div > a:nth-child(5),
-  #collapse_UTORidForgottenPW > div > a:nth-child(6),
-  #collapse_UTORidForgottenPW > div > a:nth-child(7) {
+#doc-login-problems > a,
+#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
+#collapse_UTORidLoginProblems > div > a:nth-child(5),
+#collapse_UTORidLoginProblems > div > a:nth-child(6),
+#collapse_UTORidLoginProblems > div > a:nth-child(7),
+#collapse_UTORidForgottenPW > div > a:nth-child(5),
+#collapse_UTORidForgottenPW > div > a:nth-child(6),
+#collapse_UTORidForgottenPW > div > a:nth-child(7) {
+  @include common.override {
     padding: 5px 10px;
   }
+}
 
-  body > div > div > div.col-md-4 > div.login-box > form > button:hover,
-  #doc-login-problems > a:hover,
-  #collapse_PwReq_LoginProblems > div > p:nth-child(2) > a:hover,
-  #collapse_UTORidLoginProblems > div > a:nth-child(5):hover,
-  #collapse_UTORidLoginProblems > div > a:nth-child(6):hover,
-  #collapse_UTORidLoginProblems > div > a:nth-child(7):hover,
-  #collapse_UTORidForgottenPW > div > a:nth-child(5):hover,
-  #collapse_UTORidForgottenPW > div > a:nth-child(6):hover,
-  #collapse_UTORidForgottenPW > div > a:nth-child(7):hover {
-    cursor: pointer;
-    background-color: rgb(13, 115, 236, 1);
-  }
+#doc-login-problems > a,
+#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
+#collapse_UTORidLoginProblems > div > a:nth-child(5),
+#collapse_UTORidLoginProblems > div > a:nth-child(6),
+#collapse_UTORidLoginProblems > div > a:nth-child(7),
+#collapse_UTORidForgottenPW > div > a:nth-child(5),
+#collapse_UTORidForgottenPW > div > a:nth-child(6),
+#collapse_UTORidForgottenPW > div > a:nth-child(7) {
+  @include common.typography(body2);
 
-  #doc-login-problems > a,
-  #collapse_PwReq_LoginProblems > div > p:nth-child(2) > a,
-  #collapse_UTORidLoginProblems > div > a:nth-child(5),
-  #collapse_UTORidLoginProblems > div > a:nth-child(6),
-  #collapse_UTORidLoginProblems > div > a:nth-child(7),
-  #collapse_UTORidForgottenPW > div > a:nth-child(5),
-  #collapse_UTORidForgottenPW > div > a:nth-child(6),
-  #collapse_UTORidForgottenPW > div > a:nth-child(7) {
+  @include common.override {
     text-transform: capitalize;
-    font-size: 13px;
   }
+}
 
-  body > div > div > div.col-md-4 > div.login-box > form > button:focus,
-  body > div > div > div.col-md-4 > div.login-box > form > button:focus-visible,
-  #doc-login-problems > a:focus,
-  #doc-login-problems > a:focus-visible,
-  #collapse_PwReq_LoginProblems > div > p:nth-child(2) > a:focus,
-  #collapse_PwReq_LoginProblems > div > p:nth-child(2) > a:focus-visible,
-  #collapse_UTORidLoginProblems > div > a:nth-child(5):focus,
-  #collapse_UTORidLoginProblems > div > a:nth-child(5):focus-visible,
-  #collapse_UTORidLoginProblems > div > a:nth-child(6):focus,
-  #collapse_UTORidLoginProblems > div > a:nth-child(6):focus-visible,
-  #collapse_UTORidLoginProblems > div > a:nth-child(7):focus,
-  #collapse_UTORidLoginProblems > div > a:nth-child(7):focus-visible,
-  #collapse_UTORidForgottenPW > div > a:nth-child(5):focus,
-  #collapse_UTORidForgottenPW > div > a:nth-child(5):focus-visible,
-  #collapse_UTORidForgottenPW > div > a:nth-child(6):focus,
-  #collapse_UTORidForgottenPW > div > a:nth-child(6):focus-visible,
-  #collapse_UTORidForgottenPW > div > a:nth-child(7):focus,
-  #collapse_UTORidForgottenPW > div > a:nth-child(7):focus-visible {
-    border: solid 1px #1a73e8;
-    box-shadow: 0 0 0 2px rgba(39, 94, 254, 0.3);
-    background-color: rgb(13, 115, 236, 1);
-    outline: none;
+#collapse_PwReq_LoginProblems > div > p:nth-child(2) > a {
+  @include common.override {
+    margin-bottom: 0;
   }
+}
 
-  #collapse_PwReq_LoginProblems > div > p:nth-child(2) > a {
-    margin-bottom: 0 !important;
-  }
-
-  #login-with-partner > button {
-    font-size: 16px;
-    color: #e3e3e3;
-    background-color: rgba(227, 227, 227, 0.05);
+#login-with-partner > button {
+  @include common.button;
+  @include common.override {
     padding: 10px 20px;
-    border-radius: 4px;
-    border: none;
-    border: solid 1px #414141;
-    transition: background-color 0.3s, box-shadow 0.2s;
   }
+}
 
-  #login-with-partner > button:hover,
-  body
-    > div
-    > div
-    > div.col-md-8
-    > div
-    > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
-    > ul
-    > li.active
-    > a:hover,
-  body
-    > div
-    > div
-    > div.col-md-8
-    > div
-    > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
-    > ul
-    > li
-    > a:hover,
-  body
-    > div
-    > div
-    > div.col-md-7
-    > div
-    > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
-    > ul
-    > li.active
-    > a:hover,
-  body
-    > div
-    > div
-    > div.col-md-7
-    > div
-    > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
-    > ul
-    > li
-    > a:hover {
-    cursor: pointer;
-    background-color: rgba(227, 227, 227, 0.15);
-  }
+body > div > div > div.col-md-4 > div.login-box > form > button:disabled,
+#login-with-partner > button:disabled {
+  @include common.button;
+}
 
-  #login-with-partner > button:focus,
-  #login-with-partner > button:focus-visible,
-  :focus,
-  :focus-visible,
-  body
-    > div
-    > div
-    > div.col-md-8
-    > div
-    > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
-    > ul
-    > li
-    > a:focus,
-  body
-    > div
-    > div
-    > div.col-md-8
-    > div
-    > div.col-md-3.col-sm-12.col-xs-12.weblogin-info-sidenav
-    > ul
-    > li
-    > a:focus-visible {
-    border: solid 1px #1a73e8;
-    box-shadow: 0 0 0 2px rgba(39, 94, 254, 0.3);
-    outline: none !important;
-  }
-
-  body > div > div > div.col-md-4 > div.login-box > form > button:disabled,
-  #login-with-partner > button:disabled {
-    color: rgb(44, 43, 60, 0.4);
-    background-color: rgb(44, 43, 60, 0.03);
-  }
-
-  body
-    > div
-    > div
-    > div.col-md-4
-    > div.login-box
-    > form
-    > button:disabled:hover,
-  #login-with-partner > button:disabled:hover {
+body > div > div > div.col-md-4 > div.login-box > form > button:disabled:hover,
+#login-with-partner > button:disabled:hover {
+  @include common.button;
+  @include common.override {
     cursor: not-allowed;
-    background-color: rgb(44, 43, 60, 0.03);
+  }
+}
+
+body > footer > div > div {
+  @include common.override(light) {
+    border-top: 1px solid common.textColor(paper, 2, light);
   }
 
-  // body > div > div > div.col-md-4 > div.alert.alert-warning {
-  //   color: #ffe2b7;
-  //   background-color: #191207;
-  //   border-color: #e89823;
-  //   border-radius: 6px;
-  // }
+  @include common.override(dark) {
+    border-top: 1px solid common.textColor(paper, 2, dark);
+  }
+}
 
-  // body > div > div > div.col-md-4 > div.alert.alert-danger {
-  //   color: #f4c7c7;
-  //   background-color: #160b0b;
-  //   border-color: #dd3d32;
-  //   border-radius: 6px;
-  // }
-
-  body > footer > div > div {
-    border-top: 1px solid #414141;
+body > footer > div > div > div > ul > li:nth-child(1),
+body > footer > div > div > div > ul > li:nth-child(4),
+body > footer > div > div > div > ul > li:nth-child(3) {
+  @include common.override(light) {
+    color: common.textColor(paper, 2, light);
   }
 
-  body > footer > div > div > div > ul > li:nth-child(1),
-  body > footer > div > div > div > ul > li:nth-child(4),
-  body > footer > div > div > div > ul > li:nth-child(3) {
-    color: #898989;
+  @include common.override(dark) {
+    color: common.textColor(paper, 2, dark);
+  }
+}
+
+body > footer > div > div > div > ul > li:nth-child(2) > a,
+body > footer > div > div > div > ul > li:nth-child(3) > a,
+body
+  > div
+  > div
+  > div.col-md-4
+  > div.login-box
+  > section:nth-child(2)
+  > p
+  > a:nth-child(1),
+#pwreq-link,
+#collapse_UTORidLoginProblems > div > p > a,
+#collapse_UTORidLoginProblems > div > a:nth-child(9),
+#collapse_JOINid_LoginProblems > div > p > a,
+body > footer > div > div > div > ul > li:nth-child(1) > a,
+#collapse_UTORidForgottenPW > div > p > a,
+#collapse_UTORidForgottenPW > div > a:nth-child(9),
+#collapse_JOINidForgottenPW > div > p > a,
+#collapseHelp_UTORid > div > p > a,
+#collapseHelp3 > div > p > a,
+#collapseHelp3 > div > p > i:nth-child(8) > a,
+#collapseHelp_uSOURCE > div > p > a:nth-child(1),
+#collapseHelp_uSOURCE > div > p > a:nth-child(3),
+#collapseHelp_ess > div > p > a:nth-child(6),
+#collapseHelp_ess > div > p > a:nth-child(8),
+#collapseHelp_ess > div > p > a:nth-child(10),
+#collapseHelp_erdd > div > p > a,
+#collapseHelp_IC > div > p > a,
+#collapseHelp_JOINid > div > ul > li > a,
+#collapseHelp_JOINid > div > p:nth-child(3) > a,
+#doc-protect > ul > li:nth-child(1) > a,
+#idpSelectIdPEntryTile > a,
+#idpSelectIdPListTile > a,
+#accordionLoginProblems div.panel-heading h4 a {
+  @include common.link;
+}
+
+#accordionLoginProblems > div,
+#accordionForgottenPW > div,
+#collapse_UTORidForgottenPW > div::before,
+#accordionHelp > div {
+  @include common.paper(2);
+}
+
+#collapse_PwReq_LoginProblems > div,
+#collapse_UTORidLoginProblems > div,
+#collapse_JOINid_LoginProblems > div,
+#collapse_JOINidForgottenPW > div,
+#collapse_UTORidForgottenPW > div,
+#collapseHelp_UTORid > div,
+#collapseHelp3 > div,
+#collapseHelp_uSOURCE > div,
+#collapseHelp_ess > div,
+#collapseHelp_erdd > div,
+#collapseHelp_IC > div,
+#collapseHelp_JOINid > div {
+  @include common.override(light) {
+    border-top: 1px solid common.color(paper, 3, light);
   }
 
-  body > footer > div > div > div > ul > li:nth-child(2) > a,
-  body > footer > div > div > div > ul > li:nth-child(3) > a,
-  body
-    > div
-    > div
-    > div.col-md-4
-    > div.login-box
-    > section:nth-child(2)
-    > p
-    > a:nth-child(1),
-  #pwreq-link,
-  #collapse_UTORidLoginProblems > div > p > a,
-  #collapse_UTORidLoginProblems > div > a:nth-child(9),
-  #collapse_JOINid_LoginProblems > div > p > a,
-  body > footer > div > div > div > ul > li:nth-child(1) > a,
-  #collapse_UTORidForgottenPW > div > p > a,
-  #collapse_UTORidForgottenPW > div > a:nth-child(9),
-  #collapse_JOINidForgottenPW > div > p > a,
-  #collapseHelp_UTORid > div > p > a,
-  #collapseHelp3 > div > p > a,
-  #collapseHelp3 > div > p > i:nth-child(8) > a,
-  #collapseHelp_uSOURCE > div > p > a:nth-child(1),
-  #collapseHelp_uSOURCE > div > p > a:nth-child(3),
-  #collapseHelp_ess > div > p > a:nth-child(6),
-  #collapseHelp_ess > div > p > a:nth-child(8),
-  #collapseHelp_ess > div > p > a:nth-child(10),
-  #collapseHelp_erdd > div > p > a,
-  #collapseHelp_IC > div > p > a,
-  #collapseHelp_JOINid > div > ul > li > a,
-  #collapseHelp_JOINid > div > p:nth-child(3) > a,
-  #doc-protect > ul > li:nth-child(1) > a,
-  #idpSelectIdPEntryTile > a,
-  #idpSelectIdPListTile > a {
-    color: #69a9f5;
+  @include common.override(dark) {
+    border-top: 1px solid common.color(paper, 3, dark);
+  }
+}
+
+#accordionLoginProblems > div > div.panel-heading > h4 > a,
+#accordionForgottenPW > div > div.panel-heading > h4 > a,
+#accordionHelp > div > div.panel-heading > h4 > a {
+  @include common.override(light) {
+    color: common.textColor(paper, 0, light);
   }
 
-  div.panel-heading {
-    background-color: var(--page-background) !important;
-    border: 1px solid var(--page-background) !important;
-    border-radius: 4px !important;
-    outline: none !important;
+  @include common.override(dark) {
+    color: common.textColor(paper, 0, dark);
+  }
+}
+
+#accordionLoginProblems > div > div.panel-heading > h4 > a::before,
+#accordionForgottenPW > div > div.panel-heading > h4 > a::before,
+#accordionHelp > div > div.panel-heading > h4 > a::before {
+  @include common.override(light) {
+    color: common.textColor(paper, 0, light);
   }
 
-  #accordionLoginProblems > div,
-  #accordionForgottenPW > div,
-  #collapse_UTORidForgottenPW > div::before,
-  #accordionHelp > div {
-    border: none !important;
-    border-radius: 4px;
-    background-color: #121212;
+  @include common.override(dark) {
+    color: common.textColor(paper, 0, dark);
+  }
+}
+
+#idpSelectIdPSelector {
+  @include common.override(light) {
+    color: common.textColor(paper, 0, light);
   }
 
-  #collapse_PwReq_LoginProblems > div,
-  #collapse_UTORidLoginProblems > div,
-  #collapse_JOINid_LoginProblems > div,
-  #collapse_JOINidForgottenPW > div,
-  #collapse_UTORidForgottenPW > div,
-  #collapseHelp_UTORid > div,
-  #collapseHelp3 > div,
-  #collapseHelp_uSOURCE > div,
-  #collapseHelp_ess > div,
-  #collapseHelp_erdd > div,
-  #collapseHelp_IC > div,
-  #collapseHelp_JOINid > div {
-    border-top: 1px solid #282828;
+  @include common.override(dark) {
+    color: common.textColor(paper, 0, dark);
   }
 
-  #accordionLoginProblems > div > div.panel-heading > h4 > a,
-  #accordionForgottenPW > div > div.panel-heading > h4 > a,
-  #accordionHelp > div > div.panel-heading > h4 > a {
-    color: #fff;
-    border: 1px solid transparent;
-  }
-
-  #accordionLoginProblems > div > div.panel-heading > h4 > a::before,
-  #accordionForgottenPW > div > div.panel-heading > h4 > a::before,
-  #accordionHelp > div > div.panel-heading > h4 > a::before {
-    color: #fff !important;
-  }
-
-  #idpSelectIdPSelector {
-    background: transparent !important;
-    border: transparent !important;
+  @include common.override {
     padding: 0 !important;
-    color: #fff !important;
     width: 100% !important;
   }
 }

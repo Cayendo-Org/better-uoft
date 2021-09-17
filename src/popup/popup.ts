@@ -47,21 +47,8 @@ huePaperSlider.addEventListener("change", (event) => {
 chrome.storage.sync.get(["enabled", "darkMode", "advancedMode", "huePrimary", "huePaper"], (result) => {
     if (result.enabled ?? true) {
         enabledButton.classList.add("on");
-        darkModeButton.disabled = false;
-        huePrimarySlider.disabled = false;
-        huePaperSlider.disabled = false;
-        primaryStrengthSlider.disabled = false;
-        paperStrengthSlider.disabled = false;
-        advancedModeButton.disabled = false;
     } else {
         enabledButton.classList.remove("on");
-        darkModeButton.disabled = true;
-        huePrimarySlider.disabled = true;
-        huePaperSlider.disabled = true;
-        primaryStrengthSlider.disabled = true;
-        paperStrengthSlider.disabled = true;
-        advancedModeButton.disabled = true;
-        chrome.storage.sync.set({ advancedMode: false });
     }
 
     if (result.darkMode ?? true) {
@@ -88,22 +75,8 @@ chrome.storage.onChanged.addListener((changes) => {
     if (changes.enabled) {
         if (changes.enabled.newValue ?? true) {
             enabledButton.classList.add("on");
-            darkModeButton.disabled = false;
-            huePrimarySlider.disabled = false;
-            huePaperSlider.disabled = false;
-            primaryStrengthSlider.disabled = false;
-            paperStrengthSlider.disabled = false;
-            advancedModeButton.disabled = false;
         } else {
             enabledButton.classList.remove("on");
-            darkModeButton.disabled = true;
-            huePrimarySlider.disabled = true;
-            huePaperSlider.disabled = true;
-            primaryStrengthSlider.disabled = true;
-            paperStrengthSlider.disabled = true;
-            advancedModeButton.disabled = true;
-            advancedModePanel.classList.remove("on");
-            chrome.storage.sync.set({ advancedMode: false });
         }
     }
 
