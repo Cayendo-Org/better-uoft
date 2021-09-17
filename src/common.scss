@@ -122,7 +122,7 @@
       @content;
     }
   } @else {
-    :root:not(#better-uoft-off, .uoft-dark-mode) & {
+    :root:not(#abcd).better-uoft:not(.uoft-dark-mode) & {
       @content;
     }
   }
