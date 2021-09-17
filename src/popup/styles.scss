@@ -24,7 +24,7 @@
 
 body {
   @include common.override {
-    width: 380px;
+    width: 350px;
     padding: 0;
     margin: 0;
   }
@@ -99,8 +99,8 @@ body {
 #darkMode {
   @include common.button(secondary, filled, 0);
   @include common.override {
-    width: 57px;
-    height: 40px;
+    width: 53px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,25 +137,41 @@ body {
 #enabled {
   @include common.button(primary, filled, 0);
   @include common.override {
-    width: 57px;
-    height: 40px;
+    width: 53px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
+    &:not(.on){
+      background: #FF8C8C;
+      border-color: #FF8C8C;
+      &:hover {
+        background: #FFBFBF;
+      }
+    }
   }
 
   svg {
-    @include common.override(dark) {
-      fill: common.textColor(primary, 0, dark);
-    }
-
-    @include common.override(light) {
-      fill: common.textColor(primary, 0, light);
-    }
-
     @include common.override {
       height: 24px;
       width: 24px;
+      fill: #290000;
+    }
+  }
+}
+
+#enabled.on {
+  @include common.override {
+    background: #8CFF8C;
+    border-color: #8CFF8C;
+    &:hover {
+      background: #BFFFBF;
+    }
+  }
+
+  svg {
+    @include common.override {
+      fill: #002900;
     }
   }
 }

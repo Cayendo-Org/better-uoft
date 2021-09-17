@@ -145,7 +145,7 @@
       --hue-paper: 200;
       --paper-strength: 0;
       --primary-strength: 1;
-      transition: background-color 0.3s;
+      transition: background-color 0.2s;
     }
 
     &,
@@ -224,7 +224,7 @@
     @include override {
       border-radius: borderRadius();
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: background-color 0.2s;
     }
   } @else if $variant == text {
     @include override(light) {
@@ -246,7 +246,7 @@
     @include override {
       border-radius: borderRadius();
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: background-color 0.2s;
     }
   }
 }
@@ -266,6 +266,6 @@
 
   @include override {
     border-radius: borderRadius(1.5);
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
   }
 }
