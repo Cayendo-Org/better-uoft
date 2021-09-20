@@ -135,8 +135,10 @@ footer {
 }
 
 #weblogin:hover, #acorn:hover, #quercus:hover,
-#weblogin:focus, #acorn:focus, #quercus:focus {
+.cards a:focus {
+  border-radius: 6px;
   border: 1px solid var(--grey);
+  outline: none;
 }
 
 #weblogin h2, #acorn h2, #quercus h2 {
@@ -157,6 +159,7 @@ footer {
 }
 
 .cards a {
+  border: 1px solid transparent;
   outline: none;
   text-decoration: none;
   color: var(--grey);
@@ -422,7 +425,7 @@ footer {
 
 [type="range"]::-webkit-slider-runnable-track {
   @include common.override(dark) {
-    border: 1px solid common.color(paper, 3, dark);
+    border: 1px solid common.color(paper, 0, dark);
   }
 
   @include common.override(light) {
@@ -435,6 +438,17 @@ footer {
     transition: all 0.2s ease;
     width: 100%;
     border-radius: common.borderRadius(1.5);
+  }
+}
+
+[type="range"]::-webkit-slider-runnable-track:focus,
+[type="range"]::-webkit-slider-runnable-track:hover {
+  @include common.override(dark) {
+    border: 1px solid #000;
+  }
+
+  @include common.override(light) {
+    border: 1px solid #000;
   }
 }
 
@@ -472,6 +486,10 @@ footer {
 @media only screen and (max-width: 850px) {
   h1 {
     font-size: 40px;
+  }
+
+  .intro {
+    margin-top: 90px;
   }
 
   div.control-panel {

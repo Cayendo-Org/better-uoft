@@ -6,7 +6,7 @@ const huePaperSlider = document.getElementById("paper-hue") as HTMLInputElement;
 const primaryStrengthSlider = document.getElementById("primary-strength") as HTMLInputElement;
 const paperStrengthSlider = document.getElementById("paper-strength") as HTMLInputElement;
 
-let darkMode = false;
+let darkMode = true;
 
 darkModeButton.addEventListener("click", () => {
     darkMode = !darkMode;
@@ -54,3 +54,5 @@ const updatePrimaryStrength = (primaryStrength: number) => {
 const updatePaperStrength = (paperStrength: number) => {
     (document.getElementsByTagName("HTML")[0] as HTMLHtmlElement).style.setProperty("--paper-strength", paperStrength.toString());
 };
+
+updateMode(darkMode);
