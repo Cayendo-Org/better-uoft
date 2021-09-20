@@ -1,7 +1,5 @@
 @use "../../src/common.scss";
 
-// @include common.theme;
-
 * {
   font-family: "Syne", sans-serif;
 }
@@ -25,9 +23,10 @@
   transition: background-color 0.2s;
 }
 
-// ::selection {
-//   background: var(--black);
-// }
+::selection {
+  background: common.color(focus, 0, dark);
+  color: common.textColor(focus, 0, dark);
+}
 
 h1 {
   font-size: 60px;
@@ -41,13 +40,14 @@ h2 {
 
 h3 {
   font-size: 28px;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 h4 {
   color: #b0b0b0;
   font-size: 14px;
-  margin: 20px 0;
+  margin-bottom: 0;
+  margin-top: 20px;
 }
 
 p {
@@ -74,17 +74,113 @@ footer {
   align-items: center;
 }
 
+#primary, #disabled {
+  width: 100%;
+}
+
+#darkMode {
+  border: solid 1px transparent;
+  border-radius: 4px;
+  background-color: #4D4D4D;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 36px;
+  padding: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  svg {
+      fill: var(--white);
+      height: 24px;
+      width: 24px;
+  }
+
+  svg:not(.on) {
+    transform: rotateZ(180deg);
+  }
+
+  &:not(.on) > .on {
+    display: none;
+  }
+
+  &.on > :not(.on) {
+    display: none;
+  }
+}
+
+#darkMode:focus {
+  outline: none;
+  border: solid 1px var(--black);
+}
+
+#darkMode:hover {
+  background-color: #595959;
+}
+
+#weblogin, #acorn, #quercus {
+  min-width: 220px;
+  padding: 50px 15px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: border 0.2s;
+}
+
+#weblogin:hover, #acorn:hover, #quercus:hover,
+#weblogin:focus, #acorn:focus, #quercus:focus {
+  border: 1px solid var(--grey);
+}
+
+#weblogin h2, #acorn h2, #quercus h2 {
+  font-size: 32px;
+  margin: 0;
+}
+
+#weblogin svg, #acorn svg, #quercus svg {
+  fill: var(--grey);
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.cards a {
+  outline: none;
+  text-decoration: none;
+  color: var(--grey);
+}
+
 .you {
   color: var(--blue);
 }
 
 .top {
-  min-height: calc(100vh - 20px);
+  min-height: calc(100vh - 150px);
+}
+
+.grey {
+  color: var(--grey);
 }
 
 .space-bot {
   color: var(--grey);
   margin-bottom: 20px;
+}
+
+.bottom {
+  margin-top: 100px;
 }
 
 .github:link,
@@ -148,8 +244,6 @@ footer {
   text-align: center;
 }
 
-/* PAGE CONTENT */
-
 .customize-wrapper {
   margin: auto;
   max-width: 1000px;
@@ -169,12 +263,12 @@ footer {
 
 .notification {
   @include common.override(light) {
-    background: common.color(focus, 0, light);
+    background: common.color(focus, 1, light);
     color: common.textColor(focus, 0, light);
   }
 
   @include common.override(dark) {
-    background: common.color(focus, 0, dark);
+    background: common.color(focus, 1, dark);
     color: common.textColor(focus, 0, dark);
   }
 
@@ -183,50 +277,51 @@ footer {
     padding: 10px;
     border-radius: 4px;
     border: 1px solid transparent;
+    display: flex;
+    gap: 12px;
+    flex-direction: row;
   }
 }
 
 .control-panel {
-  @include common.override {
     max-width: 400px;
     border-radius: 6px 0 0 6px;
     background: #333333;
     padding: 10px 15px;
-  }
 }
 
 .content {
   @include common.paper();
+  padding: 10px 15px;
+  border-radius: 0 6px 6px 0 !important;
+}
 
-  @include common.override {
-    padding: 10px 15px;
-    border-radius: 0 6px 6px 0;
-  }
+.link {
+  @include common.link;
 }
 
 .example-card {
   @include common.paper(2);
 
   @include common.override {
+    display: flex;
+    flex-direction: column;
     padding: 15px;
     max-width: 700px;
+    min-height: 300px;
   }
 }
 
-@media only screen and (max-width: 850px) {
-  .customize {
-    @include common.override {
-      flex-direction: column;
-    }
-  }
+.example-card p {
+  margin-bottom: 20px;
 }
 
 .content input {
   @include common.input;
   @include common.typography;
-  @include common.override {
-    padding: common.spacing(1.25) common.spacing(1.75);
-  }
+
+  padding: common.spacing(1.25) common.spacing(1.75);
+  min-width: 220px;
 }
 
 .content button {
@@ -236,43 +331,18 @@ footer {
   }
 }
 
-#darkMode {
-  @include common.button;
-  @include common.override {
-    width: 100%;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  svg {
-    @include common.override(dark) {
-      fill: common.textColor(primary, 0, dark);
-    }
-
-    @include common.override(light) {
-      fill: common.textColor(primary, 0, light);
-    }
-
-    @include common.override {
-      height: 24px;
-      width: 24px;
-    }
-  }
-
-  svg:not(.on) {
-    transform: rotateZ(180deg);
-  }
-
-  &:not(.on) > .on {
-    display: none;
-  }
-
-  &.on > :not(.on) {
-    display: none;
-  }
+.disabled-input {
+  cursor: not-allowed;
+  border: 1px solid transparent !important;
 }
+
+.inputs {
+  display: flex; 
+  flex-direction: column;
+  gap: 15px;
+}
+
+// RANGE INPUTS
 
 [type="range"] {
   -webkit-appearance: none;
@@ -285,10 +355,13 @@ footer {
   outline: 0;
 }
 
-//#region Strength
 #primary-strength::-webkit-slider-runnable-track,
 #paper-strength::-webkit-slider-runnable-track {
   background: linear-gradient(to right, hsl(0, 0%, 0%), hsl(0, 100%, 100%));
+}
+
+#paper-strength {
+  margin-bottom: 30px;
 }
 
 #primary-strength::-webkit-slider-thumb {
@@ -310,9 +383,7 @@ footer {
     background: hsla(0, 0%, calc(var(--paper-strength) * 100%), 1);
   }
 }
-//#endregion
 
-//#region Hue
 #primary-hue::-webkit-slider-runnable-track,
 #paper-hue::-webkit-slider-runnable-track {
   @include common.override {
@@ -348,7 +419,6 @@ footer {
     background: hsla(var(--hue-paper), 100%, 77.5%, 1);
   }
 }
-//#endregion
 
 [type="range"]::-webkit-slider-runnable-track {
   @include common.override(dark) {
@@ -397,4 +467,39 @@ footer {
 
 [type="range"]:disabled::-webkit-slider-thumb {
   display: none;
+}
+
+@media only screen and (max-width: 850px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  div.control-panel {
+    border-radius: 6px 6px 0 0;
+    max-width: unset;
+  }
+
+  .customize {
+    @include common.override {
+      flex-direction: column;
+    }
+
+    .example-container {
+      flex-direction: column;
+    }
+  }
+
+  #test-input, #disabled-input {
+    min-width: unset;
+    width: 90%
+  }
+
+  .content {
+    border-radius: 0 0 6px 6px !important;
+    padding-bottom: 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
 }

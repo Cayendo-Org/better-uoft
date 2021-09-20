@@ -13,19 +13,19 @@ darkModeButton.addEventListener("click", () => {
     updateMode(darkMode);
 });
 
-primaryStrengthSlider.addEventListener("change", (event) => {
+primaryStrengthSlider.addEventListener("input", (event) => {
     updatePrimaryStrength(parseFloat((event.target as HTMLInputElement).value));
 });
 
-paperStrengthSlider.addEventListener("change", (event) => {
+paperStrengthSlider.addEventListener("input", (event) => {
     updatePaperStrength(parseFloat((event.target as HTMLInputElement).value));
 });
 
-huePrimarySlider.addEventListener("change", (event) => {
+huePrimarySlider.addEventListener("input", (event) => {
     updateHuePrimary(parseInt((event.target as HTMLInputElement).value));
 });
 
-huePaperSlider.addEventListener("change", (event) => {
+huePaperSlider.addEventListener("input", (event) => {
     updateHuePaper(parseInt((event.target as HTMLInputElement).value));
 });
 
