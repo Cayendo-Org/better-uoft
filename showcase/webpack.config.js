@@ -16,6 +16,11 @@ module.exports = {
       filename: "index.html",
       chunks: ["index"],
     }),
+    new CopyPlugin({
+      patterns: [
+        { from: path.join(__dirname, "src", "CNAME"), to: "" }
+      ],
+    })
   ],
   performance: {
     hints: false,
