@@ -67,6 +67,18 @@ body > header > div > div:nth-child(1) > div > a {
       );
     }
   }
+
+  @include common.override(dark) {
+    &::before {
+      background: common.textColor(paper, 0, dark);
+    }
+  }
+
+  @include common.override(light) {
+    &::before {
+      background: common.textColor(paper, 0, light);
+    }
+  }
 }
 //#endregion
 
