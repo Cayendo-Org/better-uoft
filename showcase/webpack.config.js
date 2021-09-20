@@ -9,32 +9,33 @@ const { NODE_ENV = "production" } = process.env;
 
 module.exports = {
   plugins: [
-    new MiniCssExtractPlugin({ filename: "[name]/styles.css" }),
+    new MiniCssExtractPlugin(),
     new RemoveEmptyScriptsPlugin(),
-    new CopyPlugin({
-      patterns: [
-        { from: path.join(__dirname, "src", "icon.png"), to: "icon.png" },
-        {
-          from: path.join(__dirname, "src", "icon-off.png"),
-          to: "icon-off.png",
-        },
-        {
-          from: path.join(__dirname, "src", "manifest.json"),
-          to: "manifest.json",
-        },
-      ],
-    }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "popup.html"),
-      filename: "popup.html",
-      chunks: ["popup"],
+      template: path.join(__dirname, "src", "index.html"),
+      filename: "index.html",
+      chunks: ["index"],
     }),
   ],
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "../docs"),
+    },
+    compress: true,
+    port: 25565,
+    liveReload: true,
+    watchFiles: ["src/**/*", "../docs/**/*"],
+  },
   entry: {
-    popup: path.join(__dirname, "src", "popup.ts"),
+    index: path.join(__dirname, "src", "index.ts"),
   },
   mode: NODE_ENV,
-  target: "node",
+  // target: "node",
   output: {
     path: path.resolve(__dirname, "../docs"),
     clean: true,
@@ -87,6 +88,5 @@ module.exports = {
     ],
   },
   devtool: "inline-source-map",
-  externals: [nodeExternals()],
   watch: NODE_ENV === "development",
 };

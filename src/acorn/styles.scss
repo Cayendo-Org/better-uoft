@@ -19,7 +19,11 @@ body {
 }
 
 #acorn-title,
-#acorn-nav-top > div.flex-item.user-controls > div > div.flex-display.flex-item.dropdown > a {
+#acorn-nav-top
+  > div.flex-item.user-controls
+  > div
+  > div.flex-display.flex-item.dropdown
+  > a {
   @include common.override {
     text-shadow: none;
   }
@@ -66,7 +70,7 @@ nav#acorn-nav-top {
 }
 
 #acorn-nav-side > ul > li.nav-section.academics > div::before {
-  @include common.override{
+  @include common.override {
     display: none;
   }
 }
@@ -93,7 +97,6 @@ nav#acorn-nav-top {
 
   @include common.override(dark) {
     background-color: common.color(paper, 1, dark);
-
   }
 }
 
@@ -137,13 +140,13 @@ div.calendar .date-calendar .day-container {
   @include common.override(light) {
     background-color: common.color(paper, 1, light);
     color: common.textColor(paper, 0, light);
-    border: 1px solid  common.color(paper, 2, light);
+    border: 1px solid common.color(paper, 2, light);
   }
 
   @include common.override(dark) {
     background-color: common.color(paper, 1, dark);
     color: common.textColor(paper, 0, dark);
-    border: 1px solid  common.color(paper, 2, dark);
+    border: 1px solid common.color(paper, 2, dark);
     border-radius: 6px;
   }
 }
@@ -165,11 +168,7 @@ div.acorn-card-footer,
 div#acorn-footer .border,
 div#acorn-footer .border:before,
 div.acorn .currentlyEnrolledBox .courseDetailsBox .courseDetails td,
-div#program-enrolment-app
-  .subject_pos_contents
-  .program_info_details
-  table
-  td,
+div#program-enrolment-app .subject_pos_contents .program_info_details table td,
 div.awards-container .acorn-table tr:last-child td,
 table.table > tbody > tr > td,
 table.table > tbody > tr > th,
@@ -179,7 +178,7 @@ table.table > thead > tr > td,
 table.table > thead > tr > th,
 div.acorn .borderTopDashed {
   @include common.override {
-  border-top: 1px solid transparent;
+    border-top: 1px solid transparent;
   }
 }
 
@@ -202,7 +201,6 @@ div.notification-activity-container .table tr td,
 thead.notification-activity-header {
   @include common.override(light) {
     border-bottom: 1px solid common.color(paper, 1, light);
-
   }
 
   @include common.override(dark) {
@@ -313,11 +311,7 @@ div.acorn .currentlyEnrolledBox i.icon-cog:hover,
 div.currentCoursesBox .fa-calendar:hover,
 div.currentCoursesBox .icon-calendar:hover,
 div.acorn .courseSearchBox .courseDetailsBox .changeActivity .fa-pencil:hover,
-div.acorn
-  .courseSearchBox
-  .courseDetailsBox
-  .changeActivity
-  .icon-pencil:hover,
+div.acorn .courseSearchBox .courseDetailsBox .changeActivity .icon-pencil:hover,
 div.absence-declaration h2,
 div.absence-declaration h3,
 div.acorn-classic.page-container .sectionHeader,
@@ -339,14 +333,93 @@ div.acorn .information,
 span.notification-activity-tab-title,
 span.notification-activity-filter-personal,
 div#acorn-footer .uoft-footer,
-#main-content > div > div.acorn > div > profile-phone > div > div > div > div:nth-child(1) > div > h1,
-#main-content > div > div.acorn > div > profile-email > div > div > div > div:nth-child(1) > div > h1,
-#main-content > div > div.acorn > div > profile-contact > div > div > div > div:nth-child(1) > div > h1,
-#main-content > div > div.acorn > div > profile-sin-num > div > div > div:nth-child(1) > div > h1,
-#main-content > div > div.acorn > div > profile-bank > div > div > div > div:nth-child(1) > div > h1,
-#main-content > div > div.acorn > div > profile-info > div > div > div > div:nth-child(1) > div > h1,
-#main-content > div > div.acorn > div > absence-declaration > div > div > div > div:nth-child(1) > div > h1,
-#main-content > div > div.acorn > div > profile-address > div > div > div > div:nth-child(1) > div > h1 {
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-phone
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div
+  > h1,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-email
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div
+  > h1,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-contact
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div
+  > h1,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-sin-num
+  > div
+  > div
+  > div:nth-child(1)
+  > div
+  > h1,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-bank
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div
+  > h1,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-info
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div
+  > h1,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > absence-declaration
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div
+  > h1,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-address
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div
+  > h1 {
   @include common.override(light) {
     color: common.textColor(paper, 0, light);
   }
@@ -408,7 +481,8 @@ div.acorn-card-deck .acorn-card,
 div.awards-container .cards-wrapper .acorn-card-deck .acorn-card {
   @include common.override(light) {
     border-left: 10px solid common.color(paper, 0, light);
-    border-right: 10px solid common.color(paper, 0, light);  }
+    border-right: 10px solid common.color(paper, 0, light);
+  }
 
   @include common.override(dark) {
     border-left: 10px solid common.color(paper, 0, dark);
@@ -422,30 +496,30 @@ div.invoice-and-net-cost
   .net-cost
   .acorn-card-deck
   .acorn-card.acorn-card-placeholder {
-    @include common.override(light) {
-      background-color: common.color(paper, 1, light) !important;
-    }
-  
-    @include common.override(dark) {
-      background-color: common.color(paper, 1, dark) !important;
-    }
+  @include common.override(light) {
+    background-color: common.color(paper, 1, light) !important;
+  }
+
+  @include common.override(dark) {
+    background-color: common.color(paper, 1, dark) !important;
+  }
 }
 
 div table.timetableSchedule tr .dayOfWeek {
-  @include common.override{
+  @include common.override {
     line-height: 40px;
   }
 }
 
 div table.timetableSchedule tr .timeOfDay {
-  @include common.override{
+  @include common.override {
     line-height: 98px;
   }
 }
 
 div#acorn-footer .acorn-logo {
   // ADD LIGHT MODE
-  @include common.override{
+  @include common.override {
     filter: grayscale(100%) invert(100%) brightness(0.9);
   }
 }
@@ -494,41 +568,427 @@ div.acorn .finances {
   }
 }
 
-#main-content > div > div.acorn > div > profile-sin-num > div > div > div.acorn-classic.page-container.sin-container > p > a,
-#main-content > div > div.acorn > div > profile-sin-num > div > div > div > div > profile-and-settings-sub-menu > div > ul > li > a,
-#main-content > div > div.acorn > div > profile-bank > div > div > div > div.bank-container.acorn-card-deck > div > div.acorn-card-block > p:nth-child(1) > a,
-#main-content > div > div.acorn > div > div > div:nth-child(2) > acorn-global-message > acorn-notice > div > div.flex-item.alert-body > p > p > a,
-#main-content > div > div.acorn > div > div > div:nth-child(6) > div > div:nth-child(1) > div.acorn-card-block > div > div > div.flex-display > div:nth-child(3) > a,
-#main-content > div > div.acorn > div > profile-bank > div > div > div > div > div > profile-and-settings-sub-menu > div > ul > li > a,
-#main-content > div > div.acorn > div > profile-bank > div > div > div > div.address.acorn-classic.page-container > table.main > tbody > tr:nth-child(2) > td > a,
-#main-content > div > div.acorn > div > profile-info > div > div > div > div > div > profile-and-settings-sub-menu > div > ul > li > a,
-#main-content > div > div.acorn > div > profile-info > div > div > div > div.address.acorn-classic.page-container > table.main > tbody > tr:nth-child(2) > td > a,
-#main-content > div > div.acorn > div > profile-contact > div > div > div > div > div > profile-and-settings-sub-menu > div > ul > li > a,
-#main-content > div > div.acorn > div > profile-contact > div > div > div > div.address.acorn-classic.page-container > table.main > tbody > tr:nth-child(2) > td > a,
-#main-content > div > div.acorn > div > profile-email > div > div > div > div > div > profile-and-settings-sub-menu > div > ul > li > a,
-#main-content > div > div.acorn > div > profile-email > div > div > div > div.address.acorn-classic.page-container > table.main > tbody > tr:nth-child(2) > td > a,
-#main-content > div > div.acorn > div > profile-phone > div > div > div > div > div > profile-and-settings-sub-menu > div > ul > li > a,
-#main-content > div > div.acorn > div > profile-phone > div > div > div > div.address.acorn-classic.page-container > table.main > tbody > tr:nth-child(2) > td > a,
-#main-content > div > div.acorn > div > profile-address > div > div > div > div > div > profile-and-settings-sub-menu > div > ul > li > a,
-#main-content > div > div.acorn > div > profile-address > div > div > div > div.address.acorn-classic.page-container > table.main > tbody > tr:nth-child(2) > td > a,
-#main-content > div > div.acorn > div > absence-declaration > div > div > div > div > div > profile-and-settings-sub-menu > div > ul > li > a,
-#main-content > div > div.acorn > div > absence-declaration > div > div > div > div.absence-declaration.skipprint.acorn-card-deck > div > div:nth-child(2) > div.acorn-card-block > div > a,
-#main-content > div > div.acorn > div > absence-declaration > div > div > div > div.absence-declaration.skipprint.acorn-card-deck > div > div > div.acorn-card-block > p > a,
-#main-content > div > div.acorn > div > profile-and-settings > div > div > div.acorn-card-deck > div > div.acorn-card-block > div > p > a,
-#main-content > div > div.acorn > div > profile-and-settings > div > div > div.acorn-card-deck > div > div.acorn-card-block > div > ul > li > a,
-#main-content > div > div.acorn > div > profile-and-settings > div > div > div.row.skipprint > div > profile-and-settings-sub-menu > div > ul > li > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-sin-num
+  > div
+  > div
+  > div.acorn-classic.page-container.sin-container
+  > p
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-sin-num
+  > div
+  > div
+  > div
+  > div
+  > profile-and-settings-sub-menu
+  > div
+  > ul
+  > li
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-bank
+  > div
+  > div
+  > div
+  > div.bank-container.acorn-card-deck
+  > div
+  > div.acorn-card-block
+  > p:nth-child(1)
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > div
+  > div:nth-child(2)
+  > acorn-global-message
+  > acorn-notice
+  > div
+  > div.flex-item.alert-body
+  > p
+  > p
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > div
+  > div:nth-child(6)
+  > div
+  > div:nth-child(1)
+  > div.acorn-card-block
+  > div
+  > div
+  > div.flex-display
+  > div:nth-child(3)
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-bank
+  > div
+  > div
+  > div
+  > div
+  > div
+  > profile-and-settings-sub-menu
+  > div
+  > ul
+  > li
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-bank
+  > div
+  > div
+  > div
+  > div.address.acorn-classic.page-container
+  > table.main
+  > tbody
+  > tr:nth-child(2)
+  > td
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-info
+  > div
+  > div
+  > div
+  > div
+  > div
+  > profile-and-settings-sub-menu
+  > div
+  > ul
+  > li
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-info
+  > div
+  > div
+  > div
+  > div.address.acorn-classic.page-container
+  > table.main
+  > tbody
+  > tr:nth-child(2)
+  > td
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-contact
+  > div
+  > div
+  > div
+  > div
+  > div
+  > profile-and-settings-sub-menu
+  > div
+  > ul
+  > li
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-contact
+  > div
+  > div
+  > div
+  > div.address.acorn-classic.page-container
+  > table.main
+  > tbody
+  > tr:nth-child(2)
+  > td
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-email
+  > div
+  > div
+  > div
+  > div
+  > div
+  > profile-and-settings-sub-menu
+  > div
+  > ul
+  > li
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-email
+  > div
+  > div
+  > div
+  > div.address.acorn-classic.page-container
+  > table.main
+  > tbody
+  > tr:nth-child(2)
+  > td
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-phone
+  > div
+  > div
+  > div
+  > div
+  > div
+  > profile-and-settings-sub-menu
+  > div
+  > ul
+  > li
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-phone
+  > div
+  > div
+  > div
+  > div.address.acorn-classic.page-container
+  > table.main
+  > tbody
+  > tr:nth-child(2)
+  > td
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-address
+  > div
+  > div
+  > div
+  > div
+  > div
+  > profile-and-settings-sub-menu
+  > div
+  > ul
+  > li
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-address
+  > div
+  > div
+  > div
+  > div.address.acorn-classic.page-container
+  > table.main
+  > tbody
+  > tr:nth-child(2)
+  > td
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > absence-declaration
+  > div
+  > div
+  > div
+  > div
+  > div
+  > profile-and-settings-sub-menu
+  > div
+  > ul
+  > li
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > absence-declaration
+  > div
+  > div
+  > div
+  > div.absence-declaration.skipprint.acorn-card-deck
+  > div
+  > div:nth-child(2)
+  > div.acorn-card-block
+  > div
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > absence-declaration
+  > div
+  > div
+  > div
+  > div.absence-declaration.skipprint.acorn-card-deck
+  > div
+  > div
+  > div.acorn-card-block
+  > p
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-and-settings
+  > div
+  > div
+  > div.acorn-card-deck
+  > div
+  > div.acorn-card-block
+  > div
+  > p
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-and-settings
+  > div
+  > div
+  > div.acorn-card-deck
+  > div
+  > div.acorn-card-block
+  > div
+  > ul
+  > li
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > profile-and-settings
+  > div
+  > div
+  > div.row.skipprint
+  > div
+  > profile-and-settings-sub-menu
+  > div
+  > ul
+  > li
+  > a,
 tr > td > div > data-info-notice > div > p > a,
-#wellBeingContent > div > div > well-being-support-content > div.well-being-support-content > div:nth-child(4) > div > div > div > div:nth-child(2) > support-content > p > a,
-#wellBeingContent > div > div > well-being-support-content > div.well-being-support-content > div > div > div > div > div > support-content > a,
-#wellBeingContent > div > div > well-being-support-content > div.well-being-support-cards > div > div > div > div.acorn-card-block > p > a,
-#wellBeingContent > div > div > well-being-support-content > div.well-being-support-content > p > a,
+#wellBeingContent
+  > div
+  > div
+  > well-being-support-content
+  > div.well-being-support-content
+  > div:nth-child(4)
+  > div
+  > div
+  > div
+  > div:nth-child(2)
+  > support-content
+  > p
+  > a,
+#wellBeingContent
+  > div
+  > div
+  > well-being-support-content
+  > div.well-being-support-content
+  > div
+  > div
+  > div
+  > div
+  > div
+  > support-content
+  > a,
+#wellBeingContent
+  > div
+  > div
+  > well-being-support-content
+  > div.well-being-support-cards
+  > div
+  > div
+  > div
+  > div.acorn-card-block
+  > p
+  > a,
+#wellBeingContent
+  > div
+  > div
+  > well-being-support-content
+  > div.well-being-support-content
+  > p
+  > a,
 #feedbackContent > div > div > div > div > div:nth-child(1) > div > a,
 #emailHelpContent > div > div > div > div > div:nth-child(2) > p > a,
-#emailHelpContent > div > div > div > div > div:nth-child(1) > div > figure > ul > li > a,
+#emailHelpContent
+  > div
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div
+  > figure
+  > ul
+  > li
+  > a,
 #notification-content-container > div.notification-panel-footer > p > a,
-#ps_notification_61269913e4b0c9d30f25a214 > div.side-notification-body.notification-style-read.notification-style > div > data-info-notice > div > p > a,
+#ps_notification_61269913e4b0c9d30f25a214
+  > div.side-notification-body.notification-style-read.notification-style
+  > div
+  > data-info-notice
+  > div
+  > p
+  > a,
 #notification-body > div.notification-header > a,
-#main-content > div > div.acorn > div > div > div:nth-child(6) > div > div:nth-child(2) > div.acorn-card-block > div > div > div > ul > li > a,
-#main-content > div > div.acorn > div > div > div:nth-child(6) > div > div:nth-child(1) > div.acorn-card-block > div > div > div.flex-display > div.flex-item.todays-events > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > building-code-url > span > a {
+#main-content
+  > div
+  > div.acorn
+  > div
+  > div
+  > div:nth-child(6)
+  > div
+  > div:nth-child(2)
+  > div.acorn-card-block
+  > div
+  > div
+  > div
+  > ul
+  > li
+  > a,
+#main-content
+  > div
+  > div.acorn
+  > div
+  > div
+  > div:nth-child(6)
+  > div
+  > div:nth-child(1)
+  > div.acorn-card-block
+  > div
+  > div
+  > div.flex-display
+  > div.flex-item.todays-events
+  > div:nth-child(2)
+  > div:nth-child(2)
+  > div:nth-child(2)
+  > building-code-url
+  > span
+  > a {
   @include common.link;
 }
