@@ -1,8 +1,8 @@
 {
-    "name": "UofT Dark Mode",
-    "version": "0.0.2",
+    "name": "Better UofT",
+    "version": "1.0.0",
     "manifest_version": 2,
-    "description": "Adds dark mode to UofT websites (Acorn, Quercus, Weblogin)",
+    "description": "Adds custom theming to UofT websites (Acorn, Quercus, Weblogin)",
     "background": {
         "scripts": [
             "hot-reload.js",
