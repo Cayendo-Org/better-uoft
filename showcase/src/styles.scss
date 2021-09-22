@@ -29,16 +29,19 @@
 }
 
 h1 {
+  color: var(--white);
   font-size: 60px;
   font-weight: 700;
 }
 
 h2 {
+  color: var(--white);
   font-size: 24px;
   font-weight: 500;
 }
 
 h3 {
+  color: var(--white);
   font-size: 28px;
   margin: 15px 0;
 }
@@ -56,6 +59,7 @@ p {
 }
 
 p.about {
+  color: var(--white);
   margin-bottom: 50px;
 }
 
@@ -112,6 +116,10 @@ footer {
   }
 }
 
+#darkMode p {
+  color: var(--white);
+}
+
 #darkMode:focus {
   outline: none;
   border: solid 1px var(--black);
@@ -148,6 +156,10 @@ footer {
 
 #weblogin svg, #acorn svg, #quercus svg {
   fill: var(--grey);
+}
+
+.slider-title, .toronto {
+  color: var(--white);
 }
 
 .cards {
@@ -317,6 +329,15 @@ footer {
 
 .example-card p {
   margin-bottom: 20px;
+}
+
+.example-card h2 {
+  @include common.override(light) {
+    color: common.textColor(paper, 0, light);
+  }
+  @include common.override(dark) {
+    color: common.textColor(paper, 0, dark);
+  }
 }
 
 .content input {
