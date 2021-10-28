@@ -6,7 +6,7 @@
   @return calc(#{$value} * var(--spacing));
 }
 
-@function color($color: primary, $elevation: 0, $mode: dark) {
+@function color($color: primary, $elevation: 0, $mode: dark, $opacity: 1) {
   @if $color == paper {
     @return if(
       $mode == dark,
@@ -14,7 +14,7 @@
         var(--hue-paper),
         calc(11.11% * var(--paper-strength)),
         #{9% + 4.5% * $elevation},
-        1
+        #{$opacity}
       ),
       hsla(
         var(--hue-paper),
@@ -22,7 +22,7 @@
           #{100% - 94.5% * $elevation + 26.9% * $elevation * $elevation} * var(--paper-strength)
         ),
         #{98% - 3.92% * $elevation},
-        1
+        #{$opacity}
       )
     );
   } @else if $color == focus {
@@ -30,14 +30,14 @@
       calc(var(--hue-primary) + 180),
       calc(100% * var(--primary-strength)),
       #{77.5% + 10% * $elevation},
-      1
+      #{$opacity}
     );
   } @else if $color == primary {
     @return hsla(
       var(--hue-primary),
       calc(100% * var(--primary-strength)),
       #{77.5% + 10% * $elevation},
-      1
+      #{$opacity}
     );
   } @else if $color == warning {
     @if ($elevation == 0) {
@@ -195,7 +195,7 @@
       text-decoration: none;
     }
 
-    &:focus {
+    &:focus-visible {
       border: 1px solid color(focus, 0, light);
       outline: none;
     }
@@ -209,7 +209,7 @@
       text-decoration: none;
     }
 
-    &:focus {
+    &:focus-visible {
       border: 1px solid color(focus, 0, dark);
       outline: none;
     }
@@ -233,7 +233,7 @@
         background: color(primary, 1, light);
       }
 
-      &:focus {
+      &:focus-visible {
         border: 1px solid color(focus, 0, light);
         box-shadow: 0 0 0 2px color(focus, 1, light);
         outline: none;
@@ -259,7 +259,7 @@
         background: color(primary, 1, dark);
       }
 
-      &:focus {
+      &:focus-visible {
         border: 1px solid color(focus, 1, dark);
         box-shadow: 0 0 0 2px color(focus, 0, dark);
         outline: none;
@@ -290,7 +290,7 @@
         color: textColor(primary, 0, light);
       }
 
-      &:focus {
+      &:focus-visible {
         border: 1px solid color(focus, 0, light);
         box-shadow: 0 0 0 2px color(focus, 1, light);
         outline: none;
@@ -309,7 +309,7 @@
         color: textColor(primary, 0, dark);
       }
 
-      &:focus {
+      &:focus-visible {
         border: 1px solid color(focus, 1, dark);
         box-shadow: 0 0 0 2px color(focus, 0, dark);
         outline: none;
@@ -342,7 +342,7 @@
       border: 1px solid color(focus, 0, light);
     }
 
-    &:focus {
+    &:focus-visible {
       border: 1px solid color(focus, 0, light);
       box-shadow: 0 0 0 2px color(focus, 1, light);
       outline: none;
@@ -350,11 +350,11 @@
 
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
-    &:-webkit-autofill:focus,
+    &:-webkit-autofill:focus-visible,
     &:-internal-autofill-previewed,
     &:-internal-autofill-previewed:hover,
     &:-internal-autofill-selected,
-    &:-internal-autofill-selected:focus {
+    &:-internal-autofill-selected:focus-visible {
       box-shadow: 0 0 0 1000px #{color(paper, 0, light)} inset;
     }
   }
@@ -370,7 +370,7 @@
       border: 1px solid color(focus, 0, dark);
     }
 
-    &:focus {
+    &:focus-visible {
       border: 1px solid color(focus, 1, dark);
       box-shadow: 0 0 0 2px color(focus, 0, dark);
       outline: none;
@@ -378,11 +378,11 @@
 
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
-    &:-webkit-autofill:focus,
+    &:-webkit-autofill:focus-visible,
     &:-internal-autofill-previewed,
     &:-internal-autofill-previewed:hover,
     &:-internal-autofill-selected,
-    &:-internal-autofill-selected:focus {
+    &:-internal-autofill-selected:focus-visible {
       box-shadow: 0 0 0 1000px #{color(paper, 0, dark)} inset;
     }
   }

@@ -5,6 +5,8 @@ const RemoveEmptyScriptsPlugin = require("webpack-remove-empty-scripts");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const moveProps = require("postcss-move-props-to-bg-image-query");
+const autoPrefixer = require("autoprefixer");
+const inputRange = require('postcss-input-range');
 const { NODE_ENV = "production" } = process.env;
 
 module.exports = {
@@ -78,7 +80,7 @@ module.exports = {
             loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: [moveProps()],
+                plugins: [moveProps(), autoPrefixer(), inputRange()],
               },
             },
           },

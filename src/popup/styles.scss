@@ -67,14 +67,14 @@ body {
     border: 1px solid common.color(paper, 1, light);
 
     &:hover {
-      background: common.color(paper, 2, light);
+      background: common.color(paper, 3, light);
     }
 
-    &:focus {
+    &:focus-visible {
       box-shadow: none;
     }
 
-    &:active:focus {
+    &:active:focus-visible {
       border: 1px solid common.color(paper, 1, light);
     }
   }
@@ -88,7 +88,7 @@ body {
       background: common.color(paper, 2, dark);
     }
 
-    &:focus {
+    &:focus-visible {
       box-shadow: none;
     }
   }
@@ -131,13 +131,37 @@ body {
     justify-content: center;
   }
 
+  @include common.override(light) {
+    fill: common.textColor(paper, 1, light);
+    background: common.color(paper, 1, light);
+    border: 1px solid common.color(paper, 1, light);
+
+    &:hover {
+      background: common.color(paper, 3, light);
+    }
+
+    &:active:focus-visible {
+      border: 1px solid common.color(paper, 1, light);
+    }
+  }
+
+  @include common.override(dark) {
+    fill: common.textColor(paper, 1, dark);
+    background: common.color(paper, 1, dark);
+    border: 1px solid common.color(paper, 1, dark);
+
+    &:hover {
+      background: common.color(paper, 2, dark);
+    }
+  }
+
   svg {
     @include common.override(dark) {
-      fill: common.textColor(primary, 0, dark);
+      fill: common.textColor(paper, 0, dark);
     }
 
     @include common.override(light) {
-      fill: common.textColor(primary, 0, light);
+      fill: common.textColor(paper, 0, light);
     }
 
     @include common.override {
@@ -212,13 +236,23 @@ body {
   outline: 0;
 }
 
+[type="range"]:focus-visible::range-thumb{
+  @include common.override(dark) {
+    outline: 3px solid common.color(focus, 0, dark);
+  }
+
+  @include common.override(light) {
+    outline: 3px solid common.color(focus, 0, light);
+  }
+}
+
 //#region Strength
-#primary-strength::-webkit-slider-runnable-track,
-#paper-strength::-webkit-slider-runnable-track {
+#primary-strength::range-track,
+#paper-strength::range-track {
   background: linear-gradient(to right, hsl(0, 0%, 0%), hsl(0, 100%, 100%));
 }
 
-#primary-strength::-webkit-slider-thumb {
+#primary-strength::range-thumb {
   @include common.override(dark) {
     background: hsla(0, 0%, calc(var(--primary-strength) * 100%), 1);
   }
@@ -228,7 +262,7 @@ body {
   }
 }
 
-#paper-strength::-webkit-slider-thumb {
+#paper-strength::range-thumb {
   @include common.override(dark) {
     background: hsla(0, 0%, calc(var(--paper-strength) * 100%), 1);
   }
@@ -240,8 +274,8 @@ body {
 //#endregion
 
 //#region Hue
-#primary-hue::-webkit-slider-runnable-track,
-#paper-hue::-webkit-slider-runnable-track {
+#primary-hue::range-track,
+#paper-hue::range-track {
   @include common.override {
     background: linear-gradient(
       to right,
@@ -256,7 +290,7 @@ body {
   }
 }
 
-#primary-hue::-webkit-slider-thumb {
+#primary-hue::range-thumb {
   @include common.override(dark) {
     background: hsla(var(--hue-primary), 100%, 77.5%, 1);
   }
@@ -266,7 +300,7 @@ body {
   }
 }
 
-#paper-hue::-webkit-slider-thumb {
+#paper-hue::range-thumb {
   @include common.override(dark) {
     background: hsla(var(--hue-paper), 100%, 77.5%, 1);
   }
@@ -277,7 +311,7 @@ body {
 }
 //#endregion
 
-[type="range"]::-webkit-slider-runnable-track {
+[type="range"]::range-track {
   @include common.override(dark) {
     border: 1px solid common.color(paper, 3, dark);
   }
@@ -295,7 +329,7 @@ body {
   }
 }
 
-[type="range"]::-webkit-slider-thumb {
+[type="range"]::range-thumb {
   @include common.override {
     border-radius: common.borderRadius(3);
     box-sizing: border-box;
@@ -309,20 +343,20 @@ body {
   }
 }
 
-[type="range"]::-webkit-slider-thumb:focus,
-[type="range"]::-webkit-slider-thumb:hover {
+[type="range"]::range-thumb:focus-visible,
+[type="range"]::range-thumb:hover {
   @include common.override {
     border: 1px solid common.color(paper, 5, dark);
   }
 }
 
 
-[type="range"]:disabled::-webkit-slider-thumb,
-[type="range"]:disabled::-webkit-slider-runnable-track {
+[type="range"]:disabled::range-thumb,
+[type="range"]:disabled::range-track {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-[type="range"]:disabled::-webkit-slider-thumb {
+[type="range"]:disabled::range-thumb {
   display: none;
 }

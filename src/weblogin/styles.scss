@@ -330,7 +330,9 @@ body
 
 #username,
 #password {
-  padding: 14px 20px;
+  @include common.override {
+    padding: 14px 20px;
+  }
 }
 
 body > div > div > div.col-md-8 > div > div.col-md-9.col-sm-12.col-xs-12 > div,
@@ -351,7 +353,9 @@ body > div > div > div.col-md-4 > div.login-box > form > button,
 #collapse_UTORidForgottenPW > div > a:nth-child(5),
 #collapse_UTORidForgottenPW > div > a:nth-child(6),
 #collapse_UTORidForgottenPW > div > a:nth-child(7) {
-  margin-bottom: 10px;
+  @include common.override {
+    margin-bottom: 10px;
+  }
 }
 
 #collapse_PwReq_LoginProblems > div > p:nth-child(2) > a {

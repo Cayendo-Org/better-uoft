@@ -56,3 +56,33 @@ const updatePaperStrength = (paperStrength: number) => {
 };
 
 updateMode(darkMode);
+
+let lastKnownScrollPosition = 0;
+let ticking = false;
+let scrollElements = document.querySelectorAll(".scroll-anim");
+
+const fromPxString = (value:string)=>{
+    return parseFloat(value.slice(0, value.length - 2)) || 0;
+}
+
+const doSomething = (scrollPos:number) => {
+    for (const element of scrollElements) {
+        let div = element as HTMLDivElement;
+        let rect = div.getBoundingClientRect();
+        let style = window.getComputedStyle(div);
+        div.style.setProperty("--progress", (Math.min(Math.max(((div.classList.contains("scroll-anim-top") ? 0: window.innerHeight)-rect.top + fromPxString(style.getPropertyValue("top"))) / fromPxString(style.getPropertyValue("--amount")), 0), 1)).toString());
+    }
+}
+
+document.addEventListener('scroll', (e) => {
+    lastKnownScrollPosition = window.scrollY;
+
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            doSomething(lastKnownScrollPosition);
+            ticking = false;
+        });
+
+        ticking = true;
+    }
+});
